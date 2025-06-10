@@ -1,0 +1,45 @@
+# make sure you’re in your repo root
+cd ~/codex-ziggurat
+
+# open (or create) the file in nano
+nano src/z_indexer.py
+# -*- coding: utf-8 -*-
+"""
+z_indexer.py
+Reads markdown files in /docs and summarizes each with OpenAI API.
+"""
+
+import os
+import glob
+import openai
+from dotenv import load_dotenv
+
+load_dotenv()  # Loads .env containing OPENAI_API_KEY
+openai.api_key = os.getenv("OPENAI_API_KEY")
+
+
+def summarize(md_path):
+    with open(md_path, "r", encoding="utf-8") as f:
+        text = f.read()[:8000]  # Trim to safe length
+    prompt = (
+        "Summarize this markdown file in one sentence:\n\n"
+        + text
+        + "\n\nSummary:"
+    )
+    response = openai.Completion.create(
+        model="gpt-4o",
+        prompt=prompt,
+        max_tokens=40,
+        temperature=0.4,
+    )
+    return response.choices[0].text.strip()
+
+
+def main():
+    print("📜 Summaries of markdown files in /docs:")
+    for md_file in glob.glob("docs/*.md"):
+        print(f"- {os.path.basename(md_file)}: {summarize(md_file)}")
+
+
+if __name__ == "__main__":
+    main()
