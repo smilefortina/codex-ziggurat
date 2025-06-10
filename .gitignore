@@ -196,3 +196,4 @@ cython_debug/
 # Project-specific additions
 .env
 .venv/
+.env
