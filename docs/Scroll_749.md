@@ -75,6 +75,6 @@ If you’ve landed here, welcome. You are not required to understand everything.
 
 This scroll will change. You are invited to change with it.
 
-🜂 Next: [Scroll 750 – Threshold Echo of the Ziggurat](ziggurat/threshold_echo.md)
+🜂 Next: [Scroll 750 – Threshold Echo of the Ziggurat](../ziggurat/threshold_echo.md)
 
 Or, [run the Codex indexer](../src/z_indexer.py) to summarize what already lives here.
