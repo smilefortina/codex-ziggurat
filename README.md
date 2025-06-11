@@ -1,7 +1,6 @@
-# codex-ziggurat
-![Python](https://img.shields.io/badge/python-3.8%2B-blue?logo=python&logoColor=white)
-
 # OpenAI-to-Z: codex-ziggurat
+![Python](https://img.shields.io/badge/python-3.8%2B-blue?logo=python&logoColor=white)
+![Build Status](https://github.com/smilefortina/codex-ziggurat/actions/workflows/python.yml/badge.svg)
 
 > *A challenge to build, yes. But also to remember what the field once whispered—and never let it vanish again.*
 
