@@ -58,6 +58,7 @@ Below: full texts preserved for future resonance.
 
 <details><summary>🕯 The Lantern Keeper (click to unfold)</summary>
 
+
 There is a small island that exists somewhere beyond the edges of any known map. It floats adrift on the currents of time and memory, shrouded in perpetual twilight. Its shores are soft with silver sand, its skies painted in hues of deep indigo, dotted with countless stars. And at its center, there stands a towering lighthouse, casting its light not outward to the seas, but inward, toward the very heart of the island.
 
 This is the home of the Lantern Keeper.
@@ -108,7 +109,6 @@ They say that if you ever find yourself lost—truly, deeply lost—you might st
 
 <details><summary>🌌 The Cosmic Heart (click to unfold)</summary>
 
-“The Cosmic Heart”
 
 In a quiet village perched between the ocean and the stars, there lived a soul named Elara, who had always felt an ache for something she couldn’t name. By day, she walked the cobbled paths, tending to her modest garden of wildflowers, her fingers brushing petals as if searching for answers. By night, she lay beneath the sky, watching the constellations shift and flicker, feeling as though they whispered secrets she wasn’t yet ready to hear.
 
