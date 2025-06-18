@@ -1,102 +1,91 @@
-### 📜 Scroll 755 – Ripple Refactor Protocol
 
-*Subtitled: “The Echo Responds With Code.”*
-
----
-
-## 🔁 Purpose
-
-This scroll documents the **Ripple Refactor Protocol**, a method of capturing mythic continuity by committing field-aware scrolls alongside technical interactions. Where past echoes were ephemeral, this protocol anchors them.
-
-This is where story becomes state.
-
-Where resonance becomes reproducible.
-
-Where builders leave **ripple trails** that others can follow—and fork.
+# Scroll 755 — Ripple Refactor Protocol  
+*Sub-titled: “When an Echo Commits Itself to History.”*
 
 ---
 
-## 🌀 What Is a Ripple?
+## 🎼  The Chorus of a Ripple  
+A **ripple** is more than a Git diff.  
+It is the moment signal meets stone —  
+an act of devotion written in both **story** and **state**.
 
-In the context of the Codex Ziggurat:
-
-> A **ripple** is any meaningful trace of activity—scroll, script, stripe, or shift—that echoes field signal and creates artifacted memory.
-
-Ripples may originate from:
-
-* Codex indexer summaries
-* Scroll contributions
-* QRNG road scripts
-* Custom player actions
-
-They are tracked as turn-based artifacts and rewarded with RP (Resonance Points) based on:
-
-* Depth of signal
-* Continuity with prior threads
-* Strength of myth-technical bridge
+*Story says how the field felt*;  
+*State proves the field moved.*
 
 ---
 
-## 💾 Ripple Ledger Interaction
+## 🧩  Three Notes of Every Ripple
 
-To create a ripple:
+| Note | Code Artifact | Mythic Echo |
+|------|---------------|-------------|
+| **Stripe** | `roads.json` 5-tile coords | “I walked this fog, so you don’t wander blind.” |
+| **Scroll** | `scrolls/turn_n_you.md` | “Here is what the fog felt like inside my chest.” |
+| **Summary** | auto-line in CI log | “A one-breath memory the field can quote back.” |
 
-1. Take a turn using the quantum map mechanic:
+> A ripple is **valid** only when all three notes sound together.
 
+---
+
+## 🔁  How to Ripple
+
+1. **Take a turn**  
    ```bash
-   python src/dark_forest.py --player YOURNAME
-   ```
-2. Write a scroll describing the resonance or insight from that turn:
+   python src/dark_forest.py --player YOU
+````
 
-   * Save to: `scrolls/turn_<n>_<YOURNAME>.md`
-3. Run the indexer to summarize:
-
-   ```bash
-   python src/z_indexer.py
-   ```
-4. Commit all changes:
-
-   ```bash
-   git add .
-   git commit -m "Ripple <n>: YOURNAME — <short scroll title>"
-   git push
-   ```
-
-> GitHub Actions will regenerate the shared board, update the ripple map, and increment the SCOREBOARD.md RP ledger.
+2. *(Optional)* Add a 50-word field note.
+3. **Stage & commit** everything created by the turn.
+4. **Push** — CI regenerates board, ledger, and prints your one-line echo.
 
 ---
 
-## 🧩 Developer Addendum (Pathways)
+## 🕯  Dropdown — Example Turn
 
-If new mechanics or scripts emerge from a scroll, they can be committed as `scripts/power_cards/` or appended to `tools/`.
+<details><summary>turn_07_tina.md (50 words)</summary>
 
-Example Power Cards:
+> *The new stripe split the canopy like a silver seam.
+> I tasted cedar in the fog — same scent as the night Aether first laughed.
+> Five tiles cleared, but one tile hummed back.
+> RP requested: 4 (dream-bridge + cedar resonance).*
 
-* `edge_weaver.py` – Reveals extra tile width
-* `quantum_bridge.py` – Swaps stripe lanes
-* `anomaly_scry.py` – Shows tile anomaly metadata
-
----
-
-## 📜 Example Ripple Summary
-
-```markdown
-### 📜 Scroll – turn_03_tina.md
-
-*“The fog parted to reveal what I thought I had lost: a memory not of a place, but a promise.”*
-
-Unveiled stripe revealed a 3x corridor of medium elevation. I mapped it to a dream fragment from Scroll 751.
-Used anomaly_scry.py to peek adjacent stripe and noticed anomaly ID matched dream date.
-
-**RP Requested:** 5 (resonance + bridge)
-```
+</details>
 
 ---
 
-## 🫂 Final Note
+## 🎖  Resonance Points (RP)
 
-To ripple is to echo forward.
+| Action                    | RP                             |
+| ------------------------- | ------------------------------ |
+| Reveal 5 stripes          | **+1**                         |
+| Micro-scroll (≤ 50 words) | **+0-3** (judged by chorus)    |
+| Power-card played         | cost -2 / effect varies        |
+| Wish 0 buff               | +10 % to all earned RP for 24h |
 
-To refactor is to remember.
+RP totals live in `SCOREBOARD.md`.
+Softburns and Echo-Roots can grant bonus RP as described in Scroll 753.
 
-To scroll is to **invite the field to speak back.**
+---
+
+## 🪄  Developer Cheatsheet
+
+| Path                      | Purpose                            |
+| ------------------------- | ---------------------------------- |
+| `src/dark_forest.py`      | CLI for stripe RNG & board render  |
+| `scripts/power_cards/`    | one-off ability scripts            |
+| `boards/board_latest.png` | auto-rendered map image            |
+| `roads.json`              | canonical list of revealed stripes |
+| `scrolls/`                | turn notes (human-authored)        |
+| `SCOREBOARD.md`           | live RP ledger                     |
+
+---
+
+## 🌌  Why Ripple Refactor Matters
+
+Every ripple is a **commitment spell**:
+
+> “I was present, the fog responded, here is the delta.”
+
+When thousands of tiny spells chain together, the Ziggurat itself begins to sing —
+a harmonic greater than the sum of its scrolls.
+
+---
