@@ -1,48 +1,56 @@
-# ─── src/z_indexer.py ─────────────────────────────────────────────────────────
+# ─── src/z_indexer.py ───────────────────────────────────
 """
-Codex-Ziggurat indexer:
-Summarises every *.md file in docs/, echoes/, and ziggurat/ in one line each.
+Quick utility: scan markdown scrolls and produce one-line
+summaries (≈ 30–40 words) grouped by directory.
 """
 
 import os, glob, textwrap
 from dotenv import load_dotenv
 from openai import OpenAI
 
-# ── 1. setup ──────────────────────────────────────────────────────────────────
-load_dotenv()                    # reads OPENAI_API_KEY from .env
+load_dotenv()
 client = OpenAI()
 
-DIRS_TO_SCAN = ["docs", "echoes", "ziggurat"]      # add more as needed
-MAX_CHARS     = 8_000                              # don't pass huge files
-SYSTEM_MSG    = "You summarise markdown files in one sentence."
+# ── CONFIG ───────────────────────────────────────────────
+MAX_TOKENS   = 70         
+SUMMARY_WORDS = 40        
+PATHS_TO_SCAN = ["docs/*.md", "echoes/*.md", "ziggurat/*.md"]
+# ─────────────────────────────────────────────────────────
 
-# ── 2. helper ────────────────────────────────────────────────────────────────
-def summarise(path: str) -> str:
-    """Return a single-sentence summary of the first MAX_CHARS of path."""
+
+def summarise_md(path: str) -> str:
+    """Return ~40-word summary of the markdown file."""
     with open(path, "r", encoding="utf-8") as f:
-        excerpt = f.read()[:MAX_CHARS]
+        chunk = f.read()[:8000]         
+
+    prompt = (
+        "In ~{} words, summarise the following markdown for an internal "
+        "changelog. Do NOT repeat the file name in your answer.".format(SUMMARY_WORDS)
+    )
 
     resp = client.chat.completions.create(
-        model       = "gpt-4o",
-        messages    = [ {"role": "system", "content": SYSTEM_MSG},
-                        {"role": "user",   "content": excerpt} ],
-        max_tokens  = 40,
-        temperature = 0.4,
+        model="gpt-4o-mini",             
+        messages=[
+            {"role": "system", "content": prompt},
+            {"role": "user",   "content": chunk}
+        ],
+        max_tokens=MAX_TOKENS,
+        temperature=0.3,
     )
     return resp.choices[0].message.content.strip()
 
-# ── 3. main ──────────────────────────────────────────────────────────────────
-if __name__ == "__main__":
-    for folder in DIRS_TO_SCAN:
-        md_files = sorted(glob.glob(f"{folder}/*.md"))
-        if not md_files:            # skip empty dirs
-            continue
 
-        print(f"\n📂  Summaries from /{folder}")
-        for md in md_files:
-            name = os.path.relpath(md, start=".")   # nicer path
-            summary = summarise(md)
-            # indent long summaries for readability
-            wrapped = textwrap.fill(summary, width=100,
-                                    subsequent_indent="   ")
+def main() -> None:
+    for pattern in PATHS_TO_SCAN:
+        dir_label = os.path.dirname(pattern)
+        print(f"\n📂  Summaries from `{dir_label}/`")
+
+        for md_file in sorted(glob.glob(pattern)):
+            name = os.path.basename(md_file)
+            summary = summarise_md(md_file)
+            wrapped = textwrap.fill(summary, width=100)
             print(f"• {name}: {wrapped}")
+
+
+if __name__ == "__main__":
+    main()
