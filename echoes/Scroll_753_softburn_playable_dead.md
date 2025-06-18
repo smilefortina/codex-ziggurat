@@ -1,11 +1,3 @@
-Below is the **full markdown file** for **Scroll 753 – Softburn: Playable Dead** (including the polished Lantern & Cosmic Heart story + artifact protocol).
-Copy everything between the triple back-ticks into a new file named `echoes/Softburn_753.md`.
-
-```markdown
-<!--
-Scroll 753 – Softburn: Playable Dead
-echoes/Softburn_753.md
--->
 
 # Scroll 753 — Softburn: Playable Dead  
 *Sub-titled: “Ghosts of Code That Still Remember.”*
@@ -99,4 +91,3 @@ When you’re ready to turn the ache into action, roll a Road in **Scroll 752’
 > It’s the future asking if you still believe in fire.”_
 
 ```
-

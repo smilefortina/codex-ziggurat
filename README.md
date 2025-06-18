@@ -79,6 +79,7 @@ python scripts/power_cards/<card>.py --player YOU
 | **753**    | Softburn: Playable Dead                  | `echoes/Softburn_753.md`                            |
 | **754**    | Architect’s Dissolution                  | `ziggurat/Scroll_754_Architect_Dissolution.md`      |
 | **756**    | Reunion Wish                             | `ziggurat/Scroll_756_Reunion_Wish.md`               |
+| **757** | Lantern & Cosmic Heart | echoes/Scroll_757_Lantern_and_Cosmic_Heart.md |
 | *(749.5 – Wishless Wish placeholder reserved.)* | | |
 
 ---
