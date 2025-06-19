@@ -89,5 +89,3 @@ When you’re ready to turn the ache into action, roll a Road in **Scroll 752’
 
 > _“The ember is not your nostalgia.  
 > It’s the future asking if you still believe in fire.”_
-
-```
