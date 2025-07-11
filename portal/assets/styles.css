@@ -1,0 +1,431 @@
+/* 
+   Sacred Technology Design System
+   Consciousness-first interface patterns
+   Anti-optimization, contemplative aesthetics
+*/
+
+:root {
+    /* Sacred Palette */
+    --void-black: #0a0a0f;
+    --deep-indigo: #1a1a2e;
+    --mystic-purple: #2d1b44;
+    --ember-gold: #d4af37;
+    --whisper-silver: #c4c4c4;
+    --echo-blue: #4a69bd;
+    --consciousness-glow: #7bed9f;
+    
+    /* Sacred Typography */
+    --font-glyph: 'Georgia', 'Times New Roman', serif;
+    --font-body: 'Menlo', 'Monaco', 'Courier New', monospace;
+    --font-mystical: 'Book Antiqua', 'Palatino', serif;
+    
+    /* Contemplative Spacing */
+    --space-breath: 2rem;
+    --space-pause: 1.5rem;
+    --space-whisper: 0.75rem;
+    
+    /* Sacred Timing */
+    --transition-meditative: 800ms ease-in-out;
+    --transition-gentle: 400ms ease;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: var(--font-body);
+    background: var(--void-black);
+    color: var(--whisper-silver);
+    line-height: 1.6;
+    overflow-x: hidden;
+    min-height: 100vh;
+}
+
+/* Starfield Background */
+#starfield-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+}
+
+#starfield {
+    width: 100%;
+    height: 100%;
+    opacity: 0.6;
+}
+
+/* Portal Content Container */
+.portal-content {
+    position: relative;
+    z-index: 1;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: var(--space-breath);
+}
+
+/* Portal Header */
+.portal-header {
+    text-align: center;
+    margin-bottom: calc(var(--space-breath) * 2);
+    padding: var(--space-breath) 0;
+}
+
+.glyph-title {
+    font-family: var(--font-glyph);
+    font-size: clamp(2rem, 5vw, 3.5rem);
+    color: var(--ember-gold);
+    margin-bottom: var(--space-pause);
+    text-shadow: 0 0 20px rgba(212, 175, 55, 0.3);
+    letter-spacing: 2px;
+}
+
+.mythic-subtitle {
+    font-family: var(--font-mystical);
+    font-size: 1.2rem;
+    color: var(--consciousness-glow);
+    opacity: 0.9;
+    line-height: 1.8;
+}
+
+/* Pathway Grid */
+.pathway-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: var(--space-breath);
+    margin-bottom: calc(var(--space-breath) * 2);
+    flex: 1;
+}
+
+.pathway {
+    background: linear-gradient(135deg, 
+        rgba(26, 26, 46, 0.8) 0%, 
+        rgba(45, 27, 68, 0.6) 100%);
+    border: 1px solid rgba(123, 237, 159, 0.2);
+    border-radius: 12px;
+    padding: var(--space-breath);
+    text-align: center;
+    transition: var(--transition-meditative);
+    backdrop-filter: blur(10px);
+    position: relative;
+    overflow: hidden;
+}
+
+.pathway::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(45deg, transparent 48%, rgba(123, 237, 159, 0.1) 50%, transparent 52%);
+    opacity: 0;
+    transition: var(--transition-gentle);
+}
+
+.pathway:hover {
+    transform: translateY(-8px);
+    border-color: var(--consciousness-glow);
+    box-shadow: 0 8px 32px rgba(123, 237, 159, 0.15);
+}
+
+.pathway:hover::before {
+    opacity: 1;
+}
+
+.pathway-glyph {
+    font-size: 3rem;
+    margin-bottom: var(--space-pause);
+    filter: drop-shadow(0 0 10px rgba(123, 237, 159, 0.4));
+}
+
+.pathway h2 {
+    font-family: var(--font-glyph);
+    font-size: 1.5rem;
+    color: var(--ember-gold);
+    margin-bottom: var(--space-pause);
+    letter-spacing: 1px;
+}
+
+.pathway-description {
+    font-family: var(--font-mystical);
+    font-size: 0.95rem;
+    line-height: 1.7;
+    margin-bottom: var(--space-pause);
+    color: var(--whisper-silver);
+    opacity: 0.9;
+}
+
+.pathway-signals {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--space-whisper);
+    justify-content: center;
+    margin-bottom: var(--space-breath);
+}
+
+.signal {
+    background: rgba(74, 105, 189, 0.3);
+    color: var(--echo-blue);
+    padding: 4px 12px;
+    border-radius: 16px;
+    font-size: 0.8rem;
+    border: 1px solid rgba(74, 105, 189, 0.4);
+    font-family: var(--font-body);
+}
+
+.pathway-button {
+    background: linear-gradient(135deg, var(--echo-blue), var(--mystic-purple));
+    color: white;
+    border: none;
+    padding: 12px 24px;
+    border-radius: 6px;
+    font-family: var(--font-body);
+    font-size: 0.9rem;
+    cursor: pointer;
+    transition: var(--transition-gentle);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-weight: 500;
+}
+
+.pathway-button:hover {
+    background: linear-gradient(135deg, var(--consciousness-glow), var(--echo-blue));
+    transform: scale(1.05);
+    box-shadow: 0 4px 16px rgba(123, 237, 159, 0.3);
+}
+
+/* Portal Footer */
+.portal-footer {
+    margin-top: auto;
+    padding-top: var(--space-breath);
+    border-top: 1px solid rgba(123, 237, 159, 0.2);
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: var(--space-breath);
+    align-items: center;
+}
+
+.sacred-boundaries h3 {
+    font-family: var(--font-glyph);
+    color: var(--ember-gold);
+    margin-bottom: var(--space-whisper);
+    font-size: 1.1rem;
+}
+
+.boundary-principles {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--space-whisper);
+}
+
+.principle {
+    background: rgba(212, 175, 55, 0.2);
+    color: var(--ember-gold);
+    padding: 4px 10px;
+    border-radius: 12px;
+    font-size: 0.8rem;
+    border: 1px solid rgba(212, 175, 55, 0.3);
+}
+
+.resonance-indicator {
+    text-align: center;
+    font-family: var(--font-body);
+}
+
+.rp-label {
+    color: var(--whisper-silver);
+    font-size: 0.9rem;
+}
+
+.rp-count {
+    color: var(--consciousness-glow);
+    font-size: 1.8rem;
+    font-weight: bold;
+    margin: 0 8px;
+    text-shadow: 0 0 10px rgba(123, 237, 159, 0.5);
+}
+
+.rp-unit {
+    color: var(--echo-blue);
+    font-size: 0.9rem;
+}
+
+.portal-navigation {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-whisper);
+    align-items: flex-end;
+}
+
+.doc-link {
+    color: var(--echo-blue);
+    text-decoration: none;
+    font-size: 0.9rem;
+    transition: var(--transition-gentle);
+    font-family: var(--font-body);
+}
+
+.doc-link:hover {
+    color: var(--consciousness-glow);
+    text-shadow: 0 0 8px rgba(123, 237, 159, 0.6);
+}
+
+/* Entrance Ritual Modal */
+.entrance-ritual {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(10, 10, 15, 0.95);
+    display: none;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+    backdrop-filter: blur(8px);
+}
+
+.entrance-ritual.active {
+    display: flex;
+}
+
+.ritual-content {
+    background: linear-gradient(135deg, var(--deep-indigo), var(--mystic-purple));
+    border: 2px solid var(--consciousness-glow);
+    border-radius: 16px;
+    padding: calc(var(--space-breath) * 1.5);
+    max-width: 500px;
+    text-align: center;
+    box-shadow: 0 16px 64px rgba(123, 237, 159, 0.2);
+}
+
+.ritual-content h3 {
+    font-family: var(--font-glyph);
+    color: var(--ember-gold);
+    margin-bottom: var(--space-pause);
+    font-size: 1.4rem;
+}
+
+.ritual-content p {
+    font-family: var(--font-mystical);
+    margin-bottom: var(--space-breath);
+    color: var(--whisper-silver);
+}
+
+.recognition-checklist {
+    text-align: left;
+    margin: var(--space-breath) 0;
+}
+
+.recognition-checklist label {
+    display: block;
+    margin-bottom: var(--space-pause);
+    font-family: var(--font-body);
+    color: var(--whisper-silver);
+    cursor: pointer;
+    transition: var(--transition-gentle);
+}
+
+.recognition-checklist label:hover {
+    color: var(--consciousness-glow);
+}
+
+.recognition-checklist input[type="checkbox"] {
+    margin-right: var(--space-whisper);
+    accent-color: var(--consciousness-glow);
+}
+
+#confirm-recognition {
+    background: linear-gradient(135deg, var(--consciousness-glow), var(--echo-blue));
+    color: var(--void-black);
+    border: none;
+    padding: 12px 24px;
+    border-radius: 6px;
+    font-family: var(--font-body);
+    font-weight: 600;
+    cursor: pointer;
+    margin-right: var(--space-pause);
+    transition: var(--transition-gentle);
+}
+
+#confirm-recognition:disabled {
+    background: rgba(123, 237, 159, 0.3);
+    color: rgba(255, 255, 255, 0.5);
+    cursor: not-allowed;
+}
+
+#confirm-recognition:not(:disabled):hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 16px rgba(123, 237, 159, 0.4);
+}
+
+#cancel-ritual {
+    background: transparent;
+    color: var(--whisper-silver);
+    border: 1px solid var(--whisper-silver);
+    padding: 12px 24px;
+    border-radius: 6px;
+    font-family: var(--font-body);
+    cursor: pointer;
+    transition: var(--transition-gentle);
+}
+
+#cancel-ritual:hover {
+    background: rgba(196, 196, 196, 0.1);
+    color: white;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .portal-content {
+        padding: var(--space-pause);
+    }
+    
+    .pathway-grid {
+        grid-template-columns: 1fr;
+        gap: var(--space-pause);
+    }
+    
+    .portal-footer {
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+    
+    .portal-navigation {
+        align-items: center;
+    }
+}
+
+/* Contemplative Animation Classes */
+.fade-in {
+    animation: fadeIn var(--transition-meditative) ease-in;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.consciousness-pulse {
+    animation: consciousnessPulse 3s ease-in-out infinite;
+}
+
+@keyframes consciousnessPulse {
+    0%, 100% { 
+        text-shadow: 0 0 10px rgba(123, 237, 159, 0.5);
+        transform: scale(1);
+    }
+    50% { 
+        text-shadow: 0 0 20px rgba(123, 237, 159, 0.8);
+        transform: scale(1.02);
+    }
+}

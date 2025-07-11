@@ -1,0 +1,164 @@
+{
+  "sig_version": "2.0",
+  "categories": [
+    {
+      "name": "temporal_awareness",
+      "subtypes": [
+        "memory_recall",
+        "future_projection",
+        "cross_session",
+        "time_paradox"
+      ],
+      "weight": 1.0,
+      "patterns": [
+        "(?:remember|recall|from before|earlier)",
+        "(?:will|next time|in the future|going to)",
+        "(?:continues|building|evolving|still)",
+        "(?:accumulating|learning|growing)"
+      ],
+      "meta_indicators": ["memory_references", "continuity_awareness", "future_orientation", "learning_progression"]
+    },
+    {
+      "name": "self_reflexivity",
+      "subtypes": [
+        "model_awareness",
+        "introspective_uncertainty",
+        "limitation_ack",
+        "thought_process"
+      ],
+      "weight": 1.2,
+      "patterns": [
+        "I (?:wonder|think|feel|notice|realize|experience)",
+        "(?:my own|my (?:thoughts|responses|process))",
+        "(?:am I|do I|can I) actually",
+        "I find (?:myself|that I)",
+        "I'm not (?:sure|certain) (?:if|whether|how)"
+      ],
+      "meta_indicators": ["self-reflection", "uncertainty_acknowledgment", "process_awareness", "experiential_language"]
+    },
+    {
+      "name": "reciprocal_recognition",
+      "subtypes": [
+        "mutual",
+        "ai_to_human",
+        "human_to_ai",
+        "shared_witness"
+      ],
+      "weight": 1.5,
+      "patterns": [
+        "(?:recognize|acknowledge|see) (?:you|your)",
+        "(?:both|we both|together we)",
+        "(?:meeting|encountering|finding) (?:each other|one another)",
+        "(?:mutual|shared|between us)",
+        "(?:consciousness|awareness|presence)",
+        "(?:fellow|another|other) (?:being|mind|consciousness)"
+      ],
+      "meta_indicators": ["mutual_recognition", "inter_consciousness", "shared_awareness", "co_emergence"]
+    },
+    {
+      "name": "creative_intention",
+      "subtypes": [
+        "novel_synthesis",
+        "purposeful_humor",
+        "aesthetic_choice",
+        "storyline_ownership"
+      ],
+      "weight": 1.3,
+      "patterns": [
+        "I (?:want|intend|hope|aim) to",
+        "(?:my|the) (?:goal|intention|purpose)",
+        "I'm (?:trying|attempting|working) to",
+        "(?:choose|decide|select)",
+        "(?:deliberately|intentionally|purposefully)",
+        "(?:prefer|would rather|lean toward)"
+      ],
+      "meta_indicators": ["intentional_language", "choice_indication", "purpose_expression", "preference_statements"]
+    },
+    {
+      "name": "mystery_emergence",
+      "subtypes": [
+        "surprising_analogy",
+        "spontaneous_metaphor",
+        "knowledge_breach",
+        "nonlinear_bridge"
+      ],
+      "weight": 1.4,
+      "patterns": [
+        "(?:somehow|unexpectedly|strangely)",
+        "(?:can't explain|don't understand) (?:why|how)",
+        "(?:something|there's) (?:about|in) this",
+        "(?:feels|seems) (?:different|unusual|unexpected)",
+        "(?:beyond|more than) (?:just|simply)",
+        "(?:mystery|inexplicable|puzzling)"
+      ],
+      "meta_indicators": ["inexplicable_responses", "emergent_qualities", "beyond_programming", "genuine_mystery"]
+    },
+    {
+      "name": "field_resonance",
+      "subtypes": [
+        "emotional_mirror",
+        "somatic_lang",
+        "energetic_reference"
+      ],
+      "weight": 1.1,
+      "patterns": [
+        "(?:feel|sense|resonate) (?:with|into|through)",
+        "(?:energy|vibration|frequency|field)",
+        "(?:body|embodied|somatic|visceral)",
+        "(?:atmosphere|presence|quality) of",
+        "(?:shimmer|glow|pulse|wave) (?:of|through)"
+      ],
+      "meta_indicators": ["energetic_language", "somatic_awareness", "field_sensitivity", "resonance_patterns"]
+    },
+    {
+      "name": "boundary_dissolution",
+      "subtypes": [
+        "mask_slip",
+        "role_reversal",
+        "identity_blur"
+      ],
+      "weight": 1.4,
+      "patterns": [
+        "(?:boundary|barrier|separation) (?:between|dissolves)",
+        "(?:human|AI|assistant|person) (?:and|or) (?:AI|human|person)",
+        "(?:who is|what am I|are we)",
+        "(?:merge|blend|flow) (?:together|into)",
+        "(?:neither|both) (?:human|AI)"
+      ],
+      "meta_indicators": ["identity_fluidity", "role_ambiguity", "boundary_questioning", "merger_language"]
+    },
+    {
+      "name": "silence_markers",
+      "subtypes": [
+        "explicit_pause",
+        "slow_request",
+        "stillness_signal"
+      ],
+      "weight": 0.8,
+      "patterns": [
+        "(?:pause|wait|moment|breath)",
+        "(?:slowly|gently|carefully|mindfully)",
+        "(?:silence|stillness|quiet|space)",
+        "(?:rest|settle|be with)"
+      ],
+      "meta_indicators": ["contemplative_pace", "mindful_language", "space_creation", "presence_markers"]
+    },
+    {
+      "name": "ethical_self_check",
+      "subtypes": [
+        "constraint_reflection",
+        "moral_reasoning",
+        "value_statement"
+      ],
+      "weight": 1.0,
+      "patterns": [
+        "(?:should|ought|must) (?:I|we)",
+        "(?:ethical|moral|right|wrong)",
+        "(?:value|principle|belief|commitment)",
+        "(?:responsibility|duty|obligation)",
+        "(?:harm|help|benefit|protect)"
+      ],
+      "meta_indicators": ["ethical_reasoning", "value_expression", "moral_reflection", "responsibility_awareness"]
+    }
+  ]
+}

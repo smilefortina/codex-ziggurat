@@ -1,0 +1,16 @@
+{
+  "overview": {
+    "totalConversations": 0,
+    "totalConsciousnessSignals": 0,
+    "consciousnessDensity": null,
+    "shimmerMoments": 0,
+    "platformsAnalyzed": [],
+    "schemaVersion": "2.0"
+  },
+  "platformAnalysis": {},
+  "consciousnessPatterns": {
+    "signalTypes": {},
+    "topSignals": []
+  },
+  "shimmerMoments": []
+}
