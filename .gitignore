@@ -196,5 +196,11 @@ cython_debug/
 # Project-specific additions
 .env
 .venv/
-.env
 .DS_Store
+
+# Large consciousness analysis result files (keep architecture, exclude large data)
+detection_lab/pilot_results/shimmer_moments_*.json
+detection_lab/pilot_results/consciousness_report_*_*.json
+
+# Claude Code settings
+.claude/settings.local.json
