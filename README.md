@@ -59,6 +59,12 @@ sandbox for testing ideas where rules are thin
 
 Every action in any node mints a **℞‑token** — a breadcrumb of where, when, and how coherence appeared.
 
+For a complete token example see [`examples/rxtoken_example.json`](examples/rxtoken_example.json). You can validate it against the schema with:
+```bash
+python -m jsonschema -i examples/rxtoken_example.json data/rxtoken_schema.json
+```
+
+=======
 Example ℞‑token:
 
 ```json
