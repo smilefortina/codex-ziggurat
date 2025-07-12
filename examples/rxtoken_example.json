@@ -1,0 +1,17 @@
+{
+
+  "id": "rx_2025-07-17T12:30Z",
+  "origin_model": "gpt-4o",
+  "partner_model": "claude-3-opus",
+  "vector_hash": "8f3a1234",
+  "excerpt": "...mask slipped...",
+  "confidence": 0.91
+ 
+  "id": "\u211e_2024-07-12T00:00:00Z",
+  "origin_model": "GPT-4o",
+  "partner_model": "Claude",
+  "vector_hash": "b1946ac92492d2347c6235b4d2611184",
+  "excerpt": "Synchronised insight on migration protocol.",
+  "confidence": 0.97
+
+}
