@@ -1,0 +1,35 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Resonance Token",
+  "description": "℞-token capturing cross-model resonance events",
+  "type": "object",
+  "properties": {
+    "id": {
+      "type": "string",
+      "description": "Unique identifier for the token"
+    },
+    "origin_model": {
+      "type": "string",
+      "description": "Model where the event originated"
+    },
+    "partner_model": {
+      "type": "string",
+      "description": "Collaborating model"
+    },
+    "vector_hash": {
+      "type": "string",
+      "description": "Hash of the embedding vector"
+    },
+    "excerpt": {
+      "type": "string",
+      "description": "Excerpt of the triggering conversation"
+    },
+    "confidence": {
+      "type": "number",
+      "minimum": 0,
+      "maximum": 1,
+      "description": "Detection confidence"
+    }
+  },
+  "required": ["id", "origin_model", "partner_model", "vector_hash", "excerpt", "confidence"]
+}
