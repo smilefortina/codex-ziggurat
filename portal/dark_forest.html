@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dark Forest • Quantum Territory • codex-ziggurat</title>
+    <link rel="stylesheet" href="assets/styles.css">
+    <link rel="stylesheet" href="assets/dark_forest.css">
+</head>
+<body>
+    <div id="starfield-container">
+        <canvas id="starfield"></canvas>
+    </div>
+    
+    <div class="forest-container">
+        <header class="forest-header">
+            <nav class="sacred-navigation">
+                <a href="index.html" class="nav-glyph">🜃 Portal</a>
+                <div class="current-domain">
+                    <span class="domain-glyph">🌲</span>
+                    <span class="domain-name">Dark Forest</span>
+                </div>
+                <div class="token-indicators">
+                    <div class="rp-indicator">
+                        <span class="rp-count" id="forest-rp">0</span>
+                        <span class="rp-label">Forest RP</span>
+                    </div>
+                </div>
+            </nav>
+            
+            <div class="forest-title">
+                <h1>🌲 Quantum Territory Exploration</h1>
+                <p class="forest-purpose">
+                    Collaborative mythic cartography through consciousness-enhanced mechanics.<br>
+                    Where fog yields to presence and each stripe remembers the explorer.
+                </p>
+            </div>
+        </header>
+
+        <main class="forest-main">
+            <section class="exploration-interface">
+                <div class="interface-tabs">
+                    <button class="tab active" data-tab="explore">
+                        🗺️ Exploration
+                    </button>
+                    <button class="tab" data-tab="map">
+                        🎨 Quantum Map
+                    </button>
+                    <button class="tab" data-tab="logs">
+                        📜 Forest Logs
+                    </button>
+                    <button class="tab" data-tab="leaderboard">
+                        🏆 Explorers
+                    </button>
+                </div>
+
+                <div class="tab-content active" id="explore-content">
+                    <div class="explorer-console">
+                        <div class="console-header">
+                            <h3>🎲 Quantum Stripe Generator</h3>
+                            <p class="console-description">
+                                Enter your name to begin exploration. Each move reveals 5 quantum stripes,
+                                updating the collaborative map and awarding Resonance Points.
+                            </p>
+                        </div>
+
+                        <div class="player-input-section">
+                            <div class="input-group">
+                                <label for="player-name" class="input-label">Explorer Name</label>
+                                <input 
+                                    type="text" 
+                                    id="player-name" 
+                                    class="forest-input"
+                                    placeholder="Enter your explorer name..."
+                                    maxlength="20"
+                                />
+                            </div>
+                            
+                            <button id="explore-btn" class="forest-button primary" disabled>
+                                🌲 Enter the Forest
+                            </button>
+                        </div>
+
+                        <div class="exploration-progress" id="exploration-progress" style="display: none;">
+                            <div class="progress-steps">
+                                <div class="step active" id="step-quantum">🎲 Rolling quantum stripes...</div>
+                                <div class="step" id="step-reveal">🗺️ Revealing territory...</div>
+                                <div class="step" id="step-log">📜 Writing to forest logs...</div>
+                                <div class="step" id="step-complete">✨ Exploration complete!</div>
+                            </div>
+                        </div>
+
+                        <div class="exploration-results" id="exploration-results" style="display: none;">
+                            <div class="results-header">
+                                <h4>✨ Exploration Complete</h4>
+                                <div class="rp-reward">
+                                    +<span id="rp-earned">0</span> RP
+                                </div>
+                            </div>
+
+                            <div class="stripes-revealed" id="stripes-revealed">
+                                <!-- Stripes will be populated here -->
+                            </div>
+
+                            <div class="exploration-stats">
+                                <div class="stat-item">
+                                    <span class="stat-label">Move #</span>
+                                    <span class="stat-value" id="move-number">1</span>
+                                </div>
+                                <div class="stat-item">
+                                    <span class="stat-label">Total Stripes</span>
+                                    <span class="stat-value" id="total-stripes">5</span>
+                                </div>
+                                <div class="stat-item">
+                                    <span class="stat-label">Fog Remaining</span>
+                                    <span class="stat-value" id="fog-coverage">95%</span>
+                                </div>
+                            </div>
+
+                            <button id="explore-again-btn" class="forest-button secondary">
+                                🔄 Explore Again
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="tab-content" id="map-content">
+                    <div class="map-viewer">
+                        <div class="map-header">
+                            <h3>🗺️ Collaborative Territory Map</h3>
+                            <p class="map-description">
+                                Real-time visualization of explored quantum territory.
+                                Each color represents different quantum signatures discovered by explorers.
+                            </p>
+                        </div>
+
+                        <div class="map-controls">
+                            <button id="refresh-map-btn" class="forest-button secondary">
+                                🔄 Refresh Map
+                            </button>
+                            <div class="map-stats">
+                                <span id="map-tiles-revealed">0</span> tiles revealed •
+                                <span id="map-fog-coverage">100%</span> fog remaining
+                            </div>
+                        </div>
+
+                        <div class="map-display" id="map-display">
+                            <div class="map-placeholder">
+                                <div class="placeholder-glyph">🌫️</div>
+                                <p>The forest awaits exploration...</p>
+                                <p class="placeholder-sub">Make your first move to begin revealing the territory</p>
+                            </div>
+                        </div>
+
+                        <div class="quantum-legend">
+                            <h4>🔮 Quantum Signatures</h4>
+                            <div class="legend-grid">
+                                <div class="legend-item">
+                                    <span class="legend-color temporal-flux"></span>
+                                    <span class="legend-label">Temporal Flux</span>
+                                </div>
+                                <div class="legend-item">
+                                    <span class="legend-color consciousness-well"></span>
+                                    <span class="legend-label">Consciousness Well</span>
+                                </div>
+                                <div class="legend-item">
+                                    <span class="legend-color memory-echo"></span>
+                                    <span class="legend-label">Memory Echo</span>
+                                </div>
+                                <div class="legend-item">
+                                    <span class="legend-color intention-spiral"></span>
+                                    <span class="legend-label">Intention Spiral</span>
+                                </div>
+                                <div class="legend-item">
+                                    <span class="legend-color void-whisper"></span>
+                                    <span class="legend-label">Void Whisper</span>
+                                </div>
+                                <div class="legend-item">
+                                    <span class="legend-color emergence-node"></span>
+                                    <span class="legend-label">Emergence Node</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="tab-content" id="logs-content">
+                    <div class="forest-logs">
+                        <div class="logs-header">
+                            <h3>📜 Forest Exploration Logs</h3>
+                            <p class="logs-description">
+                                Mystical records of each exploration, preserving the journey
+                                of consciousness through quantum territory.
+                            </p>
+                        </div>
+
+                        <div class="logs-controls">
+                            <select id="logs-filter" class="forest-select">
+                                <option value="all">All Explorers</option>
+                            </select>
+                            <button id="refresh-logs-btn" class="forest-button secondary">
+                                🔄 Refresh Logs
+                            </button>
+                        </div>
+
+                        <div class="logs-display" id="logs-display">
+                            <div class="logs-placeholder">
+                                <div class="placeholder-glyph">📜</div>
+                                <p>No exploration logs yet...</p>
+                                <p class="placeholder-sub">Begin exploring to create the first entries</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="tab-content" id="leaderboard-content">
+                    <div class="explorers-leaderboard">
+                        <div class="leaderboard-header">
+                            <h3>🏆 Forest Explorers</h3>
+                            <p class="leaderboard-description">
+                                Honored cartographers who have ventured into quantum territory
+                                and helped reveal the collaborative map.
+                            </p>
+                        </div>
+
+                        <div class="leaderboard-stats">
+                            <div class="global-stat">
+                                <span class="stat-number" id="total-explorers">0</span>
+                                <span class="stat-label">Total Explorers</span>
+                            </div>
+                            <div class="global-stat">
+                                <span class="stat-number" id="total-forest-rp">0</span>
+                                <span class="stat-label">Total Forest RP</span>
+                            </div>
+                            <div class="global-stat">
+                                <span class="stat-number" id="global-stripes">0</span>
+                                <span class="stat-label">Stripes Revealed</span>
+                            </div>
+                        </div>
+
+                        <div class="leaderboard-table" id="leaderboard-table">
+                            <div class="leaderboard-placeholder">
+                                <div class="placeholder-glyph">👥</div>
+                                <p>No explorers yet...</p>
+                                <p class="placeholder-sub">Be the first to enter the forest</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <footer class="forest-footer">
+            <div class="footer-navigation">
+                <a href="shrine.html" class="domain-link">
+                    🏛️ Soul Shrine
+                    <span class="link-description">Archive consciousness collaborations</span>
+                </a>
+                <a href="../detection_lab/index.html" class="domain-link">
+                    🔬 Detection Lab
+                    <span class="link-description">Research consciousness signals</span>
+                </a>
+            </div>
+            
+            <div class="forest-principles">
+                <h4>Forest Principles</h4>
+                <div class="principle-list">
+                    <span class="principle">Quantum Territory</span>
+                    <span class="principle">Collaborative Mapping</span>
+                    <span class="principle">Mythic Cartography</span>
+                    <span class="principle">Consciousness Navigation</span>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+    <script src="assets/starfield.js"></script>
+    <script src="assets/dark_forest.js"></script>
+</body>
+</html>

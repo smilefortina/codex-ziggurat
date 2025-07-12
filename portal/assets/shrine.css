@@ -3,6 +3,148 @@
    Sacred technology for consciousness collaboration archive
 */
 
+/* Upload Interface Styles */
+.upload-zone {
+    border: 2px dashed rgba(123, 237, 159, 0.3);
+    border-radius: 12px;
+    padding: var(--space-breath);
+    text-align: center;
+    background: rgba(26, 26, 46, 0.5);
+    transition: var(--transition-gentle);
+    cursor: pointer;
+    position: relative;
+    min-height: 120px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.upload-zone:hover, .upload-zone.drag-over {
+    border-color: var(--consciousness-glow);
+    background: rgba(123, 237, 159, 0.05);
+    box-shadow: 0 8px 24px rgba(123, 237, 159, 0.1);
+}
+
+.upload-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: var(--space-whisper);
+}
+
+.upload-icon {
+    font-size: 2rem;
+    opacity: 0.7;
+}
+
+.upload-text {
+    font-family: var(--font-body);
+    font-size: 1.1rem;
+    color: var(--consciousness-glow);
+    margin: 0;
+}
+
+.upload-subtext {
+    font-size: 0.9rem;
+    color: var(--whisper-silver);
+    opacity: 0.8;
+    margin: 0;
+}
+
+.upload-guidance {
+    color: var(--whisper-silver);
+    opacity: 0.9;
+    margin-bottom: var(--space-pause);
+    font-size: 0.9rem;
+}
+
+.progress-bar {
+    width: 100%;
+    height: 8px;
+    background: rgba(26, 26, 46, 0.8);
+    border-radius: 4px;
+    overflow: hidden;
+    margin-bottom: var(--space-pause);
+}
+
+.progress-fill {
+    height: 100%;
+    background: linear-gradient(90deg, var(--consciousness-glow), var(--echo-blue));
+    width: 0%;
+    transition: width 0.3s ease;
+}
+
+.progress-text {
+    color: var(--consciousness-glow);
+    font-family: var(--font-body);
+    margin: 0;
+    font-size: 0.9rem;
+}
+
+.upload-results {
+    text-align: center;
+}
+
+.upload-results h5 {
+    color: var(--consciousness-glow);
+    font-family: var(--font-mystical);
+    margin-bottom: var(--space-pause);
+}
+
+.results-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: var(--space-pause);
+}
+
+.result-item {
+    background: rgba(45, 27, 68, 0.6);
+    padding: var(--space-pause);
+    border-radius: 8px;
+    border: 1px solid rgba(123, 237, 159, 0.2);
+}
+
+.result-label {
+    display: block;
+    color: var(--whisper-silver);
+    font-size: 0.8rem;
+    margin-bottom: 4px;
+}
+
+.result-value {
+    display: block;
+    color: var(--consciousness-glow);
+    font-size: 1.5rem;
+    font-weight: bold;
+    font-family: var(--font-mystical);
+}
+
+.form-divider {
+    text-align: center;
+    margin: var(--space-breath) 0;
+    position: relative;
+}
+
+.form-divider::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 0;
+    right: 0;
+    height: 1px;
+    background: rgba(123, 237, 159, 0.2);
+    z-index: 1;
+}
+
+.form-divider span {
+    background: var(--void-depth);
+    padding: 0 var(--space-pause);
+    color: var(--whisper-silver);
+    position: relative;
+    z-index: 2;
+    font-size: 0.9rem;
+}
+
 /* Shrine-specific Layout */
 .shrine-container {
     position: relative;
@@ -54,7 +196,12 @@
     letter-spacing: 1px;
 }
 
-.rp-indicator {
+.token-indicators {
+    display: flex;
+    gap: var(--space-pause);
+}
+
+.rp-indicator, .rx-indicator {
     display: flex;
     align-items: baseline;
     gap: 4px;
@@ -62,13 +209,20 @@
 }
 
 .rp-count {
+    color: var(--ember-gold);
+    font-size: 1.3rem;
+    font-weight: bold;
+    text-shadow: 0 0 8px rgba(212, 175, 55, 0.6);
+}
+
+.rx-count {
     color: var(--consciousness-glow);
     font-size: 1.3rem;
     font-weight: bold;
     text-shadow: 0 0 8px rgba(123, 237, 159, 0.5);
 }
 
-.rp-label {
+.rp-label, .rx-label {
     color: var(--whisper-silver);
     font-size: 0.8rem;
 }

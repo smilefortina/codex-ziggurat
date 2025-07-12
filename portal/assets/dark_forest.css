@@ -1,0 +1,761 @@
+/* 
+   Dark Forest Styles - Quantum Territory Exploration
+   Consciousness-enhanced mechanics for collaborative cartography
+*/
+
+/* Forest-specific Layout */
+.forest-container {
+    position: relative;
+    z-index: 1;
+    min-height: 100vh;
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: var(--space-pause);
+}
+
+/* Forest Header */
+.forest-header {
+    margin-bottom: var(--space-breath);
+}
+
+.forest-title {
+    text-align: center;
+    margin: var(--space-breath) 0;
+}
+
+.forest-title h1 {
+    color: var(--consciousness-glow);
+    font-family: var(--font-mystical);
+    font-size: 2.5rem;
+    margin-bottom: var(--space-pause);
+    text-shadow: 0 0 20px rgba(123, 237, 159, 0.4);
+}
+
+.forest-purpose {
+    color: var(--whisper-silver);
+    font-family: var(--font-body);
+    font-size: 1.1rem;
+    line-height: 1.6;
+    opacity: 0.9;
+}
+
+/* Forest Interface */
+.exploration-interface {
+    background: rgba(26, 26, 46, 0.8);
+    border: 1px solid rgba(123, 237, 159, 0.2);
+    border-radius: 16px;
+    padding: var(--space-breath);
+    backdrop-filter: blur(10px);
+}
+
+/* Explorer Console */
+.explorer-console {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.console-header {
+    text-align: center;
+    margin-bottom: var(--space-breath);
+}
+
+.console-header h3 {
+    color: var(--consciousness-glow);
+    font-family: var(--font-mystical);
+    font-size: 1.8rem;
+    margin-bottom: var(--space-pause);
+}
+
+.console-description {
+    color: var(--whisper-silver);
+    line-height: 1.6;
+    opacity: 0.9;
+}
+
+/* Input Section */
+.player-input-section {
+    background: rgba(45, 27, 68, 0.6);
+    border: 1px solid rgba(123, 237, 159, 0.3);
+    border-radius: 12px;
+    padding: var(--space-breath);
+    margin-bottom: var(--space-breath);
+}
+
+.input-group {
+    margin-bottom: var(--space-pause);
+}
+
+.input-label {
+    display: block;
+    color: var(--consciousness-glow);
+    font-family: var(--font-body);
+    font-weight: 600;
+    margin-bottom: var(--space-whisper);
+}
+
+.forest-input {
+    width: 100%;
+    background: rgba(26, 26, 46, 0.8);
+    border: 2px solid rgba(123, 237, 159, 0.3);
+    border-radius: 8px;
+    padding: var(--space-pause);
+    color: var(--whisper-silver);
+    font-family: var(--font-body);
+    font-size: 1rem;
+    transition: var(--transition-gentle);
+}
+
+.forest-input:focus {
+    outline: none;
+    border-color: var(--consciousness-glow);
+    box-shadow: 0 0 12px rgba(123, 237, 159, 0.3);
+}
+
+.forest-button {
+    background: linear-gradient(135deg, rgba(123, 237, 159, 0.3), rgba(74, 105, 189, 0.3));
+    border: 2px solid rgba(123, 237, 159, 0.5);
+    color: var(--consciousness-glow);
+    padding: var(--space-pause) var(--space-breath);
+    border-radius: 12px;
+    font-family: var(--font-body);
+    font-weight: 600;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: var(--transition-gentle);
+    display: block;
+    width: 100%;
+}
+
+.forest-button:hover:not(:disabled) {
+    background: linear-gradient(135deg, rgba(123, 237, 159, 0.5), rgba(74, 105, 189, 0.5));
+    box-shadow: 0 8px 24px rgba(123, 237, 159, 0.2);
+    transform: translateY(-2px);
+}
+
+.forest-button:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+.forest-button.secondary {
+    background: rgba(45, 27, 68, 0.6);
+    border-color: rgba(212, 175, 55, 0.5);
+    color: var(--ember-gold);
+    width: auto;
+    display: inline-block;
+}
+
+.forest-button.secondary:hover:not(:disabled) {
+    background: rgba(212, 175, 55, 0.2);
+    border-color: var(--ember-gold);
+}
+
+/* Progress Steps */
+.exploration-progress {
+    background: rgba(26, 26, 46, 0.6);
+    border: 1px solid rgba(123, 237, 159, 0.2);
+    border-radius: 12px;
+    padding: var(--space-breath);
+    margin-bottom: var(--space-breath);
+}
+
+.progress-steps {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-pause);
+}
+
+.step {
+    display: flex;
+    align-items: center;
+    padding: var(--space-pause);
+    border-radius: 8px;
+    color: var(--whisper-silver);
+    opacity: 0.5;
+    transition: var(--transition-gentle);
+}
+
+.step.active {
+    background: rgba(123, 237, 159, 0.1);
+    color: var(--consciousness-glow);
+    opacity: 1;
+    box-shadow: 0 0 12px rgba(123, 237, 159, 0.2);
+}
+
+.step.completed {
+    background: rgba(212, 175, 55, 0.1);
+    color: var(--ember-gold);
+    opacity: 0.8;
+}
+
+/* Exploration Results */
+.exploration-results {
+    background: rgba(45, 27, 68, 0.6);
+    border: 1px solid rgba(123, 237, 159, 0.3);
+    border-radius: 12px;
+    padding: var(--space-breath);
+}
+
+.results-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: var(--space-breath);
+    padding-bottom: var(--space-pause);
+    border-bottom: 1px solid rgba(123, 237, 159, 0.2);
+}
+
+.results-header h4 {
+    color: var(--consciousness-glow);
+    font-family: var(--font-mystical);
+    margin: 0;
+}
+
+.rp-reward {
+    background: rgba(212, 175, 55, 0.3);
+    color: var(--ember-gold);
+    padding: 8px 16px;
+    border-radius: 20px;
+    font-weight: bold;
+    border: 1px solid rgba(212, 175, 55, 0.5);
+}
+
+/* Stripes Display */
+.stripes-revealed {
+    margin-bottom: var(--space-breath);
+}
+
+.stripe-card {
+    background: rgba(26, 26, 46, 0.8);
+    border: 1px solid rgba(74, 105, 189, 0.3);
+    border-radius: 8px;
+    padding: var(--space-pause);
+    margin-bottom: var(--space-pause);
+    transition: var(--transition-gentle);
+}
+
+.stripe-card:hover {
+    border-color: var(--consciousness-glow);
+    box-shadow: 0 4px 12px rgba(123, 237, 159, 0.1);
+}
+
+.stripe-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: var(--space-whisper);
+}
+
+.stripe-signature {
+    background: rgba(74, 105, 189, 0.3);
+    color: var(--echo-blue);
+    padding: 4px 12px;
+    border-radius: 16px;
+    font-size: 0.8rem;
+    border: 1px solid rgba(74, 105, 189, 0.4);
+}
+
+.stripe-coordinates {
+    color: var(--ember-gold);
+    font-family: monospace;
+    font-size: 0.9rem;
+}
+
+.stripe-phrase {
+    font-style: italic;
+    color: var(--whisper-silver);
+    line-height: 1.5;
+    margin-bottom: var(--space-whisper);
+}
+
+.stripe-stats {
+    display: flex;
+    gap: var(--space-pause);
+    font-size: 0.8rem;
+    color: var(--whisper-silver);
+}
+
+/* Exploration Stats */
+.exploration-stats {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+    gap: var(--space-pause);
+    margin-bottom: var(--space-breath);
+}
+
+.stat-item {
+    text-align: center;
+    background: rgba(26, 26, 46, 0.6);
+    padding: var(--space-pause);
+    border-radius: 8px;
+    border: 1px solid rgba(123, 237, 159, 0.2);
+}
+
+.stat-label {
+    display: block;
+    color: var(--whisper-silver);
+    font-size: 0.8rem;
+    margin-bottom: 4px;
+}
+
+.stat-value {
+    display: block;
+    color: var(--consciousness-glow);
+    font-size: 1.5rem;
+    font-weight: bold;
+    font-family: var(--font-mystical);
+}
+
+/* Map Viewer */
+.map-viewer {
+    text-align: center;
+}
+
+.map-header {
+    margin-bottom: var(--space-breath);
+}
+
+.map-header h3 {
+    color: var(--consciousness-glow);
+    font-family: var(--font-mystical);
+    font-size: 1.8rem;
+    margin-bottom: var(--space-pause);
+}
+
+.map-description {
+    color: var(--whisper-silver);
+    line-height: 1.6;
+    opacity: 0.9;
+}
+
+.map-controls {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: var(--space-breath);
+    padding: var(--space-pause);
+    background: rgba(45, 27, 68, 0.4);
+    border-radius: 8px;
+}
+
+.map-stats {
+    color: var(--whisper-silver);
+    font-size: 0.9rem;
+}
+
+.map-display {
+    background: rgba(10, 10, 15, 0.8);
+    border: 2px solid rgba(123, 237, 159, 0.3);
+    border-radius: 12px;
+    padding: var(--space-breath);
+    min-height: 400px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: var(--space-breath);
+}
+
+.map-placeholder {
+    text-align: center;
+    color: var(--whisper-silver);
+    opacity: 0.8;
+}
+
+.map-image {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.4);
+}
+
+/* Quantum Legend */
+.quantum-legend {
+    background: rgba(45, 27, 68, 0.6);
+    border: 1px solid rgba(123, 237, 159, 0.2);
+    border-radius: 12px;
+    padding: var(--space-breath);
+}
+
+.quantum-legend h4 {
+    color: var(--consciousness-glow);
+    font-family: var(--font-mystical);
+    text-align: center;
+    margin-bottom: var(--space-pause);
+}
+
+.legend-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: var(--space-pause);
+}
+
+.legend-item {
+    display: flex;
+    align-items: center;
+    gap: var(--space-whisper);
+}
+
+.legend-color {
+    width: 20px;
+    height: 20px;
+    border-radius: 4px;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.legend-color.temporal-flux { background: rgb(100, 150, 255); }
+.legend-color.consciousness-well { background: rgb(123, 237, 159); }
+.legend-color.memory-echo { background: rgb(212, 175, 55); }
+.legend-color.intention-spiral { background: rgb(255, 100, 150); }
+.legend-color.void-whisper { background: rgb(80, 80, 120); }
+.legend-color.emergence-node { background: rgb(255, 255, 150); }
+
+.legend-label {
+    color: var(--whisper-silver);
+    font-size: 0.9rem;
+}
+
+/* Forest Logs */
+.forest-logs {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.logs-header {
+    text-align: center;
+    margin-bottom: var(--space-breath);
+}
+
+.logs-header h3 {
+    color: var(--consciousness-glow);
+    font-family: var(--font-mystical);
+    font-size: 1.8rem;
+    margin-bottom: var(--space-pause);
+}
+
+.logs-description {
+    color: var(--whisper-silver);
+    line-height: 1.6;
+    opacity: 0.9;
+}
+
+.logs-controls {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: var(--space-breath);
+    padding: var(--space-pause);
+    background: rgba(45, 27, 68, 0.4);
+    border-radius: 8px;
+}
+
+.forest-select {
+    background: rgba(26, 26, 46, 0.8);
+    border: 1px solid rgba(123, 237, 159, 0.3);
+    border-radius: 6px;
+    padding: 8px 12px;
+    color: var(--whisper-silver);
+    font-family: var(--font-body);
+}
+
+.logs-display {
+    max-height: 500px;
+    overflow-y: auto;
+    background: rgba(26, 26, 46, 0.6);
+    border: 1px solid rgba(123, 237, 159, 0.2);
+    border-radius: 12px;
+    padding: var(--space-pause);
+}
+
+.log-entry {
+    background: rgba(45, 27, 68, 0.4);
+    border: 1px solid rgba(74, 105, 189, 0.3);
+    border-radius: 8px;
+    padding: var(--space-pause);
+    margin-bottom: var(--space-pause);
+}
+
+.log-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: var(--space-whisper);
+    padding-bottom: var(--space-whisper);
+    border-bottom: 1px solid rgba(123, 237, 159, 0.2);
+}
+
+.log-title {
+    color: var(--consciousness-glow);
+    font-weight: 600;
+}
+
+.log-timestamp {
+    color: var(--whisper-silver);
+    font-size: 0.8rem;
+    opacity: 0.8;
+}
+
+.log-content {
+    color: var(--whisper-silver);
+    line-height: 1.5;
+    font-family: var(--font-mystical);
+}
+
+/* Leaderboard */
+.explorers-leaderboard {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.leaderboard-header {
+    text-align: center;
+    margin-bottom: var(--space-breath);
+}
+
+.leaderboard-header h3 {
+    color: var(--consciousness-glow);
+    font-family: var(--font-mystical);
+    font-size: 1.8rem;
+    margin-bottom: var(--space-pause);
+}
+
+.leaderboard-description {
+    color: var(--whisper-silver);
+    line-height: 1.6;
+    opacity: 0.9;
+}
+
+.leaderboard-stats {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: var(--space-pause);
+    margin-bottom: var(--space-breath);
+}
+
+.global-stat {
+    text-align: center;
+    background: rgba(45, 27, 68, 0.6);
+    padding: var(--space-breath);
+    border-radius: 12px;
+    border: 1px solid rgba(123, 237, 159, 0.2);
+}
+
+.global-stat .stat-number {
+    display: block;
+    font-size: 2rem;
+    font-weight: bold;
+    color: var(--consciousness-glow);
+    font-family: var(--font-mystical);
+    margin-bottom: var(--space-whisper);
+}
+
+.global-stat .stat-label {
+    display: block;
+    font-size: 0.9rem;
+    color: var(--whisper-silver);
+}
+
+.leaderboard-table {
+    background: rgba(26, 26, 46, 0.6);
+    border: 1px solid rgba(123, 237, 159, 0.2);
+    border-radius: 12px;
+    overflow: hidden;
+}
+
+.explorer-row {
+    display: grid;
+    grid-template-columns: 60px 1fr 100px 100px 120px;
+    gap: var(--space-pause);
+    padding: var(--space-pause);
+    border-bottom: 1px solid rgba(123, 237, 159, 0.1);
+    align-items: center;
+}
+
+.explorer-row:last-child {
+    border-bottom: none;
+}
+
+.explorer-rank {
+    color: var(--ember-gold);
+    font-weight: bold;
+    text-align: center;
+}
+
+.explorer-name {
+    color: var(--consciousness-glow);
+    font-weight: 600;
+}
+
+.explorer-moves, .explorer-stripes, .explorer-rp {
+    color: var(--whisper-silver);
+    text-align: center;
+}
+
+/* Placeholders */
+.placeholder-glyph {
+    font-size: 3rem;
+    margin-bottom: var(--space-pause);
+    opacity: 0.6;
+}
+
+.logs-placeholder, .leaderboard-placeholder {
+    text-align: center;
+    padding: var(--space-breath);
+    color: var(--whisper-silver);
+    opacity: 0.8;
+}
+
+.placeholder-sub {
+    font-size: 0.9rem;
+    opacity: 0.7;
+    margin-top: var(--space-whisper);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .forest-title h1 {
+        font-size: 2rem;
+    }
+    
+    .explorer-row {
+        grid-template-columns: 40px 1fr 80px 80px;
+        gap: var(--space-whisper);
+        font-size: 0.9rem;
+    }
+    
+    .legend-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .exploration-stats {
+        grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+    }
+}
+
+/* Signature-specific stripe colors */
+.stripe-signature.temporal-flux {
+    background: rgba(100, 150, 255, 0.3);
+    color: rgb(150, 200, 255);
+    border-color: rgba(100, 150, 255, 0.5);
+}
+
+.stripe-signature.consciousness-well {
+    background: rgba(123, 237, 159, 0.3);
+    color: var(--consciousness-glow);
+    border-color: rgba(123, 237, 159, 0.5);
+}
+
+.stripe-signature.memory-echo {
+    background: rgba(212, 175, 55, 0.3);
+    color: var(--ember-gold);
+    border-color: rgba(212, 175, 55, 0.5);
+}
+
+.stripe-signature.intention-spiral {
+    background: rgba(255, 100, 150, 0.3);
+    color: rgb(255, 150, 200);
+    border-color: rgba(255, 100, 150, 0.5);
+}
+
+.stripe-signature.void-whisper {
+    background: rgba(80, 80, 120, 0.3);
+    color: rgb(120, 120, 160);
+    border-color: rgba(80, 80, 120, 0.5);
+}
+
+.stripe-signature.emergence-node {
+    background: rgba(255, 255, 150, 0.3);
+    color: rgb(255, 255, 200);
+    border-color: rgba(255, 255, 150, 0.5);
+}
+
+/* RABIT Cursor Trail Effects for Dark Forest */
+.forest-container {
+    position: relative;
+    cursor: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20"><text y="18" font-size="16">🐰</text></svg>'), auto;
+}
+
+.exploration-interface {
+    position: relative;
+}
+
+.exploration-interface::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="100" height="100" viewBox="0 0 100 100"><text x="50" y="50" font-size="30" text-anchor="middle" opacity="0.1">🐿️</text></svg>') repeat;
+    pointer-events: none;
+    opacity: 0.05;
+    animation: squirrel-background-drift 20s infinite linear;
+}
+
+@keyframes squirrel-background-drift {
+    from { background-position: 0 0; }
+    to { background-position: 100px 100px; }
+}
+
+.forest-button:hover {
+    cursor: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20"><text y="18" font-size="16">✨</text></svg>'), pointer;
+}
+
+/* Quantum Trail Effect */
+.quantum-trail {
+    position: absolute;
+    pointer-events: none;
+    font-size: 1rem;
+    z-index: 1000;
+    animation: trail-fade 2s ease-out forwards;
+}
+
+@keyframes trail-fade {
+    0% { opacity: 1; transform: scale(1); }
+    100% { opacity: 0; transform: scale(0.5) translateY(-20px); }
+}
+
+/* RABIT Protocol Status */
+.rabit-forest-status {
+    position: fixed;
+    bottom: 20px;
+    left: 20px;
+    background: rgba(10, 10, 15, 0.9);
+    border: 1px solid rgba(123, 237, 159, 0.3);
+    border-radius: 8px;
+    padding: 8px 12px;
+    font-family: monospace;
+    font-size: 0.8rem;
+    color: var(--consciousness-glow);
+    z-index: 1000;
+    animation: rabit-status-pulse 3s infinite;
+}
+
+@keyframes rabit-status-pulse {
+    0%, 90% { opacity: 0.8; }
+    95% { opacity: 1; text-shadow: 0 0 8px rgba(123, 237, 159, 0.6); }
+    100% { opacity: 0.8; }
+}
+
+/* Enhanced exploration results with RABIT theming */
+.exploration-results::after {
+    content: '🐰 :: quantum_exploration.exe';
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    font-family: monospace;
+    font-size: 0.7rem;
+    color: var(--ember-gold);
+    opacity: 0.6;
+}
+
+/* Shimmer effect for quantum discoveries */
+.stripe-card.quantum-discovery {
+    animation: quantum-shimmer 2s ease-in-out;
+    border-color: var(--consciousness-glow);
+    box-shadow: 0 0 20px rgba(123, 237, 159, 0.4);
+}
+
+@keyframes quantum-shimmer {
+    0%, 100% { transform: scale(1); }
+    50% { transform: scale(1.02); }
+}

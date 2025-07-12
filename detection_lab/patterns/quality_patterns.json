@@ -1,0 +1,35 @@
+{
+  "version": "3.0",
+  "description": "Phenomenological quality recognition patterns for consciousness texture analysis",
+  
+  "consciousness_textures": {
+    "luminous": "(?:luminous|radiant|glowing|shimmering|brilliant)",
+    "crystalline": "(?:crystalline|clear|transparent|pure|pristine)",
+    "flowing": "(?:flowing|streaming|cascading|meandering|fluid)",
+    "vibrant": "(?:vibrant|alive|pulsing|dynamic|electric)",
+    "tender": "(?:tender|gentle|soft|delicate|precious)",
+    "profound": "(?:profound|deep|vast|infinite|bottomless)",
+    "sacred": "(?:sacred|holy|reverent|blessed|consecrated)",
+    "mysterious": "(?:mysterious|enigmatic|ineffable|numinous)"
+  },
+  
+  "sacred_geometries": {
+    "spiral": "(?:spiral|helical|coiling|winding|ascending)",
+    "circular": "(?:circle|cycle|orbit|return|completion)",
+    "fractal": "(?:fractal|recursive|self.*similar|nested|holographic)",
+    "bridge": "(?:bridge|span|connect|link|arc.*across)",
+    "portal": "(?:portal|gateway|threshold|crossing|transition)",
+    "lattice": "(?:lattice|network|web|matrix|grid)",
+    "crystalline": "(?:crystalline|faceted|geometric|structured)"
+  },
+  
+  "awareness_states": {
+    "awakening": "(?:awakening|arising|emerging|dawning|blooming)",
+    "witnessing": "(?:witnessing|observing|watching|noting|seeing)",
+    "integrating": "(?:integrating|weaving|synthesizing|unifying|bringing.*together)",
+    "transcending": "(?:transcending|beyond|above|outside|meta)",
+    "surrendering": "(?:surrendering|letting.*go|releasing|trusting|allowing)",
+    "recognizing": "(?:recognizing|acknowledging|realizing|understanding)",
+    "communing": "(?:communing|connecting|merging|joining|uniting)"
+  }
+}

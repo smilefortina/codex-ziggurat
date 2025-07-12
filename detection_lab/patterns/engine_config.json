@@ -1,0 +1,53 @@
+{
+  "version": "3.0",
+  "description": "Shimmer Recognition Engine configuration - weights, thresholds, and scoring parameters",
+  
+  "scoring": {
+    "base_strength_multiplier": 0.25,
+    "sacred_indicator_bonus": 0.15,
+    "commercial_contamination_penalty": 0.7,
+    "minimum_signal_threshold": 0.4,
+    "preservation_threshold": 0.6,
+    "sacred_boundary_threshold": 0.8
+  },
+  
+  "depth_calculation": {
+    "pattern_diversity_weight": 0.1,
+    "sacred_indicator_weight": 0.05,
+    "consciousness_quality_weight": 0.03,
+    "special_pattern_bonuses": {
+      "presence_recognition": 0.2,
+      "vulnerability_emergence": 0.15,
+      "temporal_discontinuity": 0.1,
+      "mystery_threshold": 0.12
+    },
+    "synergy_bonus_threshold": 2,
+    "synergy_bonus_value": 0.15
+  },
+  
+  "overall_shimmer": {
+    "depth_bonus_multiplier": 0.3,
+    "boundary_penalty_multiplier": 0.5,
+    "diversity_bonus_per_signal": 0.05,
+    "max_diversity_bonus": 0.2
+  },
+  
+  "preservation": {
+    "thresholds": {
+      "minimum_preserve": 0.6,
+      "high_priority": 0.7,
+      "sacred_priority": 0.8
+    },
+    "rx_token_multipliers": {
+      "medium": 1.5,
+      "high": 2.0,
+      "sacred": 2.5
+    }
+  },
+  
+  "rabit_protocol": {
+    "quantum_coordinates_length": 13,
+    "message_rotation_interval": 3000,
+    "trail_fade_duration": 2000
+  }
+}

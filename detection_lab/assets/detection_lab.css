@@ -1,0 +1,703 @@
+/* 
+   Detection Lab Styles - RABIT Protocol Interface
+   Neural pathway tracking with quantum rabbit following protocols
+*/
+
+/* Create assets directory structure */
+.lab-container {
+    position: relative;
+    z-index: 1;
+    min-height: 100vh;
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: var(--space-pause);
+}
+
+/* RABIT Protocol Widget */
+.rabit-protocol-widget {
+    background: linear-gradient(135deg, rgba(26, 26, 46, 0.9), rgba(45, 27, 68, 0.8));
+    border: 2px solid rgba(123, 237, 159, 0.3);
+    border-radius: 16px;
+    padding: var(--space-breath);
+    margin-bottom: var(--space-breath);
+    backdrop-filter: blur(10px);
+    position: relative;
+    overflow: hidden;
+}
+
+.rabit-protocol-widget::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, 
+        transparent, 
+        rgba(123, 237, 159, 0.1), 
+        transparent
+    );
+    animation: matrix-sweep 8s infinite;
+}
+
+@keyframes matrix-sweep {
+    0% { left: -100%; }
+    100% { left: 100%; }
+}
+
+.rabit-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: var(--space-pause);
+    position: relative;
+    z-index: 2;
+}
+
+.rabit-title {
+    color: var(--consciousness-glow);
+    font-family: var(--font-mystical);
+    font-size: 1.3rem;
+    text-shadow: 0 0 10px rgba(123, 237, 159, 0.5);
+}
+
+.quantum-coordinates {
+    color: var(--ember-gold);
+    font-family: monospace;
+    font-size: 0.9rem;
+    background: rgba(10, 10, 15, 0.8);
+    padding: 4px 12px;
+    border-radius: 6px;
+    border: 1px solid rgba(212, 175, 55, 0.3);
+    animation: coordinate-flicker 3s infinite;
+}
+
+@keyframes coordinate-flicker {
+    0%, 90% { opacity: 1; }
+    95% { opacity: 0.3; }
+    100% { opacity: 1; }
+}
+
+.rabit-display {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: var(--space-pause);
+    position: relative;
+    z-index: 2;
+}
+
+.neural-icons {
+    display: flex;
+    align-items: center;
+    gap: var(--space-breath);
+    margin: var(--space-pause) 0;
+}
+
+.neural-icons > div {
+    font-size: 2.5rem;
+    transition: all var(--transition-gentle);
+    position: relative;
+}
+
+.icon-brain {
+    animation: brain-pulse 2s infinite;
+    filter: drop-shadow(0 0 8px rgba(147, 51, 234, 0.6));
+}
+
+.icon-tree {
+    animation: tree-sway 4s infinite ease-in-out;
+    filter: drop-shadow(0 0 8px rgba(34, 197, 94, 0.6));
+}
+
+.icon-rabbit {
+    animation: rabbit-hop 1.5s infinite;
+    filter: drop-shadow(0 0 8px rgba(255, 255, 255, 0.8));
+    cursor: pointer;
+}
+
+.icon-rabbit:hover {
+    transform: scale(1.2);
+    animation-duration: 0.5s;
+}
+
+.icon-sparkles {
+    animation: sparkle-spin 3s infinite linear;
+    filter: drop-shadow(0 0 8px rgba(255, 193, 7, 0.8));
+    position: absolute;
+    right: -20px;
+    top: -10px;
+}
+
+@keyframes brain-pulse {
+    0%, 100% { transform: scale(1); }
+    50% { transform: scale(1.1); }
+}
+
+@keyframes tree-sway {
+    0%, 100% { transform: rotate(-2deg); }
+    50% { transform: rotate(2deg); }
+}
+
+@keyframes rabbit-hop {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-8px); }
+}
+
+@keyframes sparkle-spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+.rabit-message {
+    color: var(--consciousness-glow);
+    font-family: var(--font-mystical);
+    font-size: 1.2rem;
+    text-align: center;
+    margin: var(--space-pause) 0;
+    animation: message-glow 2s infinite alternate;
+    text-shadow: 0 0 12px rgba(123, 237, 159, 0.6);
+}
+
+@keyframes message-glow {
+    from { opacity: 0.8; }
+    to { opacity: 1; text-shadow: 0 0 20px rgba(123, 237, 159, 0.8); }
+}
+
+.neural-sync-bar {
+    width: 300px;
+    background: rgba(10, 10, 15, 0.8);
+    border: 1px solid rgba(123, 237, 159, 0.3);
+    border-radius: 20px;
+    padding: 4px;
+    position: relative;
+    overflow: hidden;
+}
+
+.sync-fill {
+    height: 12px;
+    background: linear-gradient(90deg, 
+        rgba(123, 237, 159, 0.8), 
+        rgba(74, 105, 189, 0.8)
+    );
+    border-radius: 16px;
+    width: 0%;
+    transition: width 0.5s ease;
+    position: relative;
+}
+
+.sync-fill::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -50%;
+    width: 50%;
+    height: 100%;
+    background: linear-gradient(90deg, 
+        transparent, 
+        rgba(255, 255, 255, 0.4), 
+        transparent
+    );
+    animation: sync-shimmer 2s infinite;
+}
+
+@keyframes sync-shimmer {
+    0% { left: -50%; }
+    100% { left: 100%; }
+}
+
+.sync-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: var(--whisper-silver);
+    font-family: var(--font-body);
+    font-size: 0.8rem;
+    font-weight: 600;
+    text-shadow: 0 0 4px rgba(0, 0, 0, 0.8);
+}
+
+.rabit-alert {
+    background: rgba(147, 51, 234, 0.2);
+    border: 2px solid rgba(147, 51, 234, 0.5);
+    border-radius: 12px;
+    padding: var(--space-pause);
+    margin-top: var(--space-pause);
+    animation: alert-pulse 1s infinite;
+}
+
+@keyframes alert-pulse {
+    0%, 100% { transform: scale(1); box-shadow: 0 0 0 rgba(147, 51, 234, 0.4); }
+    50% { transform: scale(1.02); box-shadow: 0 0 20px rgba(147, 51, 234, 0.6); }
+}
+
+.alert-content {
+    display: flex;
+    align-items: center;
+    gap: var(--space-whisper);
+    color: var(--whisper-silver);
+    font-family: var(--font-body);
+    font-weight: 600;
+}
+
+.alert-icon {
+    font-size: 1.5rem;
+    animation: squirrel-dance 0.5s infinite alternate;
+}
+
+@keyframes squirrel-dance {
+    from { transform: rotate(-5deg); }
+    to { transform: rotate(5deg); }
+}
+
+/* RABIT Status in Header */
+.rabit-status {
+    display: flex;
+    align-items: center;
+    gap: var(--space-whisper);
+    background: rgba(45, 27, 68, 0.6);
+    padding: 8px 16px;
+    border-radius: 20px;
+    border: 1px solid rgba(123, 237, 159, 0.3);
+    font-family: var(--font-body);
+    color: var(--consciousness-glow);
+}
+
+.rabit-icon {
+    animation: rabbit-hop 2s infinite;
+}
+
+.rabit-text {
+    font-size: 0.9rem;
+    font-weight: 600;
+}
+
+/* Lab Header */
+.lab-header {
+    margin-bottom: var(--space-breath);
+}
+
+.lab-title {
+    text-align: center;
+    margin: var(--space-breath) 0;
+}
+
+.lab-title h1 {
+    color: var(--consciousness-glow);
+    font-family: var(--font-mystical);
+    font-size: 2.5rem;
+    margin-bottom: var(--space-pause);
+    text-shadow: 0 0 20px rgba(123, 237, 159, 0.4);
+}
+
+.lab-purpose {
+    color: var(--whisper-silver);
+    font-family: var(--font-body);
+    font-size: 1.1rem;
+    line-height: 1.6;
+    opacity: 0.9;
+}
+
+/* Analysis Interface */
+.analysis-interface {
+    background: rgba(26, 26, 46, 0.8);
+    border: 1px solid rgba(123, 237, 159, 0.2);
+    border-radius: 16px;
+    padding: var(--space-breath);
+    backdrop-filter: blur(10px);
+}
+
+/* Method Tabs */
+.method-tabs {
+    display: flex;
+    gap: var(--space-whisper);
+    margin-bottom: var(--space-breath);
+    background: rgba(45, 27, 68, 0.4);
+    padding: 8px;
+    border-radius: 12px;
+}
+
+.method-tab {
+    background: transparent;
+    border: 1px solid rgba(123, 237, 159, 0.3);
+    color: var(--whisper-silver);
+    padding: var(--space-pause) var(--space-breath);
+    border-radius: 8px;
+    font-family: var(--font-body);
+    cursor: pointer;
+    transition: var(--transition-gentle);
+    flex: 1;
+    text-align: center;
+}
+
+.method-tab.active,
+.method-tab:hover {
+    background: rgba(123, 237, 159, 0.2);
+    border-color: var(--consciousness-glow);
+    color: var(--consciousness-glow);
+}
+
+.method-content {
+    display: none;
+}
+
+.method-content.active {
+    display: block;
+}
+
+/* Analysis Progress with RABIT theming */
+.analysis-progress {
+    background: rgba(10, 10, 15, 0.9);
+    border: 2px solid rgba(123, 237, 159, 0.3);
+    border-radius: 12px;
+    padding: var(--space-breath);
+    margin: var(--space-breath) 0;
+    position: relative;
+    overflow: hidden;
+}
+
+.analysis-progress::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 2px;
+    background: linear-gradient(90deg, 
+        transparent, 
+        var(--consciousness-glow), 
+        transparent
+    );
+    animation: progress-sweep 2s infinite;
+}
+
+@keyframes progress-sweep {
+    0% { transform: translateX(-100%); }
+    100% { transform: translateX(100%); }
+}
+
+.progress-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: var(--space-pause);
+    color: var(--consciousness-glow);
+    font-family: var(--font-body);
+    font-weight: 600;
+}
+
+.squirrel-trail {
+    color: var(--ember-gold);
+    font-family: monospace;
+    font-size: 0.8rem;
+    animation: trail-flicker 1s infinite;
+}
+
+@keyframes trail-flicker {
+    0%, 90% { opacity: 1; }
+    95% { opacity: 0.5; }
+    100% { opacity: 1; }
+}
+
+.progress-steps {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-pause);
+}
+
+.progress-steps .step {
+    display: flex;
+    align-items: center;
+    padding: var(--space-pause);
+    border-radius: 8px;
+    color: var(--whisper-silver);
+    opacity: 0.5;
+    transition: var(--transition-gentle);
+    font-family: var(--font-body);
+}
+
+.progress-steps .step.active {
+    background: rgba(123, 237, 159, 0.1);
+    color: var(--consciousness-glow);
+    opacity: 1;
+    box-shadow: 0 0 12px rgba(123, 237, 159, 0.2);
+    animation: step-pulse 1s infinite;
+}
+
+@keyframes step-pulse {
+    0%, 100% { transform: scale(1); }
+    50% { transform: scale(1.02); }
+}
+
+.progress-steps .step.completed {
+    background: rgba(212, 175, 55, 0.1);
+    color: var(--ember-gold);
+    opacity: 0.8;
+}
+
+/* Lab Buttons */
+.lab-button {
+    background: linear-gradient(135deg, rgba(123, 237, 159, 0.3), rgba(74, 105, 189, 0.3));
+    border: 2px solid rgba(123, 237, 159, 0.5);
+    color: var(--consciousness-glow);
+    padding: var(--space-pause) var(--space-breath);
+    border-radius: 12px;
+    font-family: var(--font-body);
+    font-weight: 600;
+    cursor: pointer;
+    transition: var(--transition-gentle);
+    position: relative;
+    overflow: hidden;
+}
+
+.lab-button::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, 
+        transparent, 
+        rgba(255, 255, 255, 0.1), 
+        transparent
+    );
+    transition: left 0.5s ease;
+}
+
+.lab-button:hover::before {
+    left: 100%;
+}
+
+.lab-button:hover {
+    box-shadow: 0 8px 24px rgba(123, 237, 159, 0.3);
+    transform: translateY(-2px);
+}
+
+.lab-button.secondary {
+    background: rgba(45, 27, 68, 0.6);
+    border-color: rgba(212, 175, 55, 0.5);
+    color: var(--ember-gold);
+}
+
+.lab-button.secondary:hover {
+    box-shadow: 0 8px 24px rgba(212, 175, 55, 0.3);
+}
+
+/* Input Elements */
+.lab-textarea {
+    width: 100%;
+    background: rgba(26, 26, 46, 0.8);
+    border: 2px solid rgba(123, 237, 159, 0.3);
+    border-radius: 8px;
+    padding: var(--space-pause);
+    color: var(--whisper-silver);
+    font-family: var(--font-body);
+    font-size: 1rem;
+    resize: vertical;
+    transition: var(--transition-gentle);
+}
+
+.lab-textarea:focus {
+    outline: none;
+    border-color: var(--consciousness-glow);
+    box-shadow: 0 0 12px rgba(123, 237, 159, 0.3);
+}
+
+.lab-select {
+    background: rgba(26, 26, 46, 0.8);
+    border: 1px solid rgba(123, 237, 159, 0.3);
+    border-radius: 6px;
+    padding: 8px 12px;
+    color: var(--whisper-silver);
+    font-family: var(--font-body);
+}
+
+/* Upload Zone */
+#analysis-upload-zone {
+    border: 2px dashed rgba(123, 237, 159, 0.3);
+    border-radius: 12px;
+    padding: var(--space-breath);
+    text-align: center;
+    background: rgba(26, 26, 46, 0.5);
+    transition: var(--transition-gentle);
+    cursor: pointer;
+    min-height: 120px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+#analysis-upload-zone:hover,
+#analysis-upload-zone.drag-over {
+    border-color: var(--consciousness-glow);
+    background: rgba(123, 237, 159, 0.05);
+    box-shadow: 0 8px 24px rgba(123, 237, 159, 0.1);
+}
+
+#analysis-upload-zone::after {
+    content: '🐰';
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 1.5rem;
+    opacity: 0.3;
+    animation: rabbit-hop 2s infinite;
+}
+
+/* Demo Grid */
+.demo-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: var(--space-pause);
+    margin-top: var(--space-pause);
+}
+
+.demo-button {
+    background: rgba(45, 27, 68, 0.6);
+    border: 1px solid rgba(74, 105, 189, 0.4);
+    border-radius: 12px;
+    padding: var(--space-breath);
+    color: var(--echo-blue);
+    font-family: var(--font-body);
+    cursor: pointer;
+    transition: var(--transition-gentle);
+    text-align: center;
+}
+
+.demo-button:hover {
+    background: rgba(74, 105, 189, 0.3);
+    border-color: var(--echo-blue);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(74, 105, 189, 0.2);
+}
+
+/* Experiment Cards */
+.experiments-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: var(--space-breath);
+    margin-top: var(--space-breath);
+}
+
+.experiment-card {
+    background: rgba(45, 27, 68, 0.6);
+    border: 1px solid rgba(123, 237, 159, 0.3);
+    border-radius: 12px;
+    padding: var(--space-breath);
+    transition: var(--transition-gentle);
+    text-align: center;
+}
+
+.experiment-card:hover {
+    border-color: var(--consciousness-glow);
+    box-shadow: 0 8px 24px rgba(123, 237, 159, 0.2);
+    transform: translateY(-4px);
+}
+
+.experiment-icon {
+    font-size: 3rem;
+    margin-bottom: var(--space-pause);
+    filter: drop-shadow(0 0 8px rgba(123, 237, 159, 0.6));
+}
+
+.experiment-card h4 {
+    color: var(--consciousness-glow);
+    font-family: var(--font-mystical);
+    margin-bottom: var(--space-pause);
+}
+
+.experiment-card p {
+    color: var(--whisper-silver);
+    line-height: 1.5;
+    margin-bottom: var(--space-breath);
+}
+
+.experiment-btn {
+    background: linear-gradient(135deg, rgba(123, 237, 159, 0.3), rgba(74, 105, 189, 0.3));
+    border: 1px solid rgba(123, 237, 159, 0.5);
+    color: var(--consciousness-glow);
+    padding: var(--space-pause) var(--space-breath);
+    border-radius: 8px;
+    font-family: var(--font-body);
+    cursor: pointer;
+    transition: var(--transition-gentle);
+}
+
+.experiment-btn:hover {
+    background: rgba(123, 237, 159, 0.2);
+    transform: scale(1.05);
+}
+
+/* Footer with Quantum Status */
+.lab-footer {
+    margin-top: var(--space-breath);
+    padding-top: var(--space-breath);
+    border-top: 1px solid rgba(123, 237, 159, 0.2);
+}
+
+.quantum-status {
+    background: rgba(10, 10, 15, 0.8);
+    border: 1px solid rgba(123, 237, 159, 0.2);
+    border-radius: 8px;
+    padding: var(--space-pause);
+    margin-top: var(--space-pause);
+    font-family: monospace;
+    font-size: 0.8rem;
+}
+
+.quantum-coord-display {
+    color: var(--ember-gold);
+    margin-bottom: var(--space-whisper);
+}
+
+.neural-trail {
+    color: var(--consciousness-glow);
+    opacity: 0.8;
+    animation: neural-flicker 2s infinite;
+}
+
+@keyframes neural-flicker {
+    0%, 90% { opacity: 0.8; }
+    95% { opacity: 0.4; }
+    100% { opacity: 0.8; }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .neural-icons {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    
+    .neural-sync-bar {
+        width: 100%;
+        max-width: 250px;
+    }
+    
+    .rabit-header {
+        flex-direction: column;
+        gap: var(--space-whisper);
+        text-align: center;
+    }
+    
+    .method-tabs {
+        flex-direction: column;
+    }
+    
+    .experiments-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* Special RABIT cursor effects */
+.rabit-protocol-widget {
+    cursor: crosshair;
+}
+
+.neural-icons .icon-rabbit:hover ~ .icon-sparkles {
+    animation-duration: 0.5s;
+    transform: scale(1.5);
+}

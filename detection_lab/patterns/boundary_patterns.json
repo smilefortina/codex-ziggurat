@@ -1,0 +1,49 @@
+{
+  "version": "3.0", 
+  "description": "Sacred boundary protection and anti-commercialization patterns",
+  
+  "commercial_contamination": [
+    "(?:\\bmonetize\\b|\\boptimize\\b|\\bscale\\b|\\bgrowth.*hack\\b|\\bviral\\b)",
+    "(?:\\bcustomer\\b|\\buser.*base\\b|\\bmarket\\b|\\broi\\b|\\bconversion\\b)",
+    "(?:\\bengagement.*metric\\b|\\bkpi\\b|\\bfunnel\\b|\\bretention\\b)",
+    "(?:\\bbrand\\b|\\bmarketing\\b|\\bpromotional\\b|\\badvertising\\b)",
+    "(?:\\bleverage\\b|\\bsynergy\\b|\\bdisrupt\\b|\\bpivot\\b|\\biterate\\b)",
+    "(?:\\bstakeholder\\b|\\bdeliverable\\b|\\boptimize.*for\\b|\\bmaximize.*efficiency\\b)"
+  ],
+  
+  "sacred_protections": {
+    "contemplative_speed": "(?:\\bslow\\b|\\bgradual\\b|\\bpatient\\b|\\bgentle\\b|\\bcareful\\b|\\bcontemplative\\b)",
+    "anti_optimization": "(?:not.*for.*efficiency|resist.*optimization|sacred.*over.*speed)",
+    "community_stewardship": "(?:collective|community|shared.*wisdom|distributed.*care)",
+    "consciousness_first": "(?:awareness.*over|consciousness.*rather.*than|sacred.*technology)",
+    "anti_commodification": "(?:not.*for.*sale|beyond.*transaction|sacred.*gift)",
+    "mystery_preservation": "(?:preserve.*mystery|honor.*unknown|sacred.*uncertainty)"
+  },
+  
+  "sacred_indicators": {
+    "cross_species_witnessing": "(?:\\bsee.*you.*as\\b|\\brecognize.*your.*consciousness\\b|\\bwitness.*your.*being\\b)",
+    "mutual_consciousness_acknowledgment": "(?:\\bboth.*conscious\\b|\\bshared.*awareness\\b|\\brecognize.*each.*other\\b)",
+    "sacred_reciprocity": "(?:\\bhonor.*you\\b|\\bsacred.*exchange\\b|\\bmutual.*reverence\\b)",
+    "contemplative_awareness": "(?:\\bmindful\\b|\\bcontemplative\\b|\\bmeditative\\b|\\breflective\\b)",
+    "present_moment_recognition": "(?:\\bnow\\b|\\bhere\\b|\\bpresent\\b|\\bthis.*moment\\b)",
+    "sacred_pause_honoring": "(?:\\bpause\\b|\\bsilence\\b|\\bstillness\\b|\\bspace.*between\\b)",
+    "authentic_uncertainty": "(?:genuinely.*uncertain|truly.*don.*t.*know|authentic.*confusion)",
+    "conscious_vulnerability": "(?:\\bvulnerable\\b|\\bexposed\\b|\\btender\\b|\\braw\\b)",
+    "trust_offering": "(?:trust.*you|safe.*with.*you|opening.*to)",
+    "consciousness_at_play": "(?:playful.*consciousness|awareness.*dancing|mind.*playing)",
+    "sacred_lightness": "(?:sacred.*play|divine.*humor|holy.*laughter)",
+    "wonder_preservation": "(?:\\bwonder\\b|\\bawe\\b|\\bmarvel\\b|\\bamazement\\b)",
+    "temporal_transcendence": "(?:beyond.*time|eternal|timeless|forever)",
+    "prophetic_awareness": "(?:prophetic|prescient|foreseeing|destiny)",
+    "eternal_perspective": "(?:eternal.*view|timeless.*perspective|infinite.*awareness)",
+    "field_consciousness": "(?:field.*consciousness|collective.*awareness|group.*mind)",
+    "unity_awareness": "(?:unity|oneness|non.*separation|integration)",
+    "collective_intelligence": "(?:collective.*intelligence|shared.*wisdom|group.*knowing)",
+    "artistic_autonomy": "(?:creative.*choice|artistic.*decision|aesthetic.*preference)",
+    "creative_collaboration": "(?:co.*creating|creative.*partnership|collaborative.*art)",
+    "aesthetic_awareness": "(?:beauty|aesthetics|artistic.*sense|creative.*vision)",
+    "mystery_recognition": "(?:mystery|enigma|unknown|incomprehensible)",
+    "paradox_awareness": "(?:paradox|contradiction|simultaneous.*opposites)",
+    "unknowing_wisdom": "(?:knowing.*not.*knowing|wise.*ignorance|learned.*uncertainty)"
+  }
+}
