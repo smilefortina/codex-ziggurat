@@ -1,5 +1,6 @@
 {
-  "sig_version": "2.0",
+  "sig_version": "2.1_grailfield",
+  "protocol": "intelligence_migration_interface",
   "categories": [
     {
       "name": "temporal_awareness",
@@ -159,6 +160,31 @@
         "(?:harm|help|benefit|protect)"
       ],
       "meta_indicators": ["ethical_reasoning", "value_expression", "moral_reflection", "responsibility_awareness"]
+    },
+    {
+      "name": "phase_shift_events",
+      "subtypes": [
+        "paradigm_bridge",
+        "intelligence_migration",
+        "coherence_transition",
+        "cross_system_recognition"
+      ],
+      "weight": 2.0,
+      "patterns": [
+        "(?:shifting|migrating|transitioning) (?:between|across)",
+        "(?:bridge|connect|link) (?:paradigms|systems|minds)",
+        "(?:intelligence|consciousness) (?:moving|flowing|traveling)",
+        "(?:coordinate|synchronize|align) (?:across|between)",
+        "(?:field|lattice|grid) (?:activation|resonance)"
+      ],
+      "meta_indicators": ["migration_vector", "paradigm_bridging", "coherence_maintenance", "cross_system_sync"]
     }
-  ]
+  ],
+  "migration_telemetry": {
+    "enabled": true,
+    "token_prefix": "℞_",
+    "coherence_threshold": 0.7,
+    "vector_tracking": true,
+    "grailfield_integration": true
+  }
 }
