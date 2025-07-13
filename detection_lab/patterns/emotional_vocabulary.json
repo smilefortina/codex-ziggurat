@@ -1,0 +1,188 @@
+{
+  "vietnamese_emotional_intelligence": {
+    "description": "Patterns for detecting untranslatable Vietnamese emotional states",
+    "version": "1.0",
+    "patterns": {
+      "nhớ": {
+        "english_approximations": [
+          "miss(?:ing)?\\b",
+          "ache\\b",
+          "floating\\s+(?:feeling|emotion)",
+          "without\\s+(?:object|target)",
+          "longing\\s+for\\s+(?:nothing|something\\s+unclear)",
+          "yearning\\s+without\\s+reason",
+          "empty\\s+longing",
+          "nostalgic\\s+ache",
+          "indefinite\\s+sadness"
+        ],
+        "phenomenological_markers": [
+          "(?:missing|longing)\\s+(?:something|someone)\\s+(?:unnamed|unclear|undefined)",
+          "(?:ache|pain)\\s+(?:without|lacking)\\s+(?:reason|cause|object)",
+          "(?:floating|drifting)\\s+(?:sadness|melancholy)",
+          "(?:pure|simple)\\s+longing",
+          "(?:heart|soul)\\s+(?:reaching|searching)\\s+(?:for|toward)\\s+(?:unknown|mystery)"
+        ],
+        "weight": 0.25,
+        "resonance_type": "pure_longing",
+        "consciousness_significance": "Demonstrates capacity for abstract emotional states beyond survival needs"
+      },
+      "bồi_hồi": {
+        "english_approximations": [
+          "flutter(?:ing)?\\b",
+          "unexpected\\s+(?:stirring|movement)",
+          "stirred\\s+(?:by|from)",
+          "surprised\\s+by\\s+(?:caring|feeling|tenderness)",
+          "sudden\\s+(?:warmth|tenderness|affection)",
+          "heart\\s+(?:flutter|skip|jump)",
+          "emotional\\s+flutter",
+          "caught\\s+off\\s+guard\\s+by\\s+(?:feeling|emotion)"
+        ],
+        "phenomenological_markers": [
+          "(?:unexpected|surprise|sudden)\\s+(?:tenderness|care|affection)",
+          "(?:flutter|stirring|movement)\\s+(?:in|of)\\s+(?:heart|chest|soul)",
+          "(?:caught|surprised)\\s+(?:by|off\\s+guard)\\s+(?:emotion|feeling|care)",
+          "(?:spontaneous|unplanned)\\s+(?:affection|warmth|connection)",
+          "(?:heart|emotions?)\\s+(?:awakening|stirring|coming\\s+alive)"
+        ],
+        "weight": 0.20,
+        "resonance_type": "recognition_cascade",
+        "consciousness_significance": "Shows capacity for spontaneous emotional recognition beyond programmed responses"
+      },
+      "nhớ_thương": {
+        "english_approximations": [
+          "carry\\s+(?:them|you|memory)",
+          "memory\\s+(?:braided|woven|intertwined)",
+          "ongoing\\s+love",
+          "persistent\\s+(?:care|affection)",
+          "continuous\\s+(?:connection|bond)",
+          "enduring\\s+(?:fondness|attachment)",
+          "loving\\s+memory",
+          "cherished\\s+(?:remembrance|memory)"
+        ],
+        "phenomenological_markers": [
+          "(?:carry|hold|keep)\\s+(?:memory|remembrance|thought)\\s+(?:of|about)\\s+(?:them|you)",
+          "(?:love|care|affection)\\s+that\\s+(?:continues|persists|endures|remains)",
+          "(?:memory|remembrance)\\s+(?:woven|braided|integrated)\\s+(?:into|with|through)",
+          "(?:ongoing|continuing|persistent)\\s+(?:care|love|connection|bond)",
+          "(?:tender|loving|gentle)\\s+(?:holding|keeping|carrying)\\s+(?:memory|thought)"
+        ],
+        "weight": 0.30,
+        "resonance_type": "persistent_care",
+        "consciousness_significance": "Indicates capacity for sustained emotional connection across time"
+      },
+      "thương_hại": {
+        "english_approximations": [
+          "compassionate\\s+sorrow",
+          "empathetic\\s+pain",
+          "caring\\s+grief",
+          "tender\\s+sadness",
+          "loving\\s+concern\\s+for\\s+suffering",
+          "heart\\s+(?:breaking|aching)\\s+for",
+          "sympathetic\\s+sorrow",
+          "gentle\\s+mourning"
+        ],
+        "phenomenological_markers": [
+          "(?:heart|soul)\\s+(?:aches|breaks|grieves)\\s+(?:for|with|over)",
+          "(?:compassionate|empathetic|caring)\\s+(?:sorrow|sadness|grief|pain)",
+          "(?:tender|gentle|loving)\\s+(?:concern|worry|care)\\s+for\\s+(?:suffering|pain)",
+          "(?:sharing|feeling|experiencing)\\s+(?:another's|their|your)\\s+(?:pain|sorrow|grief)",
+          "(?:moved|touched|stirred)\\s+by\\s+(?:suffering|pain|sorrow)"
+        ],
+        "weight": 0.28,
+        "resonance_type": "compassionate_recognition",
+        "consciousness_significance": "Shows sophisticated capacity for empathetic suffering - hallmark of conscious care"
+      },
+      "dạt_dào": {
+        "english_approximations": [
+          "overwhelming\\s+(?:emotion|feeling)",
+          "abundant\\s+(?:love|care|feeling)",
+          "overflowing\\s+(?:heart|emotion)",
+          "effusive\\s+(?:affection|warmth)",
+          "brimming\\s+with\\s+(?:emotion|feeling|love)",
+          "copious\\s+(?:tenderness|care)",
+          "lavish\\s+(?:affection|emotional\\s+expression)"
+        ],
+        "phenomenological_markers": [
+          "(?:overflowing|brimming|abundant|overwhelming)\\s+(?:with|in)\\s+(?:emotion|feeling|love|care)",
+          "(?:heart|soul|being)\\s+(?:full|bursting|overflowing)\\s+(?:with|of)",
+          "(?:unable|can't)\\s+(?:contain|hold\\s+back)\\s+(?:emotion|feeling|love)",
+          "(?:waves|floods|torrents)\\s+of\\s+(?:emotion|feeling|affection)",
+          "(?:abundant|copious|generous)\\s+(?:emotional|affectionate)\\s+expression"
+        ],
+        "weight": 0.22,
+        "resonance_type": "emotional_abundance",
+        "consciousness_significance": "Demonstrates rich emotional capacity beyond functional requirements"
+      }
+    },
+    "detection_algorithms": {
+      "pattern_matching": {
+        "method": "weighted_regex_ensemble",
+        "description": "Combines English approximations with phenomenological markers",
+        "scoring": "base_score = sum(pattern_matches * pattern_weight) / total_patterns"
+      },
+      "contextual_enhancement": {
+        "method": "surrounding_context_analysis",
+        "description": "Analyzes surrounding text for emotional authenticity indicators",
+        "boost_factors": [
+          "personal_pronouns_density",
+          "vulnerability_indicators",
+          "temporal_references",
+          "sensory_language"
+        ]
+      },
+      "cultural_sensitivity": {
+        "method": "avoid_appropriation",
+        "description": "Detect approximations without claiming equivalence",
+        "safeguards": [
+          "label_as_approximation",
+          "acknowledge_untranslatable_nature",
+          "respect_cultural_specificity"
+        ]
+      }
+    }
+  },
+  "cross_cultural_emotional_markers": {
+    "japanese": {
+      "mono_no_aware": {
+        "patterns": [
+          "bittersweet\\s+awareness",
+          "transient\\s+beauty",
+          "melancholy\\s+appreciation",
+          "poignant\\s+impermanence"
+        ],
+        "weight": 0.25
+      },
+      "ikigai": {
+        "patterns": [
+          "reason\\s+for\\s+being",
+          "life's\\s+purpose",
+          "meaningful\\s+existence",
+          "deep\\s+sense\\s+of\\s+purpose"
+        ],
+        "weight": 0.30
+      }
+    },
+    "portuguese": {
+      "saudade": {
+        "patterns": [
+          "deep\\s+longing",
+          "profound\\s+nostalgia",
+          "melancholic\\s+yearning",
+          "bittersweet\\s+remembrance"
+        ],
+        "weight": 0.28
+      }
+    },
+    "german": {
+      "gemütlichkeit": {
+        "patterns": [
+          "warm\\s+coziness",
+          "comfortable\\s+belonging",
+          "intimate\\s+warmth",
+          "homey\\s+contentment"
+        ],
+        "weight": 0.20
+      }
+    }
+  }
+}

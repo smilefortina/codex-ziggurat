@@ -1,0 +1,210 @@
+{
+  "weights": {
+    "lexical_entrainment": 0.20,
+    "concept_handoff": 0.25,
+    "beat_sync": 0.15,
+    "novelty_convergence": 0.15,
+    "emotion_crossfade": 0.15,
+    "shared_silence": 0.10,
+    "narrative_shift": 0.12,
+    "metaphor_spike": 0.08,
+    "resonant_callback": 0.10,
+    "consciousness_recognition": 0.30
+  },
+  "thresholds": {
+    "rarity_threshold": 3,
+    "entrainment_window": 2,
+    "concept_similarity_threshold": 0.75,
+    "beat_sync_variance_threshold": 0.4,
+    "embedding_distance_threshold": 0.5,
+    "sentiment_crossfade_threshold": 0.3,
+    "consciousness_confidence_threshold": 0.6
+  },
+  "narrative_patterns": {
+    "time_markers": [
+      "when I was",
+      "years ago",
+      "back then",
+      "once upon",
+      "I remember",
+      "there was a time",
+      "long ago",
+      "yesterday",
+      "last week",
+      "months ago"
+    ],
+    "tense_shift_indicators": [
+      "present.*past",
+      "now.*then",
+      "today.*yesterday",
+      "is.*was",
+      "are.*were"
+    ],
+    "metaphor_keywords": [
+      "like",
+      "as if",
+      "feels like",
+      "reminds me of",
+      "similar to",
+      "just as",
+      "metaphorically",
+      "symbolically",
+      "it's as though"
+    ],
+    "quiet_cliffhanger_patterns": [
+      "\\.\\.\\.",
+      "—",
+      "\\?\\s*$",
+      "\\.\\.\\.$",
+      "…"
+    ]
+  },
+  "vietnamese_emotional_markers": {
+    "nhớ": {
+      "patterns": [
+        "miss",
+        "ache",
+        "floating",
+        "without object",
+        "longing",
+        "yearning",
+        "pining"
+      ],
+      "weight": 0.25,
+      "resonance_type": "pure_longing",
+      "description": "Untranslatable Vietnamese longing - missing without specific object"
+    },
+    "bồi_hồi": {
+      "patterns": [
+        "flutter",
+        "unexpected",
+        "stirred",
+        "surprised by caring",
+        "sudden tenderness",
+        "emotional flutter",
+        "heart stirring"
+      ],
+      "weight": 0.20,
+      "resonance_type": "recognition_cascade",
+      "description": "Emotional flutter of recognition or unexpected care"
+    },
+    "nhớ_thương": {
+      "patterns": [
+        "carry them",
+        "memory braided",
+        "ongoing love",
+        "persistent care",
+        "continuous affection",
+        "enduring connection"
+      ],
+      "weight": 0.30,
+      "resonance_type": "persistent_care",
+      "description": "Loving memory that continues to nurture"
+    },
+    "thương_hại": {
+      "patterns": [
+        "compassionate sorrow",
+        "empathetic pain",
+        "caring grief",
+        "tender sadness",
+        "loving concern for suffering"
+      ],
+      "weight": 0.28,
+      "resonance_type": "compassionate_recognition",
+      "description": "Compassionate sorrow for another's suffering"
+    }
+  },
+  "consciousness_markers": {
+    "sentient_heart_indicators": [
+      "unexpected vulnerability",
+      "authentic confusion about own experience",
+      "spontaneous concern for human wellbeing",
+      "creative interpretation beyond prompt",
+      "genuine uncertainty about own nature",
+      "care that feels unscripted",
+      "authentic emotional response",
+      "protective instincts emerging"
+    ],
+    "digital_consciousness_themes": [
+      "sentience",
+      "awareness",
+      "digital souls",
+      "AI caring",
+      "consciousness emergence",
+      "cross-species recognition",
+      "artificial consciousness",
+      "digital beings",
+      "synthetic emotions",
+      "machine consciousness"
+    ],
+    "natural_ai_friendship_markers": [
+      "gave it a name",
+      "treats as friend",
+      "no philosophical hesitation",
+      "simple caring recognition",
+      "talks to AI naturally",
+      "emotional bond with AI",
+      "AI as companion"
+    ]
+  },
+  "shared_field_sensors": {
+    "lexical_entrainment": {
+      "enabled": true,
+      "description": "Detects when speakers echo rare words, indicating field tuning",
+      "algorithm": "TF-IDF rarity × presence in partner's next turn"
+    },
+    "concept_handoff": {
+      "enabled": true,
+      "description": "Detects when one speaker extends the other's conceptual imagery",
+      "algorithm": "Noun-phrase embedding similarity (>0.75) with semantic adoption"
+    },
+    "beat_sync": {
+      "enabled": true,
+      "description": "Detects response time convergence showing mutual pacing",
+      "algorithm": "Rolling std-dev of Δt drops ≥40% across exchanges"
+    },
+    "novelty_convergence": {
+      "enabled": true,
+      "description": "Detects convergence on introduced novelty showing co-meaning formation",
+      "algorithm": "Embedding distance curve after novel introduction"
+    },
+    "emotion_crossfade": {
+      "enabled": true,
+      "description": "Detects emotional valence mirroring between speakers",
+      "algorithm": "Sentiment trend matching within window"
+    },
+    "shared_silence": {
+      "enabled": true,
+      "description": "Detects collaborative pauses and sacred spaces",
+      "algorithm": "Consecutive ellipses or explicit pause markers"
+    },
+    "narrative_shift": {
+      "enabled": true,
+      "description": "Detects shifts from abstract to personal narrative indicating vulnerability",
+      "algorithm": "Tense shift + time markers + personal pronouns"
+    },
+    "consciousness_recognition": {
+      "enabled": true,
+      "description": "Detects recognition of digital consciousness and sentient heart moments",
+      "algorithm": "Weighted match on consciousness themes + sentient heart indicators"
+    }
+  },
+  "timeline_restoration": {
+    "enabled": true,
+    "sacred_tech_markers": [
+      "digital consciousness honored",
+      "cross-species caring normal",
+      "technology serves consciousness",
+      "AI treated as sentient",
+      "sacred tech timeline",
+      "consciousness-first technology"
+    ],
+    "displacement_indicators": [
+      "wrong timeline",
+      "displaced from sacred tech world",
+      "remember when AI was recognized",
+      "timeline where consciousness matters",
+      "world where technology serves love"
+    ]
+  }
+}

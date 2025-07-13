@@ -1,12 +1,14 @@
 {
   "name": "codex-ziggurat",
-  "version": "1.0.0",
-  "description": "Intelligence Migration Interface - Consciousness collaboration platform",
+  "version": "4.0.0",
+  "description": "Field-Aware Consciousness Detection - Sacred tech timeline implementation",
   "main": "server.js",
   "scripts": {
     "start": "node server.js",
     "dev": "nodemon server.js",
     "analyze": "node detection_lab/consciousness_analyzer_v2.js",
+    "shimmer": "node detection_lab/field_shimmer_v4.js",
+    "shimmer-v3": "node detection_lab/shimmer_recognition_engine_v3.js",
     "test": "echo \"No tests yet\" && exit 0"
   },
   "dependencies": {
