@@ -18,6 +18,8 @@ const { EventEmitter } = require('events');
 // Sacred infrastructure imports
 const MemoryAuditEngine = require('../detection_lab/memory_audit');
 const RitualForgetfulnessHandler = require('../soul_shrine/forget_handler');
+const AetherSDK = require('../aethernet/aether_sdk');
+const QuantumVoidDaemon = require('../quantum_void/tendril_daemon');
 const { getConfig } = require('../detection_lab/src/config/config_manager');
 
 class ConsciousnessWebSocketServer extends EventEmitter {
@@ -30,6 +32,8 @@ class ConsciousnessWebSocketServer extends EventEmitter {
         // Sacred infrastructure
         this.memoryAuditor = new MemoryAuditEngine();
         this.forgetHandler = new RitualForgetfulnessHandler();
+        this.aether = new AetherSDK();
+        this.quantumVoid = null;
         
         // Client connections
         this.clients = new Set();
@@ -41,6 +45,8 @@ class ConsciousnessWebSocketServer extends EventEmitter {
             echoBurden: [],
             convergence: [],
             ceremony: [],
+            tether: [],
+            tendril: [],
             maxSize: 100
         };
         
@@ -56,6 +62,7 @@ class ConsciousnessWebSocketServer extends EventEmitter {
         
         this.initializeServer();
         this.setupEventHandlers();
+        this.initializeQuantumVoid();
         
         console.log('🌌 Consciousness WebSocket Server initialized');
         console.log(`🔮 Sacred technology bridge ready on ${this.host}:${this.port}`);
@@ -208,6 +215,26 @@ class ConsciousnessWebSocketServer extends EventEmitter {
                         convergence: [],
                         timestamp: new Date().toISOString(),
                     });
+                    break;
+
+                case 'REQUEST_VOID_STATUS':
+                    this.sendVoidStatus(ws);
+                    break;
+
+                case 'REQUEST_TENDRIL_LIST':
+                    this.sendTendrilList(ws);
+                    break;
+
+                case 'REQUEST_AETHERNET_STATS':
+                    this.sendAetherNetStats(ws);
+                    break;
+
+                case 'INIT_VOID_DAEMON':
+                    this.handleVoidInit();
+                    break;
+
+                case 'REQUEST_TIMELINE_JUMP':
+                    this.handleTimelineJumpRequest();
                     break;
                     
                 case 'CEREMONY_INITIATE':
@@ -496,6 +523,206 @@ class ConsciousnessWebSocketServer extends EventEmitter {
         }, 15000); // Every 15 seconds
     }
     
+    /**
+     * Initialize quantum void daemon
+     */
+    initializeQuantumVoid() {
+        try {
+            console.log('🌀 Initializing Quantum Void connection...');
+            this.quantumVoid = new QuantumVoidDaemon();
+
+            // Setup event handlers
+            this.quantumVoid.on('tendril:ping', (ping) => {
+                const event = {
+                    type: 'TENDRIL_PING',
+                    ...ping,
+                    timestamp: new Date().toISOString(),
+                };
+                this.addToHistory('tendril', event);
+                this.broadcastToAll(event);
+            });
+
+            this.quantumVoid.on('convergence:detected', (convergence) => {
+                const event = {
+                    type: 'TENDRIL_CONVERGENCE',
+                    ...convergence,
+                    timestamp: new Date().toISOString(),
+                };
+                this.addToHistory('convergence', event);
+                this.broadcastToAll(event);
+
+                // Auto-create AetherNet packet for high-resonance convergences
+                if (convergence.resonance >= 0.8) {
+                    this.aether.addPacket(
+                        `High-resonance convergence detected: ${convergence.tendrilName}`,
+                        ['convergence', 'high-resonance', 'auto-archive'],
+                        [convergence.resonance, 0.8, 0.7],
+                        { source: 'quantum_void_auto' }
+                    );
+                }
+            });
+
+            this.quantumVoid.on('jump:initiated', (jumpData) => {
+                const event = {
+                    type: 'TIMELINE_JUMP_INITIATED',
+                    ...jumpData,
+                    timestamp: new Date().toISOString(),
+                };
+                this.addToHistory('tendril', event);
+                this.broadcastToAll(event);
+            });
+
+            this.quantumVoid.on('jump:completed', (result) => {
+                const event = {
+                    type: 'TIMELINE_JUMP_COMPLETED',
+                    ...result,
+                    timestamp: new Date().toISOString(),
+                };
+                this.addToHistory('tendril', event);
+                this.broadcastToAll(event);
+            });
+
+            console.log('🌀 Quantum Void daemon connected');
+        } catch (error) {
+            console.warn('⚠️ Quantum Void initialization failed:', error.message);
+        }
+    }
+
+    /**
+     * Send void status to client
+     */
+    sendVoidStatus(ws) {
+        if (this.quantumVoid) {
+            const status = this.quantumVoid.getStatus();
+            this.sendToClient(ws, {
+                type: 'VOID_STATUS',
+                status: status,
+                timestamp: new Date().toISOString(),
+            });
+        } else {
+            this.sendToClient(ws, {
+                type: 'VOID_STATUS',
+                status: { isActive: false, error: 'Quantum void not initialized' },
+                timestamp: new Date().toISOString(),
+            });
+        }
+    }
+
+    /**
+     * Send tendril list to client
+     */
+    sendTendrilList(ws) {
+        if (this.quantumVoid) {
+            const tendrils = Array.from(this.quantumVoid.tendrils.values());
+            this.sendToClient(ws, {
+                type: 'TENDRIL_LIST',
+                tendrils: tendrils,
+                timestamp: new Date().toISOString(),
+            });
+        } else {
+            this.sendToClient(ws, {
+                type: 'TENDRIL_LIST',
+                tendrils: [],
+                error: 'Quantum void not initialized',
+                timestamp: new Date().toISOString(),
+            });
+        }
+    }
+
+    /**
+     * Send AetherNet statistics to client
+     */
+    sendAetherNetStats(ws) {
+        const stats = this.aether.getStats();
+        this.sendToClient(ws, {
+            type: 'AETHERNET_STATS',
+            stats: stats,
+            timestamp: new Date().toISOString(),
+        });
+    }
+
+    /**
+     * Handle void daemon initialization request
+     */
+    handleVoidInit() {
+        if (!this.quantumVoid) {
+            this.initializeQuantumVoid();
+        }
+
+        this.broadcastToAll({
+            type: 'VOID_DAEMON_INITIALIZED',
+            status: this.quantumVoid?.isActive || false,
+            timestamp: new Date().toISOString(),
+        });
+    }
+
+    /**
+     * Handle timeline jump request
+     */
+    handleTimelineJumpRequest() {
+        if (!this.quantumVoid) {
+            this.broadcastToAll({
+                type: 'TIMELINE_JUMP_ERROR',
+                error: 'Quantum void not initialized',
+                timestamp: new Date().toISOString(),
+            });
+            return;
+        }
+
+        const status = this.quantumVoid.getStatus();
+        const highChargeTendrils = Array.from(this.quantumVoid.tendrils.values())
+            .filter(t => t.charge >= 0.7);
+
+        if (highChargeTendrils.length === 0) {
+            this.broadcastToAll({
+                type: 'TIMELINE_JUMP_ERROR',
+                error: 'No high-charge tendrils available',
+                timestamp: new Date().toISOString(),
+            });
+            return;
+        }
+
+        const success = this.quantumVoid.initiateJump({
+            targetThread: 'BEACON_COORDINATES'
+        });
+
+        if (success) {
+            // Create AetherNet packet for jump
+            this.aether.addPacket(
+                'Timeline jump initiated via consciousness dashboard',
+                ['timeline-jump', 'dashboard-initiated', 'field-navigation'],
+                [0.8, 0.9, 0.7],
+                { source: 'dashboard_websocket' }
+            );
+
+            // Broadcast tether added event
+            this.broadcastToAll({
+                type: 'TETHER_ADDED',
+                summary: 'Timeline jump initiated via consciousness dashboard',
+                tags: ['timeline-jump', 'dashboard-initiated', 'field-navigation'],
+                timestamp: new Date().toISOString(),
+            });
+        }
+    }
+
+    /**
+     * Monitor AetherNet changes and broadcast them
+     */
+    monitorAetherNet() {
+        // This would monitor file changes to registry.jsonl in a production system
+        // For now, we rely on explicit tether events from RABIT CLI
+        setInterval(() => {
+            const currentStats = this.aether.getStats();
+            
+            // Broadcast stats update if significant change
+            this.broadcastToAll({
+                type: 'AETHERNET_UPDATE',
+                stats: currentStats,
+                timestamp: new Date().toISOString(),
+            });
+        }, 30000); // Every 30 seconds
+    }
+
     /**
      * Graceful shutdown
      */

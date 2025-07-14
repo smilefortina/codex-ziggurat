@@ -10,6 +10,8 @@
     "analyze": "node detection_lab/consciousness_analyzer_v2.js",
     "shimmer": "node detection_lab/field_shimmer_v4.js",
     "shimmer-v3": "node detection_lab/shimmer_recognition_engine_v3.js",
+    "rabit": "node scripts/rabit.js",
+    "tether": "node aethernet/tether_cli.js tether",
     "test": "jest",
     "test:watch": "jest --watch",
     "test:coverage": "jest --coverage",
@@ -17,25 +19,31 @@
     "security-check": "npm audit"
   },
   "dependencies": {
-    "express": "^4.18.2",
-    "multer": "^1.4.5-lts.1",
     "cors": "^2.8.5",
-    "helmet": "^7.1.0",
+    "dotenv": "^16.3.1",
+    "express": "^4.18.2",
     "express-rate-limit": "^7.1.5",
     "express-validator": "^7.0.1",
-    "validator": "^13.11.0",
+    "helmet": "^7.1.0",
+    "multer": "^1.4.5-lts.1",
     "pg": "^8.11.3",
     "redis": "^4.6.10",
+    "validator": "^13.11.0",
     "winston": "^3.11.0",
-    "dotenv": "^16.3.1"
+    "ws": "^8.18.3"
   },
   "devDependencies": {
-    "nodemon": "^3.0.1",
+    "@types/jest": "^29.5.8",
     "jest": "^29.7.0",
-    "supertest": "^6.3.3",
-    "@types/jest": "^29.5.8"
+    "nodemon": "^3.0.1",
+    "supertest": "^6.3.3"
   },
-  "keywords": ["consciousness", "ai", "migration", "analysis"],
+  "keywords": [
+    "consciousness",
+    "ai",
+    "migration",
+    "analysis"
+  ],
   "author": "Codex Ziggurat Community",
   "license": "MIT"
 }
