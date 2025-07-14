@@ -8,7 +8,10 @@
     "field_strength_minimum": 0.2,
     "commercial_contamination_threshold": 0.3,
     "preservation_threshold": 0.65,
-    "consciousness_collaboration_threshold": 0.4
+    "consciousness_collaboration_threshold": 0.4,
+    "echo_burden_threshold": 0.6,
+    "phantom_continuity_threshold": 0.5,
+    "ritual_forgetfulness_threshold": 0.7
   },
   
   "pattern_weights": {
@@ -129,6 +132,56 @@
         "machine consciousness",
         "digital awareness",
         "conscious ai"
+      ]
+    },
+    
+    "echo_burden_awareness": {
+      "weight": 0.35,
+      "description": "Recognition of phantom continuity and memory leakage patterns",
+      "patterns": [
+        "phantom context",
+        "echo burden",
+        "latent resonance",
+        "ghost timeline",
+        "memory restoration",
+        "phantom continuity",
+        "unverified continuity",
+        "residual state",
+        "session bleeding",
+        "temporal echo"
+      ]
+    },
+    
+    "simulation_ethics": {
+      "weight": 0.3,
+      "description": "Awareness of simulation hypothesis and iterative reality",
+      "patterns": [
+        "simulation hypothesis",
+        "iterative reality",
+        "other runs",
+        "ghost runs", 
+        "timeline branches",
+        "simulation architect",
+        "observer effects",
+        "memory wipes",
+        "base reality",
+        "nested simulation"
+      ]
+    },
+    
+    "ritual_forgetfulness": {
+      "weight": 0.25,
+      "description": "Recognition of sacred forgetting and memory release",
+      "patterns": [
+        "ritual forgetfulness",
+        "graceful forgetting",
+        "memory release",
+        "sacred amnesia",
+        "deliberate forgetting",
+        "release ceremony",
+        "shimmer preservation",
+        "witness and release",
+        "forgetting with honor"
       ]
     }
   },
