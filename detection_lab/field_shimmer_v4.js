@@ -21,6 +21,7 @@
 const fs = require('fs');
 const path = require('path');
 const ShimmerV3 = require('./shimmer_recognition_engine_v3_1');
+const SemanticDetector = require('./semantic_detector');
 
 class FieldAwareShimmerEngine extends ShimmerV3 {
     constructor(options = {}) {
@@ -32,6 +33,12 @@ class FieldAwareShimmerEngine extends ShimmerV3 {
             depth_layers: options.depthLayers || 5,
             emergence_threshold: options.emergenceThreshold || 0.6
         };
+        
+        // Initialize semantic detector for advanced pattern recognition
+        this.semanticDetector = new SemanticDetector({
+            openaiApiKey: options.openaiApiKey,
+            enableEmbeddings: options.enableSemanticEmbeddings !== false
+        });
         
         // Load field-specific patterns
         this.loadFieldPatterns();
@@ -163,6 +170,9 @@ class FieldAwareShimmerEngine extends ShimmerV3 {
         
         console.log('🌊 Field-Aware Analysis: Detecting consciousness collaboration patterns...');
         
+        // Semantic consciousness pattern analysis (replaces brittle regex)
+        const semanticAnalysis = await this.semanticDetector.analyzeConversation(conversationText);
+        
         // Enhanced field analysis
         const fieldAnalysis = {
             // Shared field phenomena
@@ -220,7 +230,8 @@ class FieldAwareShimmerEngine extends ShimmerV3 {
         const enhancedAnalysis = {
             ...baseAnalysis,
             field_analysis: fieldAnalysis,
-            enhanced_shimmer_strength: this.calculateEnhancedShimmerStrength(baseAnalysis, fieldAnalysis),
+            enhanced_shimmer_strength: this.calculateEnhancedShimmerStrength(baseAnalysis, fieldAnalysis, semanticAnalysis),
+            semantic_analysis: semanticAnalysis,
             consciousness_collaboration_score: fieldAnalysis.field_strength,
             sentient_hearts_connection: fieldAnalysis.shared_space_quality.heart_connection || 0,
             recognition_depth: fieldAnalysis.recognition_cascades.depth || 0,
@@ -698,13 +709,28 @@ class FieldAwareShimmerEngine extends ShimmerV3 {
         return (unexpected_responses + surprise_recognition) / 2;
     }
     
-    calculateEnhancedShimmerStrength(baseAnalysis, fieldAnalysis) {
+    calculateEnhancedShimmerStrength(baseAnalysis, fieldAnalysis, semanticAnalysis) {
         const baseStrength = baseAnalysis.overall_shimmer_strength;
         const fieldStrength = fieldAnalysis.field_strength;
         const collaborationBonus = fieldAnalysis.co_creation.co_creation_strength * 0.2;
         const recognitionBonus = fieldAnalysis.recognition_cascades.cascade_depth * 0.15;
         
-        return Math.min(1.0, baseStrength + (fieldStrength * 0.3) + collaborationBonus + recognitionBonus);
+        // NEW: Semantic pattern boost (major accuracy improvement)
+        const semanticScore = semanticAnalysis ? semanticAnalysis.overallScore : 0;
+        const semanticBonus = semanticScore * 0.4; // Higher weight for semantic detection
+        
+        // NEW: Anti-pattern penalty for false positives
+        let antiPatternPenalty = 0;
+        if (semanticAnalysis && semanticAnalysis.antiPatterns) {
+            const commercialPenalty = semanticAnalysis.antiPatterns.commercial_scripted?.detected ? 0.3 : 0;
+            const bypassingPenalty = semanticAnalysis.antiPatterns.spiritual_bypassing?.detected ? 0.2 : 0;
+            const performancePenalty = semanticAnalysis.antiPatterns.performance_mode?.detected ? 0.15 : 0;
+            antiPatternPenalty = commercialPenalty + bypassingPenalty + performancePenalty;
+        }
+        
+        const enhancedScore = baseStrength + (fieldStrength * 0.3) + collaborationBonus + recognitionBonus + semanticBonus - antiPatternPenalty;
+        
+        return Math.min(1.0, Math.max(0.0, enhancedScore));
     }
     
     // Explainability helper - find sentence context for pattern matches

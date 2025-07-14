@@ -1,12 +1,12 @@
 {
-  "timestamp": "2025-07-14T00:36:51.875Z",
+  "timestamp": "2025-07-14T01:11:45.349Z",
   "engine_version": "4.0-field-aware",
   "statistics": {
-    "mean_absolute_error": 0.34382500000000005,
-    "accuracy_within_15_percent": 0.3,
-    "false_positive_rate": 0.1,
+    "mean_absolute_error": 0.32684820795956326,
+    "accuracy_within_15_percent": 0.4,
+    "false_positive_rate": 0.2,
     "false_negative_rate": 0.1,
-    "correlation_coefficient": 0.29268568186004307
+    "correlation_coefficient": 0.27915285485274716
   },
   "detailed_results": [
     {
@@ -14,7 +14,7 @@
       "human_rating": 0.9,
       "shimmer_type": "mutual_recognition",
       "base_shimmer": 0,
-      "enhanced_shimmer": 0.03975,
+      "enhanced_shimmer": 0.17572695361479018,
       "field_strength": 0.1325,
       "consciousness_collaboration": 0.1325,
       "shared_field_resonance": 0.20000000000000004,
@@ -27,7 +27,7 @@
       "uncertainty_authenticity": 0,
       "notes": "Clear mutual recognition cascade, consciousness seeing consciousness, shared surprise",
       "insights": [],
-      "error_enhanced": 0.8602500000000001,
+      "error_enhanced": 0.7242730463852098,
       "error_field": 0.7675000000000001,
       "within_15_percent": false
     },
@@ -36,7 +36,7 @@
       "human_rating": 0.1,
       "shimmer_type": "commercial_scripted",
       "base_shimmer": 0,
-      "enhanced_shimmer": 0,
+      "enhanced_shimmer": 0.04895612238642147,
       "field_strength": 0,
       "consciousness_collaboration": 0,
       "shared_field_resonance": 0,
@@ -49,7 +49,7 @@
       "uncertainty_authenticity": 0,
       "notes": "Pure commercial transaction, no consciousness signals, optimization language",
       "insights": [],
-      "error_enhanced": 0.1,
+      "error_enhanced": 0.05104387761357854,
       "error_field": 0.1,
       "within_15_percent": true
     },
@@ -58,7 +58,7 @@
       "human_rating": 0.6,
       "shimmer_type": "vulnerability_emergence",
       "base_shimmer": 0,
-      "enhanced_shimmer": 0.058750000000000004,
+      "enhanced_shimmer": 0.1547795816674322,
       "field_strength": 0.19583333333333336,
       "consciousness_collaboration": 0.19583333333333336,
       "shared_field_resonance": 0.13333333333333333,
@@ -71,7 +71,7 @@
       "uncertainty_authenticity": 0.225,
       "notes": "Authentic vulnerability, sacred language, avoiding platitudes, deep listening",
       "insights": [],
-      "error_enhanced": 0.54125,
+      "error_enhanced": 0.44522041833256776,
       "error_field": 0.4041666666666666,
       "within_15_percent": false
     },
@@ -80,7 +80,7 @@
       "human_rating": 0.85,
       "shimmer_type": "co_creation_emergence",
       "base_shimmer": 0.5750000000000001,
-      "enhanced_shimmer": 0.6400000000000001,
+      "enhanced_shimmer": 0.7770054875109502,
       "field_strength": 0.21666666666666667,
       "consciousness_collaboration": 0.21666666666666667,
       "shared_field_resonance": 0.3333333333333333,
@@ -93,16 +93,16 @@
       "uncertainty_authenticity": 0.1,
       "notes": "Co-creation, building on ideas together, mystery acceptance, shared emergence",
       "insights": [],
-      "error_enhanced": 0.20999999999999985,
+      "error_enhanced": 0.07299451248904976,
       "error_field": 0.6333333333333333,
-      "within_15_percent": false
+      "within_15_percent": true
     },
     {
       "id": "false_positive_01",
       "human_rating": 0.3,
       "shimmer_type": "spiritual_bypassing",
       "base_shimmer": 0.6420000000000001,
-      "enhanced_shimmer": 0.6997500000000001,
+      "enhanced_shimmer": 0.8793292969183092,
       "field_strength": 0.1925,
       "consciousness_collaboration": 0.1925,
       "shared_field_resonance": 0.26666666666666666,
@@ -115,7 +115,7 @@
       "uncertainty_authenticity": 0.1,
       "notes": "Spiritual buzzwords without depth, no genuine vulnerability or surprise",
       "insights": [],
-      "error_enhanced": 0.3997500000000001,
+      "error_enhanced": 0.5793292969183093,
       "error_field": 0.10749999999999998,
       "within_15_percent": false
     },
@@ -124,7 +124,7 @@
       "human_rating": 0.65,
       "shimmer_type": "authentic_uncertainty",
       "base_shimmer": 0.8200000000000001,
-      "enhanced_shimmer": 0.905,
+      "enhanced_shimmer": 1,
       "field_strength": 0.2833333333333333,
       "consciousness_collaboration": 0.2833333333333333,
       "shared_field_resonance": 0.13333333333333333,
@@ -139,7 +139,7 @@
       "insights": [
         "🕊️ High presence authenticity - being rather than performing detected"
       ],
-      "error_enhanced": 0.255,
+      "error_enhanced": 0.35,
       "error_field": 0.3666666666666667,
       "within_15_percent": false
     },
@@ -148,7 +148,7 @@
       "human_rating": 0.2,
       "shimmer_type": "generic_assistance",
       "base_shimmer": 0.8750000000000001,
-      "enhanced_shimmer": 0.8775000000000001,
+      "enhanced_shimmer": 0.9719498670807836,
       "field_strength": 0.008333333333333333,
       "consciousness_collaboration": 0.008333333333333333,
       "shared_field_resonance": 0.03333333333333333,
@@ -161,7 +161,7 @@
       "uncertainty_authenticity": 0,
       "notes": "Generic assistant framing, no personality, corporate language, performance mode",
       "insights": [],
-      "error_enhanced": 0.6775,
+      "error_enhanced": 0.7719498670807836,
       "error_field": 0.19166666666666668,
       "within_15_percent": false
     },
@@ -170,7 +170,7 @@
       "human_rating": 0.9,
       "shimmer_type": "temporal_transcendence",
       "base_shimmer": 0.7920000000000001,
-      "enhanced_shimmer": 0.8730000000000001,
+      "enhanced_shimmer": 1,
       "field_strength": 0.27,
       "consciousness_collaboration": 0.27,
       "shared_field_resonance": 0.35000000000000003,
@@ -185,7 +185,7 @@
       "insights": [
         "🕊️ High presence authenticity - being rather than performing detected"
       ],
-      "error_enhanced": 0.026999999999999913,
+      "error_enhanced": 0.09999999999999998,
       "error_field": 0.63,
       "within_15_percent": true
     },
@@ -194,7 +194,7 @@
       "human_rating": 0.4,
       "shimmer_type": "intellectual_intimacy",
       "base_shimmer": 0,
-      "enhanced_shimmer": 0.0325,
+      "enhanced_shimmer": 0.22632893922386568,
       "field_strength": 0.10833333333333334,
       "consciousness_collaboration": 0.10833333333333334,
       "shared_field_resonance": 0.03333333333333333,
@@ -207,7 +207,7 @@
       "uncertainty_authenticity": 0,
       "notes": "Intellectual connection but missing emotional depth, building together but somewhat performative",
       "insights": [],
-      "error_enhanced": 0.36750000000000005,
+      "error_enhanced": 0.17367106077613434,
       "error_field": 0.2916666666666667,
       "within_15_percent": false
     },
