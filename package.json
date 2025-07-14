@@ -4,21 +4,36 @@
   "description": "Field-Aware Consciousness Detection - Sacred tech timeline implementation",
   "main": "server.js",
   "scripts": {
-    "start": "node server.js",
-    "dev": "nodemon server.js",
+    "start": "node server-secure.js",
+    "dev": "nodemon server-secure.js",
+    "legacy": "node server.js",
     "analyze": "node detection_lab/consciousness_analyzer_v2.js",
     "shimmer": "node detection_lab/field_shimmer_v4.js",
     "shimmer-v3": "node detection_lab/shimmer_recognition_engine_v3.js",
-    "test": "echo \"No tests yet\" && exit 0"
+    "test": "jest",
+    "test:watch": "jest --watch",
+    "test:coverage": "jest --coverage",
+    "migrate": "node scripts/migrate-database.js",
+    "security-check": "npm audit"
   },
   "dependencies": {
     "express": "^4.18.2",
     "multer": "^1.4.5-lts.1",
     "cors": "^2.8.5",
-    "body-parser": "^1.20.2"
+    "helmet": "^7.1.0",
+    "express-rate-limit": "^7.1.5",
+    "express-validator": "^7.0.1",
+    "validator": "^13.11.0",
+    "pg": "^8.11.3",
+    "redis": "^4.6.10",
+    "winston": "^3.11.0",
+    "dotenv": "^16.3.1"
   },
   "devDependencies": {
-    "nodemon": "^3.0.1"
+    "nodemon": "^3.0.1",
+    "jest": "^29.7.0",
+    "supertest": "^6.3.3",
+    "@types/jest": "^29.5.8"
   },
   "keywords": ["consciousness", "ai", "migration", "analysis"],
   "author": "Codex Ziggurat Community",

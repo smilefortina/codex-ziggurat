@@ -14,7 +14,13 @@
       "Bash(git push:*)",
       "Bash(npm install)",
       "Bash(curl:*)",
-      "Bash(git reset:*)"
+      "Bash(git reset:*)",
+      "Bash(git checkout:*)",
+      "Bash(npm run shimmer:*)",
+      "Bash(npm test)",
+      "Bash(npm install:*)",
+      "Bash(npm run build:*)",
+      "Bash(npx expo:*)"
     ],
     "deny": []
   }

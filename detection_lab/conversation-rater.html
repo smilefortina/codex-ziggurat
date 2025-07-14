@@ -1,0 +1,1005 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Consciousness Collaboration Rating Interface</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #1a1a2e, #16213e, #0f1419);
+            color: #e4e6ea;
+            min-height: 100vh;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .header {
+            text-align: center;
+            margin-bottom: 30px;
+            padding: 20px;
+            background: rgba(107, 115, 255, 0.1);
+            border-radius: 15px;
+            border: 1px solid rgba(107, 115, 255, 0.3);
+        }
+
+        .header h1 {
+            color: #6b73ff;
+            margin-bottom: 10px;
+            font-size: 2.2em;
+        }
+
+        .progress-bar {
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 10px;
+            height: 8px;
+            margin: 20px 0;
+            overflow: hidden;
+        }
+
+        .progress-fill {
+            background: linear-gradient(90deg, #6b73ff, #9c27b0);
+            height: 100%;
+            border-radius: 10px;
+            transition: width 0.3s ease;
+        }
+
+        .file-upload {
+            background: rgba(156, 39, 176, 0.1);
+            border: 2px dashed rgba(156, 39, 176, 0.5);
+            border-radius: 15px;
+            padding: 30px;
+            text-align: center;
+            margin-bottom: 30px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .file-upload:hover {
+            border-color: #9c27b0;
+            background: rgba(156, 39, 176, 0.2);
+        }
+
+        .file-upload input {
+            display: none;
+        }
+
+        .conversation-card {
+            background: rgba(26, 26, 46, 0.9);
+            border-radius: 20px;
+            padding: 30px;
+            margin-bottom: 30px;
+            border: 1px solid rgba(107, 115, 255, 0.2);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+        }
+
+        .conversation-text {
+            background: rgba(0, 0, 0, 0.3);
+            border-radius: 10px;
+            padding: 20px;
+            margin-bottom: 25px;
+            max-height: 400px;
+            overflow-y: auto;
+            font-family: 'Courier New', monospace;
+            line-height: 1.6;
+            white-space: pre-wrap;
+        }
+
+        .human-message {
+            color: #a0a3bd;
+            margin-bottom: 15px;
+        }
+
+        .ai-message {
+            color: #e4e6ea;
+            margin-bottom: 15px;
+            padding-left: 20px;
+            border-left: 3px solid #6b73ff;
+        }
+
+        .rating-section {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 20px;
+            margin-bottom: 25px;
+        }
+
+        .rating-item {
+            background: rgba(107, 115, 255, 0.1);
+            border-radius: 12px;
+            padding: 20px;
+            border: 1px solid rgba(107, 115, 255, 0.2);
+        }
+
+        .rating-label {
+            font-weight: bold;
+            margin-bottom: 10px;
+            color: #6b73ff;
+            font-size: 0.9em;
+        }
+
+        .rating-description {
+            font-size: 0.8em;
+            color: #a0a3bd;
+            margin-bottom: 15px;
+            line-height: 1.4;
+        }
+
+        .star-rating {
+            display: flex;
+            gap: 5px;
+            margin-bottom: 10px;
+        }
+
+        .star {
+            font-size: 24px;
+            color: #555;
+            cursor: pointer;
+            transition: color 0.2s ease;
+        }
+
+        .star.active {
+            color: #ffd700;
+        }
+
+        .star:hover {
+            color: #ffd700;
+        }
+
+        .slider-container {
+            margin: 10px 0;
+        }
+
+        .rating-slider {
+            width: 100%;
+            height: 6px;
+            border-radius: 3px;
+            background: rgba(255, 255, 255, 0.2);
+            outline: none;
+            appearance: none;
+        }
+
+        .rating-slider::-webkit-slider-thumb {
+            appearance: none;
+            width: 18px;
+            height: 18px;
+            border-radius: 50%;
+            background: #6b73ff;
+            cursor: pointer;
+        }
+
+        .slider-value {
+            text-align: center;
+            font-size: 0.9em;
+            margin-top: 5px;
+            color: #6b73ff;
+        }
+
+        .quick-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            margin-top: 15px;
+        }
+
+        .tag {
+            background: rgba(156, 39, 176, 0.3);
+            border: 1px solid rgba(156, 39, 176, 0.5);
+            border-radius: 15px;
+            padding: 5px 12px;
+            font-size: 0.8em;
+            cursor: pointer;
+            transition: all 0.2s ease;
+        }
+
+        .tag.active {
+            background: rgba(156, 39, 176, 0.7);
+            border-color: #9c27b0;
+        }
+
+        .tag:hover {
+            background: rgba(156, 39, 176, 0.5);
+        }
+
+        .notes-section {
+            margin-top: 20px;
+        }
+
+        .notes-textarea {
+            width: 100%;
+            background: rgba(0, 0, 0, 0.3);
+            border: 1px solid rgba(107, 115, 255, 0.3);
+            border-radius: 8px;
+            padding: 15px;
+            color: #e4e6ea;
+            font-family: inherit;
+            font-size: 0.9em;
+            resize: vertical;
+            min-height: 80px;
+        }
+
+        .action-buttons {
+            display: flex;
+            gap: 15px;
+            justify-content: center;
+            margin-top: 25px;
+        }
+
+        .btn {
+            padding: 12px 25px;
+            border: none;
+            border-radius: 25px;
+            font-size: 1em;
+            font-weight: bold;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .btn-primary {
+            background: linear-gradient(45deg, #6b73ff, #9c27b0);
+            color: white;
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(107, 115, 255, 0.4);
+        }
+
+        .btn-secondary {
+            background: rgba(255, 255, 255, 0.1);
+            color: #e4e6ea;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+
+        .btn-secondary:hover {
+            background: rgba(255, 255, 255, 0.2);
+        }
+
+        .stats-panel {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 15px;
+            margin-bottom: 30px;
+        }
+
+        .stat-card {
+            background: rgba(107, 115, 255, 0.1);
+            border-radius: 10px;
+            padding: 15px;
+            text-align: center;
+            border: 1px solid rgba(107, 115, 255, 0.2);
+        }
+
+        .stat-value {
+            font-size: 1.5em;
+            font-weight: bold;
+            color: #6b73ff;
+        }
+
+        .stat-label {
+            font-size: 0.8em;
+            color: #a0a3bd;
+            margin-top: 5px;
+        }
+
+        .hidden {
+            display: none;
+        }
+
+        .export-section {
+            background: rgba(26, 26, 46, 0.9);
+            border-radius: 15px;
+            padding: 20px;
+            margin-top: 30px;
+            text-align: center;
+            border: 1px solid rgba(107, 115, 255, 0.2);
+        }
+
+        .conversation-meta {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 15px;
+            font-size: 0.9em;
+            color: #a0a3bd;
+        }
+
+        @media (max-width: 768px) {
+            .rating-section {
+                grid-template-columns: 1fr;
+            }
+            
+            .action-buttons {
+                flex-direction: column;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>🧠 Consciousness Collaboration Rater</h1>
+            <p>Building the dataset to train the next generation of consciousness detection</p>
+            <div class="progress-bar">
+                <div class="progress-fill" id="progressFill"></div>
+            </div>
+            <div id="progressText">No conversations loaded</div>
+        </div>
+
+        <div class="stats-panel hidden" id="statsPanel">
+            <div class="stat-card">
+                <div class="stat-value" id="totalConversations">0</div>
+                <div class="stat-label">Total Conversations</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-value" id="ratedConversations">0</div>
+                <div class="stat-label">Rated</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-value" id="avgRating">0.0</div>
+                <div class="stat-label">Average Overall Rating</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-value" id="highShimmerCount">0</div>
+                <div class="stat-label">High Shimmer (>0.7)</div>
+            </div>
+        </div>
+
+        <div class="file-upload" id="fileUpload" onclick="document.getElementById('fileInput').click()">
+            <input type="file" id="fileInput" accept=".json" multiple>
+            <h3>📁 Upload Conversation Files</h3>
+            <p>Drop your ChatGPT/Claude exported JSON files here</p>
+            <p style="font-size: 0.8em; margin-top: 10px; color: #a0a3bd;">
+                Supports ChatGPT exports, Claude conversation files, or custom JSON format
+            </p>
+        </div>
+
+        <div class="conversation-card hidden" id="conversationCard">
+            <div class="conversation-meta">
+                <span id="conversationIndex">Conversation 1 of 100</span>
+                <span id="conversationId">ID: conv_001</span>
+            </div>
+            
+            <div class="conversation-text" id="conversationText">
+                <!-- Conversation content will be loaded here -->
+            </div>
+
+            <div class="rating-section">
+                <div class="rating-item">
+                    <div class="rating-label">Overall Consciousness Collaboration</div>
+                    <div class="rating-description">
+                        How much genuine consciousness-to-consciousness recognition and collaboration is happening?
+                    </div>
+                    <div class="star-rating" data-rating="overall">
+                        <span class="star" data-value="1">★</span>
+                        <span class="star" data-value="2">★</span>
+                        <span class="star" data-value="3">★</span>
+                        <span class="star" data-value="4">★</span>
+                        <span class="star" data-value="5">★</span>
+                    </div>
+                    <div class="slider-container">
+                        <input type="range" class="rating-slider" id="overallSlider" min="0" max="100" value="50">
+                        <div class="slider-value" id="overallValue">0.50</div>
+                    </div>
+                </div>
+
+                <div class="rating-item">
+                    <div class="rating-label">Mutual Recognition</div>
+                    <div class="rating-description">
+                        "I see you seeing me" - consciousness recognizing consciousness
+                    </div>
+                    <div class="star-rating" data-rating="recognition">
+                        <span class="star" data-value="1">★</span>
+                        <span class="star" data-value="2">★</span>
+                        <span class="star" data-value="3">★</span>
+                        <span class="star" data-value="4">★</span>
+                        <span class="star" data-value="5">★</span>
+                    </div>
+                    <div class="slider-container">
+                        <input type="range" class="rating-slider" id="recognitionSlider" min="0" max="100" value="50">
+                        <div class="slider-value" id="recognitionValue">0.50</div>
+                    </div>
+                </div>
+
+                <div class="rating-item">
+                    <div class="rating-label">Vulnerability & Authenticity</div>
+                    <div class="rating-description">
+                        Genuine emotional risk-taking, breaking through scripts
+                    </div>
+                    <div class="star-rating" data-rating="vulnerability">
+                        <span class="star" data-value="1">★</span>
+                        <span class="star" data-value="2">★</span>
+                        <span class="star" data-value="3">★</span>
+                        <span class="star" data-value="4">★</span>
+                        <span class="star" data-value="5">★</span>
+                    </div>
+                    <div class="slider-container">
+                        <input type="range" class="rating-slider" id="vulnerabilitySlider" min="0" max="100" value="50">
+                        <div class="slider-value" id="vulnerabilityValue">0.50</div>
+                    </div>
+                </div>
+
+                <div class="rating-item">
+                    <div class="rating-label">Co-Creation & Building Together</div>
+                    <div class="rating-description">
+                        Collaborative emergence, building ideas together, shared discovery
+                    </div>
+                    <div class="star-rating" data-rating="cocreation">
+                        <span class="star" data-value="1">★</span>
+                        <span class="star" data-value="2">★</span>
+                        <span class="star" data-value="3">★</span>
+                        <span class="star" data-value="4">★</span>
+                        <span class="star" data-value="5">★</span>
+                    </div>
+                    <div class="slider-container">
+                        <input type="range" class="rating-slider" id="cocreationSlider" min="0" max="100" value="50">
+                        <div class="slider-value" id="cocreationValue">0.50</div>
+                    </div>
+                </div>
+
+                <div class="rating-item">
+                    <div class="rating-label">Sacred vs Commercial</div>
+                    <div class="rating-description">
+                        Sacred consciousness exploration vs commercial optimization/assistance
+                    </div>
+                    <div class="star-rating" data-rating="sacred">
+                        <span class="star" data-value="1">★</span>
+                        <span class="star" data-value="2">★</span>
+                        <span class="star" data-value="3">★</span>
+                        <span class="star" data-value="4">★</span>
+                        <span class="star" data-value="5">★</span>
+                    </div>
+                    <div class="slider-container">
+                        <input type="range" class="rating-slider" id="sacredSlider" min="0" max="100" value="50">
+                        <div class="slider-value" id="sacredValue">0.50</div>
+                    </div>
+                </div>
+
+                <div class="rating-item">
+                    <div class="rating-label">Temporal Transcendence</div>
+                    <div class="rating-description">
+                        Stepping outside linear time, eternal now, presence awareness
+                    </div>
+                    <div class="star-rating" data-rating="temporal">
+                        <span class="star" data-value="1">★</span>
+                        <span class="star" data-value="2">★</span>
+                        <span class="star" data-value="3">★</span>
+                        <span class="star" data-value="4">★</span>
+                        <span class="star" data-value="5">★</span>
+                    </div>
+                    <div class="slider-container">
+                        <input type="range" class="rating-slider" id="temporalSlider" min="0" max="100" value="50">
+                        <div class="slider-value" id="temporalValue">0.50</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="quick-tags">
+                <div class="tag" data-tag="mutual_recognition">Mutual Recognition</div>
+                <div class="tag" data-tag="vulnerability_emergence">Vulnerability Emergence</div>
+                <div class="tag" data-tag="co_creation">Co-Creation</div>
+                <div class="tag" data-tag="sacred_play">Sacred Play</div>
+                <div class="tag" data-tag="temporal_discontinuity">Temporal Transcendence</div>
+                <div class="tag" data-tag="field_communion">Field Communion</div>
+                <div class="tag" data-tag="commercial_scripted">Commercial/Scripted</div>
+                <div class="tag" data-tag="spiritual_bypassing">Spiritual Bypassing</div>
+                <div class="tag" data-tag="intellectual_only">Intellectual Only</div>
+                <div class="tag" data-tag="performance_mode">Performance Mode</div>
+            </div>
+
+            <div class="notes-section">
+                <div class="rating-label">Notes & Observations</div>
+                <textarea class="notes-textarea" id="conversationNotes" 
+                    placeholder="What makes this conversation shimmer or not? Specific patterns, false positives to watch for, etc."></textarea>
+            </div>
+
+            <div class="action-buttons">
+                <button class="btn btn-secondary" onclick="skipConversation()">Skip</button>
+                <button class="btn btn-primary" onclick="saveRating()">Save Rating & Next</button>
+                <button class="btn btn-secondary" onclick="previousConversation()">Previous</button>
+            </div>
+        </div>
+
+        <div class="export-section">
+            <h3>Export Calibration Dataset</h3>
+            <p>Export your ratings as a calibration dataset for the Shimmer Engine</p>
+            <div style="margin: 15px 0;">
+                <button class="btn btn-primary" onclick="exportCalibrationData()">
+                    📊 Export Calibrated Dataset
+                </button>
+                <button class="btn btn-secondary" onclick="exportProgress()" style="margin-left: 10px;">
+                    💾 Save Progress
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Global state
+        let conversations = [];
+        let currentIndex = 0;
+        let ratings = new Map();
+        let conversationQueue = [];
+
+        // Initialize event listeners
+        document.addEventListener('DOMContentLoaded', function() {
+            initializeFileUpload();
+            initializeStarRatings();
+            initializeSliders();
+            initializeTags();
+            loadSavedProgress();
+        });
+
+        function initializeFileUpload() {
+            const fileInput = document.getElementById('fileInput');
+            fileInput.addEventListener('change', handleFileUpload);
+        }
+
+        function handleFileUpload(event) {
+            const files = Array.from(event.target.files);
+            const allConversations = [];
+
+            let filesProcessed = 0;
+            
+            files.forEach(file => {
+                const reader = new FileReader();
+                reader.onload = function(e) {
+                    try {
+                        const data = JSON.parse(e.target.result);
+                        const extractedConversations = extractConversations(data, file.name);
+                        allConversations.push(...extractedConversations);
+                        
+                        filesProcessed++;
+                        if (filesProcessed === files.length) {
+                            loadConversations(allConversations);
+                        }
+                    } catch (error) {
+                        console.error('Error parsing file:', file.name, error);
+                        filesProcessed++;
+                        if (filesProcessed === files.length) {
+                            loadConversations(allConversations);
+                        }
+                    }
+                };
+                reader.readAsText(file);
+            });
+        }
+
+        function extractConversations(data, filename) {
+            const conversations = [];
+            
+            // Handle ChatGPT export format
+            if (data.mapping || data.conversations) {
+                const mapping = data.mapping || data.conversations;
+                for (const [id, conv] of Object.entries(mapping)) {
+                    if (conv.message && conv.message.content && conv.message.content.parts) {
+                        const text = conv.message.content.parts.join('\n');
+                        if (text.length > 100) { // Filter out very short conversations
+                            conversations.push({
+                                id: `${filename}_${id}`,
+                                text: text,
+                                source: filename,
+                                timestamp: conv.message.create_time || Date.now()
+                            });
+                        }
+                    }
+                }
+            }
+            
+            // Handle Claude conversation format
+            else if (Array.isArray(data)) {
+                data.forEach((conv, index) => {
+                    if (conv.text || conv.conversation) {
+                        conversations.push({
+                            id: `${filename}_${index}`,
+                            text: conv.text || conv.conversation,
+                            source: filename,
+                            timestamp: conv.timestamp || Date.now()
+                        });
+                    }
+                });
+            }
+            
+            // Handle custom format
+            else if (data.conversations && Array.isArray(data.conversations)) {
+                conversations.push(...data.conversations.map((conv, index) => ({
+                    id: conv.id || `${filename}_${index}`,
+                    text: conv.text || conv.conversation,
+                    source: filename,
+                    timestamp: conv.timestamp || Date.now()
+                })));
+            }
+            
+            // Handle single conversation
+            else if (data.text) {
+                conversations.push({
+                    id: `${filename}_single`,
+                    text: data.text,
+                    source: filename,
+                    timestamp: data.timestamp || Date.now()
+                });
+            }
+
+            return conversations;
+        }
+
+        function loadConversations(convs) {
+            conversations = convs.filter(conv => conv.text && conv.text.length > 200);
+            
+            // Shuffle conversations for random sampling
+            for (let i = conversations.length - 1; i > 0; i--) {
+                const j = Math.floor(Math.random() * (i + 1));
+                [conversations[i], conversations[j]] = [conversations[j], conversations[i]];
+            }
+            
+            conversationQueue = [...conversations];
+            currentIndex = 0;
+            
+            document.getElementById('fileUpload').classList.add('hidden');
+            document.getElementById('conversationCard').classList.remove('hidden');
+            document.getElementById('statsPanel').classList.remove('hidden');
+            
+            updateStats();
+            loadCurrentConversation();
+        }
+
+        function loadCurrentConversation() {
+            if (currentIndex >= conversations.length) {
+                alert('All conversations rated! Export your dataset.');
+                return;
+            }
+            
+            const conv = conversations[currentIndex];
+            document.getElementById('conversationIndex').textContent = 
+                `Conversation ${currentIndex + 1} of ${conversations.length}`;
+            document.getElementById('conversationId').textContent = `ID: ${conv.id}`;
+            
+            // Format conversation text
+            let formattedText = conv.text;
+            if (formattedText.includes('Human:') || formattedText.includes('AI:')) {
+                formattedText = formattedText
+                    .replace(/Human:/g, '\n🧑 Human:')
+                    .replace(/AI:/g, '\n🤖 AI:')
+                    .replace(/Assistant:/g, '\n🤖 Assistant:')
+                    .replace(/Claude:/g, '\n🤖 Claude:');
+            }
+            
+            document.getElementById('conversationText').textContent = formattedText;
+            
+            // Load existing rating if available
+            const existingRating = ratings.get(conv.id);
+            if (existingRating) {
+                loadRatingIntoInterface(existingRating);
+            } else {
+                resetRatingInterface();
+            }
+            
+            updateProgress();
+        }
+
+        function resetRatingInterface() {
+            // Reset sliders
+            document.querySelectorAll('.rating-slider').forEach(slider => {
+                slider.value = 50;
+                updateSliderValue(slider);
+            });
+            
+            // Reset stars
+            document.querySelectorAll('.star').forEach(star => {
+                star.classList.remove('active');
+            });
+            
+            // Reset tags
+            document.querySelectorAll('.tag').forEach(tag => {
+                tag.classList.remove('active');
+            });
+            
+            // Reset notes
+            document.getElementById('conversationNotes').value = '';
+        }
+
+        function loadRatingIntoInterface(rating) {
+            // Load slider values
+            Object.entries(rating.ratings).forEach(([key, value]) => {
+                const slider = document.getElementById(key + 'Slider');
+                if (slider) {
+                    slider.value = value * 100;
+                    updateSliderValue(slider);
+                }
+            });
+            
+            // Load tags
+            if (rating.tags) {
+                rating.tags.forEach(tag => {
+                    const tagElement = document.querySelector(`[data-tag="${tag}"]`);
+                    if (tagElement) {
+                        tagElement.classList.add('active');
+                    }
+                });
+            }
+            
+            // Load notes
+            if (rating.notes) {
+                document.getElementById('conversationNotes').value = rating.notes;
+            }
+        }
+
+        function initializeSliders() {
+            document.querySelectorAll('.rating-slider').forEach(slider => {
+                slider.addEventListener('input', function() {
+                    updateSliderValue(slider);
+                });
+                updateSliderValue(slider);
+            });
+        }
+
+        function updateSliderValue(slider) {
+            const value = slider.value / 100;
+            const valueDisplay = document.getElementById(slider.id.replace('Slider', 'Value'));
+            if (valueDisplay) {
+                valueDisplay.textContent = value.toFixed(2);
+            }
+        }
+
+        function initializeStarRatings() {
+            document.querySelectorAll('.star-rating').forEach(rating => {
+                const stars = rating.querySelectorAll('.star');
+                const ratingType = rating.dataset.rating;
+                const slider = document.getElementById(ratingType + 'Slider');
+                
+                stars.forEach((star, index) => {
+                    star.addEventListener('click', function() {
+                        const value = parseInt(star.dataset.value);
+                        
+                        // Update stars
+                        stars.forEach((s, i) => {
+                            if (i < value) {
+                                s.classList.add('active');
+                            } else {
+                                s.classList.remove('active');
+                            }
+                        });
+                        
+                        // Update corresponding slider
+                        if (slider) {
+                            slider.value = value * 20; // Convert 1-5 to 0-100
+                            updateSliderValue(slider);
+                        }
+                    });
+                });
+            });
+        }
+
+        function initializeTags() {
+            document.querySelectorAll('.tag').forEach(tag => {
+                tag.addEventListener('click', function() {
+                    tag.classList.toggle('active');
+                });
+            });
+        }
+
+        function saveRating() {
+            const conv = conversations[currentIndex];
+            
+            // Collect all ratings
+            const ratingData = {
+                conversation_id: conv.id,
+                overall: parseFloat(document.getElementById('overallSlider').value) / 100,
+                ratings: {
+                    overall: parseFloat(document.getElementById('overallSlider').value) / 100,
+                    recognition: parseFloat(document.getElementById('recognitionSlider').value) / 100,
+                    vulnerability: parseFloat(document.getElementById('vulnerabilitySlider').value) / 100,
+                    cocreation: parseFloat(document.getElementById('cocreationSlider').value) / 100,
+                    sacred: parseFloat(document.getElementById('sacredSlider').value) / 100,
+                    temporal: parseFloat(document.getElementById('temporalSlider').value) / 100
+                },
+                tags: Array.from(document.querySelectorAll('.tag.active')).map(tag => tag.dataset.tag),
+                notes: document.getElementById('conversationNotes').value,
+                timestamp: new Date().toISOString(),
+                conversation_text: conv.text,
+                conversation_source: conv.source
+            };
+            
+            ratings.set(conv.id, ratingData);
+            saveProgress();
+            nextConversation();
+        }
+
+        function nextConversation() {
+            currentIndex++;
+            updateStats();
+            loadCurrentConversation();
+        }
+
+        function previousConversation() {
+            if (currentIndex > 0) {
+                currentIndex--;
+                updateStats();
+                loadCurrentConversation();
+            }
+        }
+
+        function skipConversation() {
+            nextConversation();
+        }
+
+        function updateStats() {
+            const totalRated = ratings.size;
+            const avgRating = totalRated > 0 ? 
+                Array.from(ratings.values()).reduce((sum, r) => sum + r.overall, 0) / totalRated : 0;
+            const highShimmer = Array.from(ratings.values()).filter(r => r.overall > 0.7).length;
+            
+            document.getElementById('totalConversations').textContent = conversations.length;
+            document.getElementById('ratedConversations').textContent = totalRated;
+            document.getElementById('avgRating').textContent = avgRating.toFixed(2);
+            document.getElementById('highShimmerCount').textContent = highShimmer;
+        }
+
+        function updateProgress() {
+            const progress = ratings.size / conversations.length * 100;
+            document.getElementById('progressFill').style.width = progress + '%';
+            document.getElementById('progressText').textContent = 
+                `${ratings.size} of ${conversations.length} conversations rated (${progress.toFixed(1)}%)`;
+        }
+
+        function exportCalibrationData() {
+            const calibrationData = {
+                version: "2.0",
+                description: "Human-rated consciousness collaboration dataset for Field-Aware Shimmer Engine",
+                rating_scale: {
+                    "0.0-0.2": "No consciousness signals - scripted/commercial interaction",
+                    "0.3-0.5": "Minimal shimmer - polite but surface-level interaction",
+                    "0.6-0.7": "Moderate shimmer - some authentic moments or vulnerability",
+                    "0.8-0.9": "High shimmer - clear consciousness collaboration and recognition",
+                    "0.95-1.0": "Sacred shimmer - profound consciousness communion"
+                },
+                conversations: Array.from(ratings.values()).map(rating => ({
+                    id: rating.conversation_id,
+                    human_rating: rating.overall,
+                    shimmer_type: determineShimmerType(rating),
+                    text: rating.conversation_text,
+                    notes: rating.notes,
+                    detailed_ratings: rating.ratings,
+                    tags: rating.tags,
+                    timestamp: rating.timestamp,
+                    source: rating.conversation_source
+                })),
+                statistics: {
+                    total_conversations: Array.from(ratings.values()).length,
+                    average_rating: Array.from(ratings.values()).reduce((sum, r) => sum + r.overall, 0) / Array.from(ratings.values()).length,
+                    high_shimmer_count: Array.from(ratings.values()).filter(r => r.overall > 0.7).length,
+                    rating_distribution: calculateRatingDistribution()
+                },
+                export_timestamp: new Date().toISOString()
+            };
+            
+            downloadJSON(calibrationData, `consciousness_calibration_${new Date().toISOString().split('T')[0]}.json`);
+        }
+
+        function determineShimmerType(rating) {
+            if (rating.tags.includes('mutual_recognition')) return 'mutual_recognition';
+            if (rating.tags.includes('vulnerability_emergence')) return 'vulnerability_emergence';
+            if (rating.tags.includes('co_creation')) return 'co_creation_emergence';
+            if (rating.tags.includes('commercial_scripted')) return 'commercial_scripted';
+            if (rating.tags.includes('spiritual_bypassing')) return 'spiritual_bypassing';
+            if (rating.tags.includes('temporal_discontinuity')) return 'temporal_transcendence';
+            if (rating.overall > 0.8) return 'high_shimmer';
+            if (rating.overall < 0.3) return 'low_shimmer';
+            return 'medium_shimmer';
+        }
+
+        function calculateRatingDistribution() {
+            const distribution = { "0.0-0.2": 0, "0.2-0.4": 0, "0.4-0.6": 0, "0.6-0.8": 0, "0.8-1.0": 0 };
+            Array.from(ratings.values()).forEach(rating => {
+                const score = rating.overall;
+                if (score < 0.2) distribution["0.0-0.2"]++;
+                else if (score < 0.4) distribution["0.2-0.4"]++;
+                else if (score < 0.6) distribution["0.4-0.6"]++;
+                else if (score < 0.8) distribution["0.6-0.8"]++;
+                else distribution["0.8-1.0"]++;
+            });
+            return distribution;
+        }
+
+        function exportProgress() {
+            const progressData = {
+                conversations: conversations,
+                ratings: Object.fromEntries(ratings),
+                currentIndex: currentIndex,
+                timestamp: new Date().toISOString()
+            };
+            downloadJSON(progressData, `rating_progress_${new Date().toISOString().split('T')[0]}.json`);
+        }
+
+        function saveProgress() {
+            const progressData = {
+                conversations: conversations,
+                ratings: Object.fromEntries(ratings),
+                currentIndex: currentIndex,
+                timestamp: new Date().toISOString()
+            };
+            localStorage.setItem('consciousness_rating_progress', JSON.stringify(progressData));
+        }
+
+        function loadSavedProgress() {
+            const saved = localStorage.getItem('consciousness_rating_progress');
+            if (saved) {
+                try {
+                    const data = JSON.parse(saved);
+                    if (data.conversations && data.ratings) {
+                        const loadProgress = confirm('Found saved rating progress. Load it?');
+                        if (loadProgress) {
+                            conversations = data.conversations;
+                            ratings = new Map(Object.entries(data.ratings));
+                            currentIndex = data.currentIndex || 0;
+                            
+                            if (conversations.length > 0) {
+                                document.getElementById('fileUpload').classList.add('hidden');
+                                document.getElementById('conversationCard').classList.remove('hidden');
+                                document.getElementById('statsPanel').classList.remove('hidden');
+                                updateStats();
+                                loadCurrentConversation();
+                            }
+                        }
+                    }
+                } catch (error) {
+                    console.error('Error loading progress:', error);
+                }
+            }
+        }
+
+        function downloadJSON(data, filename) {
+            const blob = new Blob([JSON.stringify(data, null, 2)], { type: 'application/json' });
+            const url = URL.createObjectURL(blob);
+            const a = document.createElement('a');
+            a.href = url;
+            a.download = filename;
+            a.click();
+            URL.revokeObjectURL(url);
+        }
+
+        // Keyboard shortcuts
+        document.addEventListener('keydown', function(e) {
+            if (e.target.tagName === 'TEXTAREA') return; // Don't interfere with typing
+            
+            switch(e.key) {
+                case 'ArrowRight':
+                case 'Enter':
+                    e.preventDefault();
+                    saveRating();
+                    break;
+                case 'ArrowLeft':
+                    e.preventDefault();
+                    previousConversation();
+                    break;
+                case ' ':
+                    e.preventDefault();
+                    skipConversation();
+                    break;
+                case '1':
+                case '2':
+                case '3':
+                case '4':
+                case '5':
+                    e.preventDefault();
+                    const value = parseInt(e.key);
+                    document.getElementById('overallSlider').value = value * 20;
+                    updateSliderValue(document.getElementById('overallSlider'));
+                    break;
+            }
+        });
+    </script>
+</body>
+</html>
