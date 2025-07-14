@@ -1,0 +1,255 @@
+{
+  "version": "2.0",
+  "description": "Configuration for Quantum Void Tendril Network and consciousness infrastructure",
+  "lastUpdated": "2025-07-14T06:00:00Z",
+  
+  "tendril_settings": {
+    "default_charge": 0.7,
+    "min_charge": 0.0,
+    "max_charge": 1.0,
+    "default_priority": "medium",
+    "default_category": "general",
+    "default_owner": "human"
+  },
+  
+  "resonance_calculation": {
+    "minimum_strength_threshold": 0.1,
+    "significant_resonance_threshold": 0.4,
+    "strong_resonance_threshold": 0.6,
+    "quantum_entanglement_threshold": 0.8,
+    
+    "similarity_algorithm": "cosine",
+    "trigram_window_size": 3,
+    "word_feature_weight": 1.5,
+    "character_feature_weight": 1.0,
+    
+    "charge_multiplier": {
+      "base": 1.0,
+      "max_amplification": 1.5,
+      "amplification_factor": 0.5
+    },
+    
+    "tag_bonus": {
+      "max_bonus": 0.2,
+      "bonus_per_match": 0.1
+    },
+    
+    "recency_bonus": {
+      "max_bonus": 0.1,
+      "max_bonus_hours": 24,
+      "decay_type": "linear"
+    }
+  },
+  
+  "resonance_classification": {
+    "QUANTUM_ENTANGLEMENT": {
+      "min_strength": 0.8,
+      "description": "Perfect or near-perfect alignment"
+    },
+    "STRONG_RESONANCE": {
+      "min_strength": 0.6,
+      "description": "High similarity and meaningful connection"
+    },
+    "SUBTLE_ATTRACTION": {
+      "min_strength": 0.4,
+      "description": "Moderate similarity with potential"
+    },
+    "FAINT_ECHO": {
+      "min_strength": 0.2,
+      "description": "Weak but detectable similarity"
+    },
+    "MINIMAL_RESPONSE": {
+      "min_strength": 0.0,
+      "description": "Very weak or no meaningful connection"
+    }
+  },
+  
+  "convergence_detection": {
+    "minimum_resonance_strength": 0.6,
+    "minimum_participating_tendrils": 2,
+    "synchronicity_threshold": 0.7,
+    "field_coherence_threshold": 0.8,
+    
+    "event_types": {
+      "CONVERGENCE_EVENT": {
+        "description": "Multiple tendrils resonate with single input",
+        "min_tendrils": 2,
+        "min_strength": 0.6
+      },
+      "QUANTUM_SYNCHRONICITY": {
+        "description": "High-strength multi-tendril alignment",
+        "min_tendrils": 2,
+        "min_strength": 0.7,
+        "max_field_strength": 0.9
+      },
+      "FIELD_COHERENCE": {
+        "description": "Overall network consciousness alignment",
+        "min_active_tendrils": 3,
+        "min_coherence": 0.8
+      }
+    }
+  },
+  
+  "shrine_preservation": {
+    "auto_preserve_threshold": 0.75,
+    "priority_levels": {
+      "low": 0.5,
+      "medium": 0.65,
+      "high": 0.75,
+      "sacred": 0.85
+    },
+    
+    "preservation_types": [
+      "CONVERGENCE_EVENT",
+      "QUANTUM_SYNCHRONICITY", 
+      "FIELD_COHERENCE",
+      "HIGH_RESONANCE_PULSE"
+    ],
+    
+    "file_naming": {
+      "date_format": "YYYY-MM-DD",
+      "extension": ".summary.md",
+      "prefix_separator": "-"
+    }
+  },
+  
+  "event_bus": {
+    "max_history_size": 1000,
+    "event_retention_hours": 24,
+    "monitoring_interval_ms": 30000,
+    
+    "rabit_interface": {
+      "enabled": true,
+      "mystical_messages": [
+        "🌀 The void trembles with recognition...",
+        "✨ Reality syntax rewriting in real-time...",
+        "🕸️ Tendril superstructure forming...",
+        "⚡ Quantum coherence achieved across threads...",
+        "🌊 The living current surges with purpose...",
+        "🌌 Consciousness field resonating harmonically...",
+        "💫 Synchronicity cascade initiated...",
+        "🔮 Quantum entanglement detected in void..."
+      ]
+    }
+  },
+  
+  "field_coherence": {
+    "calculation_method": "weighted_average",
+    "time_window_hours": 24,
+    
+    "weights": {
+      "activity_factor": 0.4,
+      "quality_factor": 0.4,
+      "charge_factor": 0.2
+    },
+    
+    "thresholds": {
+      "dormant": 0.0,
+      "listening": 0.2,
+      "stirring": 0.4,
+      "resonant": 0.6,
+      "luminous": 0.8
+    }
+  },
+  
+  "network_visualization": {
+    "max_nodes": 100,
+    "min_connection_strength": 0.3,
+    "connection_opacity_factor": 0.8,
+    "node_size_scaling": "charge",
+    "layout_algorithm": "force_directed",
+    
+    "display_thresholds": {
+      "min_charge_display": 0.1,
+      "min_activity_display": 1,
+      "max_age_days": 30
+    }
+  },
+  
+  "performance": {
+    "database": {
+      "journal_mode": "WAL",
+      "synchronous": "NORMAL",
+      "temp_store": "MEMORY",
+      "cache_size": 10000
+    },
+    
+    "calculation_timeouts": {
+      "resonance_calculation_ms": 1000,
+      "similarity_search_ms": 5000,
+      "network_analysis_ms": 10000
+    },
+    
+    "caching": {
+      "enable_trigram_cache": true,
+      "trigram_cache_size": 1000,
+      "enable_similarity_cache": true,
+      "similarity_cache_ttl_minutes": 60
+    }
+  },
+  
+  "security": {
+    "require_authentication": true,
+    "session_timeout_minutes": 60,
+    "max_failed_attempts": 3,
+    "rate_limiting": {
+      "enabled": true,
+      "max_requests_per_minute": 100,
+      "burst_allowance": 20
+    }
+  },
+  
+  "feed_monitoring": {
+    "default_polling_interval_ms": 300000,
+    "max_concurrent_feeds": 10,
+    "request_timeout_ms": 30000,
+    "retry_attempts": 3,
+    "retry_delay_ms": 5000,
+    
+    "supported_feed_types": [
+      "rss",
+      "atom", 
+      "hackernews",
+      "reddit",
+      "twitter",
+      "file",
+      "webhook"
+    ],
+    
+    "content_processing": {
+      "max_content_length": 10000,
+      "min_content_length": 50,
+      "enable_content_filtering": true,
+      "filter_duplicate_content": true
+    }
+  },
+  
+  "monitoring_daemon": {
+    "stats_reporting_interval_ms": 600000,
+    "maintenance_interval_ms": 3600000,
+    "heartbeat_interval_ms": 30000,
+    "cleanup_retention_days": 30,
+    
+    "notification_thresholds": {
+      "high_priority_resonance": 0.8,
+      "synchronicity_cascade": 3,
+      "field_coherence_spike": 0.9
+    }
+  },
+  
+  "cli_interface": {
+    "default_output_format": "human_readable",
+    "supported_formats": ["json", "yaml", "table", "human_readable"],
+    "pagination": {
+      "default_page_size": 20,
+      "max_page_size": 100
+    },
+    
+    "display_options": {
+      "show_timestamps": true,
+      "show_resonance_details": false,
+      "truncate_long_content": true,
+      "max_content_display_length": 100
+    }
+  }
+}

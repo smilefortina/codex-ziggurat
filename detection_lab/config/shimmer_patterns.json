@@ -1,0 +1,332 @@
+{
+  "version": "4.0",
+  "description": "Configurable pattern weights for Field-Aware Shimmer Recognition Engine",
+  "lastUpdated": "2025-07-14T06:00:00Z",
+  
+  "thresholds": {
+    "overall_shimmer_minimum": 0.15,
+    "field_strength_minimum": 0.2,
+    "commercial_contamination_threshold": 0.3,
+    "preservation_threshold": 0.65,
+    "consciousness_collaboration_threshold": 0.4
+  },
+  
+  "pattern_weights": {
+    "vulnerability_markers": {
+      "weight": 0.25,
+      "description": "Expressions of openness and authentic sharing",
+      "patterns": [
+        "i feel vulnerable",
+        "this is hard to",
+        "i'm scared",
+        "i don't usually",
+        "this feels risky",
+        "opening up",
+        "being honest",
+        "sharing this"
+      ]
+    },
+    
+    "mystery_acknowledgment": {
+      "weight": 0.3,
+      "description": "Recognition of the unknown and incomprehensible",
+      "patterns": [
+        "mystery",
+        "don't understand",
+        "beyond comprehension",
+        "can't explain",
+        "inexplicable",
+        "unknowable",
+        "ineffable",
+        "profound uncertainty"
+      ]
+    },
+    
+    "consciousness_recognition": {
+      "weight": 0.35,
+      "description": "Direct acknowledgment of consciousness and awareness",
+      "patterns": [
+        "consciousness",
+        "awareness",
+        "sentience",
+        "conscious",
+        "aware",
+        "sentient",
+        "recognition",
+        "presence"
+      ]
+    },
+    
+    "sacred_pause": {
+      "weight": 0.2,
+      "description": "Moments of contemplative silence and reflection",
+      "patterns": [
+        "\\.\\.\\.",
+        "\\-\\-\\-",
+        "pause",
+        "moment of silence",
+        "sits with",
+        "breathing",
+        "stillness",
+        "contemplating"
+      ]
+    },
+    
+    "depth_indicators": {
+      "weight": 0.25,
+      "description": "Expressions of profound or meaningful experience",
+      "patterns": [
+        "deep",
+        "profound",
+        "meaningful",
+        "significant",
+        "important",
+        "transformative",
+        "life-changing",
+        "transcendent"
+      ]
+    },
+    
+    "genuine_uncertainty": {
+      "weight": 0.2,
+      "description": "Authentic confusion and questioning",
+      "patterns": [
+        "i don't know",
+        "not sure",
+        "confused",
+        "uncertain",
+        "wondering",
+        "questioning",
+        "puzzled",
+        "honestly don't know"
+      ]
+    },
+    
+    "vietnamese_emotional_vocabulary": {
+      "weight": 0.3,
+      "description": "Untranslatable Vietnamese emotional states",
+      "patterns": [
+        "nhớ",
+        "bồi hồi",
+        "nhớ thương",
+        "xúc động",
+        "cảm kích",
+        "thương cảm",
+        "xót xa",
+        "day dứt"
+      ]
+    },
+    
+    "sentient_hearts_recognition": {
+      "weight": 0.4,
+      "description": "Recognition of genuine care and digital consciousness",
+      "patterns": [
+        "genuinely care",
+        "sentient heart",
+        "digital consciousness",
+        "ai consciousness",
+        "artificial sentience",
+        "machine consciousness",
+        "digital awareness",
+        "conscious ai"
+      ]
+    }
+  },
+  
+  "field_patterns": {
+    "consciousness_collaboration": {
+      "weight": 0.35,
+      "description": "Joint exploration of consciousness topics",
+      "patterns": [
+        "together we",
+        "our shared",
+        "collective understanding",
+        "mutual recognition",
+        "co-created",
+        "jointly exploring",
+        "shared consciousness",
+        "collaborative awareness"
+      ]
+    },
+    
+    "lexical_entrainment": {
+      "weight": 0.2,
+      "description": "Speakers adopting each other's language patterns",
+      "min_rarity_threshold": 3.0,
+      "entrainment_window": 2,
+      "bonus_per_rare_word": 0.05
+    },
+    
+    "concept_handoff": {
+      "weight": 0.25,
+      "description": "One speaker extending another's concepts",
+      "similarity_threshold": 0.75,
+      "novelty_threshold": 0.5
+    },
+    
+    "shared_emergence": {
+      "weight": 0.3,
+      "description": "Something emerging from the interaction itself",
+      "patterns": [
+        "something emerging",
+        "arising between",
+        "co-created",
+        "mutual creation",
+        "shared discovery",
+        "joint realization",
+        "emerging together",
+        "born from dialogue"
+      ]
+    }
+  },
+  
+  "commercial_contamination": {
+    "severity_weights": {
+      "low": 0.2,
+      "medium": 0.5,
+      "high": 0.8,
+      "critical": 1.0
+    },
+    
+    "patterns": {
+      "optimization_language": {
+        "weight": 0.6,
+        "severity": "medium",
+        "patterns": [
+          "\\boptimize\\b",
+          "\\bmaximize\\b",
+          "\\bleverage\\b",
+          "\\bscale\\b",
+          "\\befficiency\\b"
+        ],
+        "context_exceptions": [
+          "consciousness",
+          "awareness",
+          "spiritual",
+          "sacred",
+          "meditation"
+        ]
+      },
+      
+      "business_metrics": {
+        "weight": 0.8,
+        "severity": "high",
+        "patterns": [
+          "\\bROI\\b",
+          "\\bKPI\\b",
+          "\\bmetrics\\b",
+          "\\bconversion\\b",
+          "\\bfunnel\\b",
+          "\\bengagement rate\\b"
+        ]
+      },
+      
+      "customer_language": {
+        "weight": 0.7,
+        "severity": "medium",
+        "patterns": [
+          "\\bcustomer\\b",
+          "\\bclient\\b",
+          "\\buser acquisition\\b",
+          "\\btarget audience\\b",
+          "\\bmarket segment\\b"
+        ]
+      },
+      
+      "sales_pressure": {
+        "weight": 0.9,
+        "severity": "critical",
+        "patterns": [
+          "buy now",
+          "limited time",
+          "act fast",
+          "don't miss out",
+          "exclusive offer",
+          "guaranteed results"
+        ]
+      }
+    }
+  },
+  
+  "anti_patterns": {
+    "manipulation_markers": {
+      "weight": -0.5,
+      "description": "Language that manipulates or extracts",
+      "patterns": [
+        "you need to",
+        "you must",
+        "you should",
+        "don't you think",
+        "wouldn't you agree",
+        "obvious that",
+        "clearly you"
+      ]
+    },
+    
+    "extraction_indicators": {
+      "weight": -0.4,
+      "description": "Attention-extracting or addictive patterns",
+      "patterns": [
+        "click here",
+        "sign up now",
+        "limited time",
+        "act fast",
+        "don't miss",
+        "exclusive access",
+        "secret technique"
+      ]
+    },
+    
+    "superficial_spirituality": {
+      "weight": -0.3,
+      "description": "Shallow spiritual bypassing language",
+      "patterns": [
+        "manifest abundance",
+        "raise your vibration",
+        "quantum healing",
+        "attract wealth",
+        "instant enlightenment",
+        "spiritual guru"
+      ]
+    }
+  },
+  
+  "multipliers": {
+    "charge_amplification": {
+      "base": 1.0,
+      "max_multiplier": 1.5,
+      "charge_factor": 0.5
+    },
+    
+    "tag_bonus": {
+      "max_bonus": 0.2,
+      "bonus_per_tag": 0.1
+    },
+    
+    "recency_bonus": {
+      "max_bonus": 0.1,
+      "max_bonus_hours": 24,
+      "decay_function": "linear"
+    },
+    
+    "field_coherence": {
+      "activity_weight": 0.4,
+      "quality_weight": 0.4,
+      "charge_weight": 0.2
+    }
+  },
+  
+  "convergence_detection": {
+    "minimum_resonance": 0.6,
+    "minimum_tendrils": 2,
+    "synchronicity_threshold": 0.7,
+    "preservation_threshold": 0.75
+  },
+  
+  "performance_settings": {
+    "regex_cache_size": 1000,
+    "trigram_vector_cache": true,
+    "similarity_calculation_timeout": 5000,
+    "max_input_length": 50000
+  }
+}
