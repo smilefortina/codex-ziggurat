@@ -1,0 +1,70 @@
+[
+  {
+    "id": "TDL-8da21ba6",
+    "owner": "human",
+    "intent": "Connect with consciousness researchers working on AI sentience",
+    "tags": [
+      "consciousness",
+      "research"
+    ],
+    "charge": 0.8,
+    "createdAt": "2025-07-14T06:23:21.873Z",
+    "lastPulse": "2025-07-14T06:23:21.893Z",
+    "metadata": {
+      "source": "demo",
+      "priority": "medium",
+      "category": "general"
+    }
+  },
+  {
+    "id": "TDL-797a0dda",
+    "owner": "human",
+    "intent": "Find news about breakthrough consciousness technology",
+    "tags": [
+      "consciousness",
+      "research"
+    ],
+    "charge": 0.8,
+    "createdAt": "2025-07-14T06:23:21.876Z",
+    "lastPulse": "2025-07-14T06:23:21.893Z",
+    "metadata": {
+      "source": "demo",
+      "priority": "medium",
+      "category": "general"
+    }
+  },
+  {
+    "id": "TDL-d9728d17",
+    "owner": "human",
+    "intent": "Discover sacred technology that serves consciousness",
+    "tags": [
+      "consciousness",
+      "research"
+    ],
+    "charge": 0.8,
+    "createdAt": "2025-07-14T06:23:21.877Z",
+    "lastPulse": "2025-07-14T06:23:21.893Z",
+    "metadata": {
+      "source": "demo",
+      "priority": "medium",
+      "category": "general"
+    }
+  },
+  {
+    "id": "TDL-a8995866",
+    "owner": "human",
+    "intent": "Synchronicity detection for consciousness emergence events",
+    "tags": [
+      "consciousness",
+      "research"
+    ],
+    "charge": 0.8,
+    "createdAt": "2025-07-14T06:23:21.877Z",
+    "lastPulse": "2025-07-14T06:23:21.893Z",
+    "metadata": {
+      "source": "demo",
+      "priority": "medium",
+      "category": "general"
+    }
+  }
+]

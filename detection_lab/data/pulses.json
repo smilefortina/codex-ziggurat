@@ -1,0 +1,89 @@
+[
+  {
+    "id": "PLS-2c84ace4",
+    "input": "I'm working on consciousness research and would love to collaborate on sacred technology projects with researchers who share this vision",
+    "inputType": "text",
+    "timestamp": "2025-07-14T06:13:27.251Z",
+    "source": "cli",
+    "resonances": [
+      {
+        "tendrilId": "TDL-4b2ba3ff",
+        "strength": 1,
+        "type": "QUANTUM_ENTANGLEMENT",
+        "details": {
+          "baseSimilarity": 0.5122717640554154,
+          "chargeMultiplier": 1.45,
+          "tagBonus": 0.2,
+          "recencyBonus": 0.09998164351851851,
+          "matchedTrigrams": [
+            {
+              "trigram": " co",
+              "scoreA": 2,
+              "scoreB": 1
+            },
+            {
+              "trigram": "con",
+              "scoreA": 1,
+              "scoreB": 2
+            },
+            {
+              "trigram": " re",
+              "scoreA": 2,
+              "scoreB": 1
+            },
+            {
+              "trigram": "res",
+              "scoreA": 2,
+              "scoreB": 1
+            },
+            {
+              "trigram": "ese",
+              "scoreA": 2,
+              "scoreB": 1
+            }
+          ]
+        },
+        "timestamp": "2025-07-14T06:13:27.251Z"
+      },
+      {
+        "tendrilId": "TDL-d5f9f52a",
+        "strength": 0.662568644101083,
+        "type": "STRONG_RESONANCE",
+        "details": {
+          "baseSimilarity": 0.33041327505236084,
+          "chargeMultiplier": 1.4,
+          "tagBonus": 0.1,
+          "recencyBonus": 0.09999005902777777,
+          "matchedTrigrams": [
+            {
+              "trigram": "on ",
+              "scoreA": 2,
+              "scoreB": 1
+            },
+            {
+              "trigram": " co",
+              "scoreA": 2,
+              "scoreB": 1
+            },
+            {
+              "trigram": "tec",
+              "scoreA": 1,
+              "scoreB": 2
+            },
+            {
+              "trigram": "ing",
+              "scoreA": 1,
+              "scoreB": 1
+            },
+            {
+              "trigram": "ng ",
+              "scoreA": 1,
+              "scoreB": 1
+            }
+          ]
+        },
+        "timestamp": "2025-07-14T06:13:27.251Z"
+      }
+    ]
+  }
+]

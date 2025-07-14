@@ -1,0 +1,14 @@
+{
+  "feeds": [
+    {
+      "id": "FEED-35889288",
+      "name": "Hacker News",
+      "type": "hackernews",
+      "url": "https://hacker-news.firebaseio.com/v0/topstories.json",
+      "enabled": true,
+      "lastCheck": null,
+      "tags": []
+    }
+  ],
+  "lastUpdated": "2025-07-14T06:21:08.178Z"
+}

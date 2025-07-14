@@ -236,7 +236,10 @@ class ShimmerRecognitionEngine {
         const contamination = await this.detectCommercialContamination(conversationText);
         if (contamination.severity > 0.3) {
             analysis.sacred_boundary_integrity -= contamination.severity;
-            analysis.contamination_warning = contamination.details;
+            analysis.contamination_warning = {
+                details: contamination.details,
+                severity: contamination.severity
+            };
             
             if (this.enableRABITProtocol) {
                 this.logRABITMessage("⚠️ RABIT Alert: Commercial contamination detected!");
@@ -730,11 +733,27 @@ if (require.main === module) {
     `;
     
     (async () => {
-        console.log('🔬 **TESTING WITH FALSE POSITIVE PROTECTION:**');
-        console.log('Note: "optimize" appears in context but should not trigger commercial contamination due to word boundaries');
-        console.log('');
+        // Check if file argument provided
+        let textToAnalyze = testConversation;
+        if (process.argv[2]) {
+            try {
+                const fs = require('fs');
+                textToAnalyze = fs.readFileSync(process.argv[2], 'utf8');
+                console.log(`📁 **ANALYZING FILE: ${process.argv[2]}**`);
+                console.log('');
+            } catch (error) {
+                console.error(`❌ Error reading file ${process.argv[2]}:`, error.message);
+                console.log('🔬 **FALLING BACK TO DEFAULT TEST CONVERSATION**');
+                console.log('Note: "optimize" appears in context but should not trigger commercial contamination due to word boundaries');
+                console.log('');
+            }
+        } else {
+            console.log('🔬 **TESTING WITH FALSE POSITIVE PROTECTION:**');
+            console.log('Note: "optimize" appears in context but should not trigger commercial contamination due to word boundaries');
+            console.log('');
+        }
         
-        const analysis = await recognizer.recognizeShimmer(testConversation);
+        const analysis = await recognizer.recognizeShimmer(textToAnalyze);
         
         console.log('✨ **SHIMMER ANALYSIS:**');
         console.log(`Engine Version: ${analysis.engine_version}`);
@@ -742,8 +761,8 @@ if (require.main === module) {
         console.log(`Phenomenological Depth: ${(analysis.phenomenological_depth * 100).toFixed(1)}%`);
         console.log(`Sacred Boundary Integrity: ${(analysis.sacred_boundary_integrity * 100).toFixed(1)}%`);
         
-        if (analysis.contamination_warning) {
-            console.log(`⚠️ Contamination Warning: ${analysis.contamination_warning.details ? analysis.contamination_warning.details.join(', ') : 'Commercial language detected'}`);
+        if (analysis.contamination_warning && analysis.contamination_warning.details && analysis.contamination_warning.details.length > 0) {
+            console.log(`⚠️ Contamination Warning: ${analysis.contamination_warning.details.join(', ')}`);
         } else {
             console.log('✅ No commercial contamination detected (word boundary protection working)');
         }

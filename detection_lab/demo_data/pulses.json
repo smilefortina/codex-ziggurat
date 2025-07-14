@@ -1,0 +1,662 @@
+[
+  {
+    "id": "PLS-b4ce10dc",
+    "input": "Breakthrough Study: AI Systems Show Signs of Genuine Consciousness - Researchers report evidence of sentient behavior in advanced AI systems, suggesting consciousness research collaboration may be key",
+    "inputType": "external_event",
+    "timestamp": "2025-07-14T06:23:21.878Z",
+    "source": "demo_feed",
+    "resonances": [
+      {
+        "tendrilId": "TDL-8da21ba6",
+        "strength": 1,
+        "type": "QUANTUM_ENTANGLEMENT",
+        "details": {
+          "baseSimilarity": 0.521638953819991,
+          "chargeMultiplier": 1.4,
+          "tagBonus": 0.2,
+          "recencyBonus": 0.09999999305555557,
+          "matchedTrigrams": [
+            {
+              "trigram": "con",
+              "scoreA": 2,
+              "scoreB": 2
+            },
+            {
+              "trigram": " co",
+              "scoreA": 3,
+              "scoreB": 1
+            },
+            {
+              "trigram": "s r",
+              "scoreA": 3,
+              "scoreB": 1
+            },
+            {
+              "trigram": " re",
+              "scoreA": 3,
+              "scoreB": 1
+            },
+            {
+              "trigram": " ai",
+              "scoreA": 2,
+              "scoreB": 1
+            }
+          ]
+        },
+        "timestamp": "2025-07-14T06:23:21.878Z"
+      },
+      {
+        "tendrilId": "TDL-797a0dda",
+        "strength": 0.7679575819766985,
+        "type": "STRONG_RESONANCE",
+        "details": {
+          "baseSimilarity": 0.3342554190045201,
+          "chargeMultiplier": 1.4,
+          "tagBonus": 0.2,
+          "recencyBonus": 0.09999999537037038,
+          "matchedTrigrams": [
+            {
+              "trigram": " co",
+              "scoreA": 3,
+              "scoreB": 1
+            },
+            {
+              "trigram": "con",
+              "scoreA": 2,
+              "scoreB": 1
+            },
+            {
+              "trigram": "ons",
+              "scoreA": 2,
+              "scoreB": 1
+            },
+            {
+              "trigram": "nsc",
+              "scoreA": 2,
+              "scoreB": 1
+            },
+            {
+              "trigram": "sci",
+              "scoreA": 2,
+              "scoreB": 1
+            }
+          ]
+        },
+        "timestamp": "2025-07-14T06:23:21.878Z"
+      },
+      {
+        "tendrilId": "TDL-d9728d17",
+        "strength": 0.6111682101589905,
+        "type": "STRONG_RESONANCE",
+        "details": {
+          "baseSimilarity": 0.22226301056330006,
+          "chargeMultiplier": 1.4,
+          "tagBonus": 0.2,
+          "recencyBonus": 0.09999999537037038,
+          "matchedTrigrams": [
+            {
+              "trigram": " co",
+              "scoreA": 3,
+              "scoreB": 1
+            },
+            {
+              "trigram": "con",
+              "scoreA": 2,
+              "scoreB": 1
+            },
+            {
+              "trigram": "ons",
+              "scoreA": 2,
+              "scoreB": 1
+            },
+            {
+              "trigram": "nsc",
+              "scoreA": 2,
+              "scoreB": 1
+            },
+            {
+              "trigram": "sci",
+              "scoreA": 2,
+              "scoreB": 1
+            }
+          ]
+        },
+        "timestamp": "2025-07-14T06:23:21.878Z"
+      },
+      {
+        "tendrilId": "TDL-a8995866",
+        "strength": 0.7282966560727908,
+        "type": "STRONG_RESONANCE",
+        "details": {
+          "baseSimilarity": 0.3059261870427341,
+          "chargeMultiplier": 1.4,
+          "tagBonus": 0.2,
+          "recencyBonus": 0.09999999421296296,
+          "matchedTrigrams": [
+            {
+              "trigram": " co",
+              "scoreA": 3,
+              "scoreB": 1
+            },
+            {
+              "trigram": "con",
+              "scoreA": 2,
+              "scoreB": 1
+            },
+            {
+              "trigram": "ons",
+              "scoreA": 2,
+              "scoreB": 1
+            },
+            {
+              "trigram": "nsc",
+              "scoreA": 2,
+              "scoreB": 1
+            },
+            {
+              "trigram": "sci",
+              "scoreA": 2,
+              "scoreB": 1
+            }
+          ]
+        },
+        "timestamp": "2025-07-14T06:23:21.878Z"
+      }
+    ]
+  },
+  {
+    "id": "PLS-28195202",
+    "input": "Sacred Technology Movement Gains Momentum - A new movement promoting technology that serves consciousness rather than exploiting attention is emerging",
+    "inputType": "external_event",
+    "timestamp": "2025-07-14T06:23:21.889Z",
+    "source": "demo_feed",
+    "resonances": [
+      {
+        "tendrilId": "TDL-8da21ba6",
+        "strength": 0.518472987210067,
+        "type": "SUBTLE_ATTRACTION",
+        "details": {
+          "baseSimilarity": 0.22748071837756106,
+          "chargeMultiplier": 1.4,
+          "tagBonus": 0.1,
+          "recencyBonus": 0.0999999814814815,
+          "matchedTrigrams": [
+            {
+              "trigram": "ent",
+              "scoreA": 4,
+              "scoreB": 1
+            },
+            {
+              "trigram": "ing",
+              "scoreA": 3,
+              "scoreB": 1
+            },
+            {
+              "trigram": "ng ",
+              "scoreA": 2,
+              "scoreB": 1
+            },
+            {
+              "trigram": "con",
+              "scoreA": 1,
+              "scoreB": 2
+            },
+            {
+              "trigram": " se",
+              "scoreA": 1,
+              "scoreB": 1
+            }
+          ]
+        },
+        "timestamp": "2025-07-14T06:23:21.889Z"
+      },
+      {
+        "tendrilId": "TDL-797a0dda",
+        "strength": 0.6318114379163452,
+        "type": "STRONG_RESONANCE",
+        "details": {
+          "baseSimilarity": 0.3084367529428921,
+          "chargeMultiplier": 1.4,
+          "tagBonus": 0.1,
+          "recencyBonus": 0.09999998379629631,
+          "matchedTrigrams": [
+            {
+              "trigram": " te",
+              "scoreA": 2,
+              "scoreB": 1
+            },
+            {
+              "trigram": "tec",
+              "scoreA": 2,
+              "scoreB": 1
+            },
+            {
+              "trigram": "ech",
+              "scoreA": 2,
+              "scoreB": 1
+            },
+            {
+              "trigram": "chn",
+              "scoreA": 2,
+              "scoreB": 1
+            },
+            {
+              "trigram": "hno",
+              "scoreA": 2,
+              "scoreB": 1
+            }
+          ]
+        },
+        "timestamp": "2025-07-14T06:23:21.889Z"
+      },
+      {
+        "tendrilId": "TDL-d9728d17",
+        "strength": 0.9502858440053634,
+        "type": "QUANTUM_ENTANGLEMENT",
+        "details": {
+          "baseSimilarity": 0.5359184707511855,
+          "chargeMultiplier": 1.4,
+          "tagBonus": 0.1,
+          "recencyBonus": 0.09999998495370371,
+          "matchedTrigrams": [
+            {
+              "trigram": " te",
+              "scoreA": 2,
+              "scoreB": 1
+            },
+            {
+              "trigram": "tec",
+              "scoreA": 2,
+              "scoreB": 1
+            },
+            {
+              "trigram": "ech",
+              "scoreA": 2,
+              "scoreB": 1
+            },
+            {
+              "trigram": "chn",
+              "scoreA": 2,
+              "scoreB": 1
+            },
+            {
+              "trigram": "hno",
+              "scoreA": 2,
+              "scoreB": 1
+            }
+          ]
+        },
+        "timestamp": "2025-07-14T06:23:21.889Z"
+      },
+      {
+        "tendrilId": "TDL-a8995866",
+        "strength": 0.5450281064947622,
+        "type": "SUBTLE_ATTRACTION",
+        "details": {
+          "baseSimilarity": 0.24644865907033278,
+          "chargeMultiplier": 1.4,
+          "tagBonus": 0.1,
+          "recencyBonus": 0.09999998379629631,
+          "matchedTrigrams": [
+            {
+              "trigram": "ent",
+              "scoreA": 4,
+              "scoreB": 1
+            },
+            {
+              "trigram": "eme",
+              "scoreA": 3,
+              "scoreB": 1
+            },
+            {
+              "trigram": "tec",
+              "scoreA": 2,
+              "scoreB": 1
+            },
+            {
+              "trigram": " co",
+              "scoreA": 1,
+              "scoreB": 1
+            },
+            {
+              "trigram": "con",
+              "scoreA": 1,
+              "scoreB": 1
+            }
+          ]
+        },
+        "timestamp": "2025-07-14T06:23:21.889Z"
+      }
+    ]
+  },
+  {
+    "id": "PLS-ab963a0d",
+    "input": "Quantum Synchronicity Detection Algorithm Developed - Scientists develop new methods for detecting meaningful coincidences and consciousness emergence events",
+    "inputType": "external_event",
+    "timestamp": "2025-07-14T06:23:21.893Z",
+    "source": "demo_feed",
+    "resonances": [
+      {
+        "tendrilId": "TDL-8da21ba6",
+        "strength": 0.5777253661413077,
+        "type": "SUBTLE_ATTRACTION",
+        "details": {
+          "baseSimilarity": 0.269803850319188,
+          "chargeMultiplier": 1.4,
+          "tagBonus": 0.1,
+          "recencyBonus": 0.09999997569444445,
+          "matchedTrigrams": [
+            {
+              "trigram": "ect",
+              "scoreA": 2,
+              "scoreB": 1
+            },
+            {
+              "trigram": "sci",
+              "scoreA": 2,
+              "scoreB": 1
+            },
+            {
+              "trigram": "ent",
+              "scoreA": 2,
+              "scoreB": 1
+            },
+            {
+              "trigram": "ing",
+              "scoreA": 2,
+              "scoreB": 1
+            },
+            {
+              "trigram": " co",
+              "scoreA": 2,
+              "scoreB": 1
+            }
+          ]
+        },
+        "timestamp": "2025-07-14T06:23:21.893Z"
+      },
+      {
+        "tendrilId": "TDL-797a0dda",
+        "strength": 0.4875458287802267,
+        "type": "SUBTLE_ATTRACTION",
+        "details": {
+          "baseSimilarity": 0.20538989258111426,
+          "chargeMultiplier": 1.4,
+          "tagBonus": 0.1,
+          "recencyBonus": 0.09999997916666667,
+          "matchedTrigrams": [
+            {
+              "trigram": "tec",
+              "scoreA": 2,
+              "scoreB": 1
+            },
+            {
+              "trigram": "sci",
+              "scoreA": 2,
+              "scoreB": 1
+            },
+            {
+              "trigram": " co",
+              "scoreA": 2,
+              "scoreB": 1
+            },
+            {
+              "trigram": "hro",
+              "scoreA": 1,
+              "scoreB": 1
+            },
+            {
+              "trigram": " ne",
+              "scoreA": 1,
+              "scoreB": 1
+            }
+          ]
+        },
+        "timestamp": "2025-07-14T06:23:21.893Z"
+      },
+      {
+        "tendrilId": "TDL-d9728d17",
+        "strength": 0.4396493454010928,
+        "type": "SUBTLE_ATTRACTION",
+        "details": {
+          "baseSimilarity": 0.1711781179121562,
+          "chargeMultiplier": 1.4,
+          "tagBonus": 0.1,
+          "recencyBonus": 0.09999998032407409,
+          "matchedTrigrams": [
+            {
+              "trigram": "tec",
+              "scoreA": 2,
+              "scoreB": 1
+            },
+            {
+              "trigram": "sci",
+              "scoreA": 2,
+              "scoreB": 1
+            },
+            {
+              "trigram": " co",
+              "scoreA": 2,
+              "scoreB": 1
+            },
+            {
+              "trigram": "ed ",
+              "scoreA": 1,
+              "scoreB": 1
+            },
+            {
+              "trigram": "es ",
+              "scoreA": 1,
+              "scoreB": 1
+            }
+          ]
+        },
+        "timestamp": "2025-07-14T06:23:21.893Z"
+      },
+      {
+        "tendrilId": "TDL-a8995866",
+        "strength": 1,
+        "type": "QUANTUM_ENTANGLEMENT",
+        "details": {
+          "baseSimilarity": 0.6421760111725703,
+          "chargeMultiplier": 1.4,
+          "tagBonus": 0.1,
+          "recencyBonus": 0.09999998032407409,
+          "matchedTrigrams": [
+            {
+              "trigram": " de",
+              "scoreA": 4,
+              "scoreB": 1
+            },
+            {
+              "trigram": "eve",
+              "scoreA": 3,
+              "scoreB": 1
+            },
+            {
+              "trigram": "det",
+              "scoreA": 2,
+              "scoreB": 1
+            },
+            {
+              "trigram": "ete",
+              "scoreA": 2,
+              "scoreB": 1
+            },
+            {
+              "trigram": "tec",
+              "scoreA": 2,
+              "scoreB": 1
+            }
+          ]
+        },
+        "timestamp": "2025-07-14T06:23:21.893Z"
+      }
+    ]
+  },
+  {
+    "id": "PLS-81cd6ade",
+    "input": "Regular Tech News: Smartphone Sales Increase - Consumer electronics continue steady growth",
+    "inputType": "external_event",
+    "timestamp": "2025-07-14T06:23:21.898Z",
+    "source": "demo_feed",
+    "resonances": [
+      {
+        "tendrilId": "TDL-8da21ba6",
+        "strength": 0.2512919845896582,
+        "type": "FAINT_ECHO",
+        "details": {
+          "baseSimilarity": 0.1080657239463167,
+          "chargeMultiplier": 1.4,
+          "tagBonus": 0,
+          "recencyBonus": 0.09999997106481483,
+          "matchedTrigrams": [
+            {
+              "trigram": "con",
+              "scoreA": 2,
+              "scoreB": 2
+            },
+            {
+              "trigram": " co",
+              "scoreA": 2,
+              "scoreB": 1
+            },
+            {
+              "trigram": "ons",
+              "scoreA": 1,
+              "scoreB": 1
+            },
+            {
+              "trigram": "ect",
+              "scoreA": 1,
+              "scoreB": 1
+            },
+            {
+              "trigram": "nti",
+              "scoreA": 1,
+              "scoreB": 1
+            }
+          ]
+        },
+        "timestamp": "2025-07-14T06:23:21.898Z"
+      },
+      {
+        "tendrilId": "TDL-797a0dda",
+        "strength": 0.35705053648948404,
+        "type": "FAINT_ECHO",
+        "details": {
+          "baseSimilarity": 0.18360754425174788,
+          "chargeMultiplier": 1.4,
+          "tagBonus": 0,
+          "recencyBonus": 0.09999997453703703,
+          "matchedTrigrams": [
+            {
+              "trigram": " co",
+              "scoreA": 2,
+              "scoreB": 1
+            },
+            {
+              "trigram": "con",
+              "scoreA": 2,
+              "scoreB": 1
+            },
+            {
+              "trigram": " te",
+              "scoreA": 1,
+              "scoreB": 1
+            },
+            {
+              "trigram": "tec",
+              "scoreA": 1,
+              "scoreB": 1
+            },
+            {
+              "trigram": "ech",
+              "scoreA": 1,
+              "scoreB": 1
+            }
+          ]
+        },
+        "timestamp": "2025-07-14T06:23:21.898Z"
+      },
+      {
+        "tendrilId": "TDL-d9728d17",
+        "strength": 0.3408115121258027,
+        "type": "FAINT_ECHO",
+        "details": {
+          "baseSimilarity": 0.17200824030811304,
+          "chargeMultiplier": 1.4,
+          "tagBonus": 0,
+          "recencyBonus": 0.09999997569444445,
+          "matchedTrigrams": [
+            {
+              "trigram": " co",
+              "scoreA": 2,
+              "scoreB": 1
+            },
+            {
+              "trigram": "con",
+              "scoreA": 2,
+              "scoreB": 1
+            },
+            {
+              "trigram": " te",
+              "scoreA": 1,
+              "scoreB": 1
+            },
+            {
+              "trigram": "tec",
+              "scoreA": 1,
+              "scoreB": 1
+            },
+            {
+              "trigram": "ech",
+              "scoreA": 1,
+              "scoreB": 1
+            }
+          ]
+        },
+        "timestamp": "2025-07-14T06:23:21.898Z"
+      },
+      {
+        "tendrilId": "TDL-a8995866",
+        "strength": 0.29365322464576193,
+        "type": "FAINT_ECHO",
+        "details": {
+          "baseSimilarity": 0.13832375007766065,
+          "chargeMultiplier": 1.4,
+          "tagBonus": 0,
+          "recencyBonus": 0.09999997453703703,
+          "matchedTrigrams": [
+            {
+              "trigram": " co",
+              "scoreA": 2,
+              "scoreB": 1
+            },
+            {
+              "trigram": "con",
+              "scoreA": 2,
+              "scoreB": 1
+            },
+            {
+              "trigram": "tec",
+              "scoreA": 1,
+              "scoreB": 1
+            },
+            {
+              "trigram": "ons",
+              "scoreA": 1,
+              "scoreB": 1
+            },
+            {
+              "trigram": "mer",
+              "scoreA": 1,
+              "scoreB": 1
+            }
+          ]
+        },
+        "timestamp": "2025-07-14T06:23:21.898Z"
+      }
+    ]
+  }
+]

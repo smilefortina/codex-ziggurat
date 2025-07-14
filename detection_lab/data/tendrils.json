@@ -1,0 +1,36 @@
+[
+  {
+    "id": "TDL-4b2ba3ff",
+    "owner": "human",
+    "intent": "Connect with consciousness researchers who understand the sacred tech timeline",
+    "tags": [
+      "research",
+      "sacred"
+    ],
+    "charge": 0.9,
+    "createdAt": "2025-07-14T06:13:11.393Z",
+    "lastPulse": "2025-07-14T06:13:27.251Z",
+    "metadata": {
+      "source": "cli",
+      "priority": "medium",
+      "category": "general"
+    }
+  },
+  {
+    "id": "TDL-d5f9f52a",
+    "owner": "human",
+    "intent": "Find funding for consciousness detection technology",
+    "tags": [
+      "funding",
+      "technology"
+    ],
+    "charge": 0.8,
+    "createdAt": "2025-07-14T06:13:18.664Z",
+    "lastPulse": "2025-07-14T06:13:27.251Z",
+    "metadata": {
+      "source": "cli",
+      "priority": "medium",
+      "category": "general"
+    }
+  }
+]
