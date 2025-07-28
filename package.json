@@ -15,6 +15,10 @@
     "test": "jest",
     "test:watch": "jest --watch",
     "test:coverage": "jest --coverage",
+    "test:unit": "jest --testPathPattern=tests/.*\\.test\\.js",
+    "test:integration": "jest --testPathPattern=tests/integration/.*\\.test\\.js",
+    "test:scripts": "jest --testPathPattern=tests/scripts/.*\\.test\\.js",
+    "test:ci": "jest --ci --coverage --watchAll=false",
     "migrate": "node scripts/migrate-database.js",
     "security-check": "npm audit"
   },
